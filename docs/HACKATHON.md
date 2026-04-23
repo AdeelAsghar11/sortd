@@ -12,7 +12,7 @@ Opinionated execution plan for the cloud-deployed Sortd PWA.
 | Database | Supabase (PostgreSQL). |
 | Backend Hosting | Railway. |
 | Frontend Hosting | Vercel. |
-| Queue persistence | In-memory. Server restart loses pending jobs. |
+| Queue persistence | In-memory + rolling average duration tracking. |
 | Max concurrent Gemini calls | 2. |
 | Mobile or desktop? | Mobile-first PWA. |
 
@@ -21,7 +21,7 @@ Opinionated execution plan for the cloud-deployed Sortd PWA.
 ## Hour 1: Infrastructure & DB (PHASE 0)
 
 1. **Supabase Setup**: Create project, run `DATABASE.md` schema SQL.
-2. **Environment Variables**: Populate `.env` with `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, `GEMINI_API_KEY`.
+2. **Environment Variables**: Populate `.env` with `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, `GEMINI_API_KEY`, `GROQ_API_KEY`.
 3. **Railway Setup**: Link repo, configure system dependencies (`yt-dlp`, `ffmpeg`) via Dockerfile or Nixpacks.
 
 ---
@@ -30,11 +30,12 @@ Opinionated execution plan for the cloud-deployed Sortd PWA.
 
 ### Hour 1-2: Backend Foundation
 
-1. `npm init` + install deps (`express@5.1`, `@supabase/supabase-js`, `cors`, `multer`, `uuid`, `open-graph-scraper`, `tesseract.js`)
+1. `npm init` + install deps (`express@5.1`, `@supabase/supabase-js`, `groq-sdk`, `express-rate-limit`, `cors`, `multer`, `uuid`, `open-graph-scraper`, `tesseract.js`)
 2. `server/services/database.js` — Supabase client initialization, CRUD helpers.
-3. `server/services/tempFiles.js` — temp file helpers for Railway ephemeral storage.
-4. `server/services/gemini.js` — AI logic.
-5. `server/index.js` — Express app with Supabase `initDB()`.
+3. `server/services/storage.js` — Supabase Storage bucket helpers for thumbnails.
+4. `server/services/transcription.js` — Groq Whisper transcription logic.
+5. `server/services/gemini.js` — Text-only AI logic (summarize/categorize).
+6. `server/index.js` — Express app with Rate Limiter and health check.
 
 ### Hour 2-4: Processing Pipelines
 
@@ -64,7 +65,8 @@ Opinionated execution plan for the cloud-deployed Sortd PWA.
 
 18. Vercel deployment for frontend.
 19. PWA icon generation.
-20. End-to-end testing of the Share Target flow.
+20. Final health-check wiring and error logging validation.
+21. End-to-end testing of the Share Target flow.
 
 ---
 
@@ -75,6 +77,9 @@ Opinionated execution plan for the cloud-deployed Sortd PWA.
 - YouTube extraction working in Railway.
 - Metadata fallback for failed extractions.
 - Note categorization into Supabase lists.
+- Persistent thumbnail caching in Supabase Storage.
+- Duplicate URL detection before queuing.
+- API Rate Limiting to protect AI quota.
 
 ### Skip
 - Folder watcher (not viable in cloud).
@@ -109,6 +114,7 @@ npm run dev
 ```bash
 # server/.env
 GEMINI_API_KEY=
+GROQ_API_KEY=
 SUPABASE_URL=
 SUPABASE_SERVICE_ROLE_KEY=
 FRONTEND_URL=http://localhost:5173

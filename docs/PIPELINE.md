@@ -8,8 +8,8 @@ All content processing flows in Sortd. Three input types → one output type (a 
 
 | Type | Entry Point | Processing Path |
 |------|------------|----------------|
-| **URL** (reel/video) | `POST /api/process-url` | OG scrape → yt-dlp audio → Gemini transcribe+summarize |
-| **Screenshot** (upload) | `POST /api/process-image` | Tesseract OCR → Gemini summarize+categorize |
+| **URL** (reel/video) | `POST /api/process-url` | Rate Limit → Duplicate Check → OG scrape → yt-dlp audio → **Groq transcribe** → **Gemini summarize** → **Supabase Storage cache** |
+| **Screenshot** (upload) | `POST /api/process-image` | Rate Limit → Tesseract OCR → **Gemini summarize+categorize** → **Supabase Storage cache** |
 | **Folder watch** (local only) | Chokidar `add` event | Same as screenshot, enqueued automatically |
 
 All three paths go through the **processing queue** before hitting Gemini. See QUEUE.md for queue details.
@@ -27,32 +27,40 @@ sequenceDiagram
     participant BE as Backend
     participant Q as Queue
     participant YT as yt-dlp
+    participant GW as Groq Whisper API
     participant G as Gemini API
 
     U->>FE: Pastes Reel URL
     FE->>BE: POST /api/process-url {url}
-    BE->>Q: Enqueue job
-    BE-->>FE: 202 Accepted {jobId}
-    FE->>FE: Show ProcessingOverlay
+    BE->>BE: Rate Limiter (express-rate-limit)
+    BE->>BE: Duplicate Check (DB lookup)
+    alt Duplicate Found
+        BE-->>FE: 303 See Other {noteId}
+    else New URL
+        BE->>Q: Enqueue job
+        BE-->>FE: 202 Accepted {jobId}
+        FE->>FE: Show ProcessingOverlay
+    end
 
-    Q->>Q: Check rate limit (30/min)
     Q->>BE: Dequeue job
     BE->>BE: Scrape OG metadata
     BE->>YT: yt-dlp -x --audio-format mp3
+    BE->>BE: cacheThumbnail(metadata.image) -> Supabase Storage
 
     alt yt-dlp succeeds
-        YT-->>BE: audio.mp3 (< 25MB)
-        BE->>G: [audio + prompt] Transcribe & summarize
-    else yt-dlp fails (platform blocked, timeout)
-        BE->>BE: Log failure, use metadata text
-        BE->>G: [text prompt] Categorize metadata
+        YT-->>BE: audio.mp3
+        BE->>GW: POST /audio/transcriptions (audio file)
+        GW-->>BE: transcript text
+        BE->>G: [text prompt] Summarize & categorize
+    else yt-dlp fails
+        BE->>BE: Use metadata title/desc
+        BE->>G: [text prompt] Summarize & categorize
     end
 
-    G-->>BE: {transcript, summary, category, tags}
-    BE->>BE: Save note + tags to Supabase
-    BE->>BE: Cleanup temp audio file
+    G-->>BE: {title, summary, category, tags}
+    BE->>BE: Save note to Supabase
+    BE->>BE: Trigger: update search_vector
     BE-->>FE: SSE: job_done {note}
-    FE->>U: Toast + note appears in Inbox
 ```
 
 ### Steps in Detail
@@ -98,38 +106,49 @@ const resolvedListId = allValidIds.includes(aiResult.category) ? aiResult.catego
 
 ---
 
-## `gemini.js` Function Contracts
+## AI Service Contracts
 
-Explicit return type specs for the two Gemini-calling functions:
+### `transcription.js` (Groq Whisper)
 
 ```javascript
 /**
- * Transcribe audio and extract structured metadata.
- * @param {string} filePath - absolute path to mp3 file (< 25MB)
- * @returns {Promise<{
- *   transcript: string,
- *   title: string,
- *   summary: string,
- *   category: string,   // must be validated against valid list IDs before use
- *   tags: string[]
- * }>}
+ * Transcribe audio using Groq Whisper.
+ * @param {string} filePath - absolute path to audio file (< 25MB)
+ * @returns {Promise<string>} Plain text transcript
  */
 async function transcribeAudio(filePath)
+```
 
+### `gemini.js` (Text Only)
+
+```javascript
 /**
- * Categorize text content (no audio).
- * Used for metadata-only fallback and OCR results.
- * @param {string} text - concatenated text to categorize
+ * Summarize and categorize content from a transcript or OCR.
+ * @param {string} text - full text content
  * @param {string} platform - source platform name
+ * @param {string[]} customListNames - optional user list names
  * @returns {Promise<{
  *   title: string,
  *   summary: string,
- *   category: string,   // must be validated against valid list IDs before use
+ *   category: string,
  *   tags: string[]
- *   // NOTE: no `transcript` field — caller sets transcript = '' on fallback path
  * }>}
  */
-async function categorizeContent(text, platform)
+async function summarizeContent(text, platform, customListNames = [])
+
+/**
+ * Categorize metadata-only content.
+ * @param {string} text - metadata title + description
+ * @param {string} platform
+ * @param {string[]} customListNames
+ * @returns {Promise<{
+ *   title: string,
+ *   summary: string,
+ *   category: string,
+ *   tags: string[]
+ * }>}
+ */
+async function categorizeContent(text, platform, customListNames = [])
 ```
 
 ---
@@ -253,12 +272,17 @@ async function processUrl(url) {
     downloadAudioWithRetry(url, config).catch(err => { lastDownloadErr = err; return null; }),
   ]);
 
-  // Step 2: Gemini — either audio or metadata-only
+  // Step 2: AI Processing (Groq + Gemini)
+  let transcript = null;
   let aiResult;
   try {
     if (audioFile) {
       validateFileSize(audioFile); // throws if > 25MB
-      aiResult = await transcribeAudio(audioFile);
+      // Groq handles transcription (cheap/fast)
+      transcript = await transcribeAudio(audioFile);
+      // Gemini handles text summarization (low token cost)
+      aiResult = await summarizeContent(transcript, platform);
+      aiResult.transcript = transcript;
     } else {
       // Fallback: metadata text only
       const text = [metadata.title, metadata.description].filter(Boolean).join('\n\n');
@@ -406,8 +430,10 @@ validateFileSize(filePath)    // throw if > MAX_AUDIO_SIZE (25MB)
 
 `gemini-1.5-flash` via REST API (not SDK). Two use cases:
 
-1. **Audio transcription** — multimodal: base64 audio inline + text prompt → `{ transcript, title, summary, category, tags }`
-2. **Text categorization** — text-only: OCR text or metadata → `{ title, summary, category, tags }`
+`gemini-1.5-flash` via REST API. **Audio is NEVER sent to Gemini** to save token costs and prevent base64 overhead.
+
+1. **Text categorization** — full transcript from Groq or OCR text → `{ title, summary, category, tags }`
+2. **Metadata fallback** — metadata title + description → `{ title, summary, category, tags }`
 
 ### Prompt: Categorization
 

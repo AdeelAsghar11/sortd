@@ -34,6 +34,7 @@ CREATE TABLE IF NOT EXISTS notes (
   thumbnail        TEXT,
   list_id          TEXT DEFAULT 'inbox' REFERENCES lists(id) ON DELETE SET DEFAULT,
   starred          BOOLEAN DEFAULT FALSE,
+  search_vector    tsvector,
   created_at       TIMESTAMPTZ DEFAULT NOW(),
   updated_at       TIMESTAMPTZ DEFAULT NOW()
 );
@@ -65,6 +66,19 @@ CREATE TABLE IF NOT EXISTS settings (
   key    TEXT PRIMARY KEY,
   value  TEXT
 );
+
+### `errors`
+
+```sql
+CREATE TABLE IF NOT EXISTS errors (
+  id             SERIAL PRIMARY KEY,
+  job_id         TEXT,
+  error_message  TEXT,
+  stack          TEXT,
+  payload        JSONB,
+  created_at     TIMESTAMPTZ DEFAULT NOW()
+);
+```
 ```
 
 ---
@@ -78,6 +92,7 @@ CREATE INDEX IF NOT EXISTS idx_notes_starred ON notes(starred);
 CREATE INDEX IF NOT EXISTS idx_tags_name     ON tags(name);
 CREATE INDEX IF NOT EXISTS idx_note_tags_tag  ON note_tags(tag_id);
 CREATE INDEX IF NOT EXISTS idx_note_tags_note ON note_tags(note_id);
+CREATE INDEX IF NOT EXISTS idx_notes_search  ON notes USING GIN(search_vector);
 ```
 
 ---
@@ -126,7 +141,7 @@ Inserts note and handles tag insertion via `setNoteTags`.
 Fetches note with tags joined.
 
 #### `getAllNotes(filters) → Note[]`
-Supports filtering by `list_id`, `starred`, `search` (ILIKE), and `tag`.
+Supports filtering by `list_id`, `starred`, `search` (via `websearch_to_tsquery` on `search_vector`), and `tag`.
 
 #### `updateNote(id, updates) → Note`
 Handles field updates and tag replacement.

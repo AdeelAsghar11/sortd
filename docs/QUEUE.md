@@ -72,6 +72,7 @@ stateDiagram-v2
   fallbackNote: null | Note,        // the fallback note if any
   attempts: 0,                      // increments on each try
   maxAttempts: 2,                   // 1 retry
+  estimatedTimeRemaining: 0,        // seconds until completion
   createdAt: Date,
   startedAt: null | Date,
   completedAt: null | Date,
@@ -87,6 +88,8 @@ const QUEUE_CONFIG = {
   maxConcurrency: 2,              // max simultaneous jobs
   maxGeminiPerMinute: 30,         // rate limit
   maxGeminiPerDay: 900,           // leave headroom under 1000
+  maxGroqPerDay: 7200,            // 7,200 seconds (~120 mins) of audio
+  groqDailySecondsUsed: 0,        // reset at midnight
   retryDelayMs: 2000,             // base delay, doubles per attempt
   rateLimitRetryDelayMs: 60_000,  // wait 60s on Gemini 429
   pollIntervalMs: 500,            // worker loop checks queue every 500ms
@@ -95,9 +98,10 @@ const QUEUE_CONFIG = {
 
 ### Why These Numbers
 
-- **Concurrency 2**: Two jobs can run in parallel because each job does I/O (yt-dlp download, Gemini API call) not CPU. More than 2 risks hitting Gemini rate limits faster.
-- **30/min**: Gemini free tier is ~1000/day. At 30/min sustained, you'd hit 1000 in ~33 min of continuous use. In practice, users send bursts, not sustained streams.
-- **900/day**: 10% headroom below 1000 to account for retries and miscounting.
+- **Concurrency 2**: Sequential processing within groups prevents thundering herd. Each job is I/O bound.
+- **30/min**: Stays well under Gemini's free tier for typical burst usage.
+- **900/day**: 10% headroom below Gemini's 1000/day limit.
+- **7200s Groq**: Groq Whisper free tier allows 7,200 seconds of audio per day. We track usage to determine when to fallback to metadata-only.
 
 ---
 
@@ -183,6 +187,33 @@ class RateLimiter {
     };
   }
 }
+
+---
+
+## Wait-Time Estimation
+
+The queue tracks a rolling average of job durations to provide users with a "Ready in ~30s" estimate.
+
+### Rolling Average Algorithm
+
+```javascript
+const durations = []; // last 10 successful job durations (ms)
+const DEFAULT_DURATION = 30_000; // 30s fallback
+
+function getEstimatedDuration() {
+  if (durations.length === 0) return DEFAULT_DURATION;
+  return durations.reduce((a, b) => a + b, 0) / durations.length;
+}
+
+function updateEstimation(durationMs) {
+  durations.push(durationMs);
+  if (durations.length > 10) durations.shift();
+}
+```
+
+### Calculation for Job `i`
+`estimatedWait = (jobsAheadInQueue * getEstimatedDuration()) + currentJobRemainingTime`
+This value is broadcasted via SSE on every `job_queued` and `job_started` event.
 ```
 
 ### Behavior on Rate Limit Hit
@@ -190,8 +221,9 @@ class RateLimiter {
 | Scenario | Action |
 |----------|--------|
 | Per-minute limit reached | Worker pauses for `getWaitMs()` then retries |
-| Per-day limit reached | Job fails with `RATE_LIMITED` error. Note created with raw text only (no AI). |
+| Per-day limit reached (Gemini) | Job fails with `RATE_LIMITED` error. Note created with raw text only (no AI). |
 | Gemini returns 429 | Re-enqueue with 60s delay. Not counted as a retry attempt. |
+| Groq daily limit reached | **Fallback**: Use metadata-only processing. Do not fail the job. |
 
 ---
 
@@ -231,7 +263,7 @@ async function workerLoop() {
 4. On error:
    - If `attempts < maxAttempts`: increment, delay, set back to `pending`
    - If Gemini 429: set job state back to pending after 60s delay without incrementing attempts and without broadcasting a new `job_queued` SSE event.
-   - Otherwise: state → `failed`, add to dead letter log, broadcast `job_failed`
+   - Otherwise: state → `failed`, log to Supabase `errors` table, broadcast `job_failed`
 
 ---
 

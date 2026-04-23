@@ -16,29 +16,25 @@ graph TD
     end
 
     subgraph "Backend · Node.js + Express · Railway"
-        D -- "POST /api/process-url" --> F[API Router]
-        D -- "POST /api/process-image" --> F
+        D -- "POST /api/process-url" --> RL1[Rate Limiter]
+        RL1 --> F[API Router]
+        F -- "Check Duplicate" --> O
         F --> Q[Processing Queue]
 
         Q --> G[URL Processor]
         Q --> H[Image Processor]
 
         G --> J[yt-dlp CLI]
-        G --> JF[Fallback: Metadata-Only]
-        J --> K[Gemini AI]
-        JF --> K
-        G --> L["OG Scraper (open-graph-scraper)"]
-
-        H --> M[Tesseract.js OCR]
-        M --> K
-
-        K --> R[Rate Limiter · 30 req/min]
-        R --> N[Gemini API · gemini-1.5-flash]
+        J --> GW[Groq Whisper API]
+        GW --> K[Gemini AI]
+        G --> ST[Supabase Storage]
+        H --> ST
     end
 
     subgraph "Storage · Supabase"
         K --> O[(PostgreSQL)]
-        O --> P["notes · tags · note_tags · lists · settings"]
+        O --> P["notes · tags · note_tags · lists · settings · errors"]
+        ST --> BUC[("thumbnails bucket")]
     end
 
     Q -- SSE --> SSE
@@ -52,15 +48,25 @@ graph TD
 |-------|-----------|---------|-----|
 | **Frontend** | Vite + React | Vite 6.x, React 19.x | Fast HMR, no config |
 | **Backend** | Node.js + Express | Express 5.1 | ESM-only (`"type": "module"`), async routes |
-| **Video Download** | yt-dlp (system CLI) | Latest | Audio extraction from reels/shorts |
-| **Transcription** | Gemini multimodal API | gemini-1.5-flash | Audio → transcript + summary in one call |
-| **OCR** | Tesseract.js | 5.1.x | Server-side screenshot text extraction |
-| **AI** | Gemini API (free tier) | gemini-1.5-flash | Summarize, categorize, tag |
-| **Folder Watch** | Chokidar | 4.x | ESM-only FS event watcher |
+| **Hosting (Backend)** | Railway | — | Managed hosting with system deps (yt-dlp) |
+| **Hosting (Frontend)** | Vercel | — | Static hosting for SPA |
 | **Database** | Supabase (PostgreSQL) | — | Deployed, managed Postgres |
+| **Transcription** | Groq Whisper | whisper-large-v3 | Ultra-fast, free-tier transcription |
+| **AI (Text)** | Gemini API (free tier) | gemini-1.5-flash | Summarize, categorize, tag |
+| **OCR** | Tesseract.js | 5.1.x | Server-side screenshot text extraction |
+| **Asset Storage** | Supabase Storage | — | Persistent thumbnail caching |
+| **Rate Limiting** | express-rate-limit | 7.x | Protect API from abuse/quota drain |
+| **Folder Watch** | Chokidar | 4.x | **Disabled in Production** (Desktop/Local only) |
 | **OG Scraper** | open-graph-scraper | 6.8.x | Extract title/desc/thumbnail from URLs |
 | **File Uploads** | Multer | 2.0.0 | Multipart form handling |
-| **Queue** | Custom in-memory | — | Rate-limit Gemini, prevent thundering herd |
+| **Queue** | Custom in-memory | — | Rate-limit AI calls, sequential processing |
+
+### Reliability & Resilience
+
+- **yt-dlp Auto-Update**: Railway startup script forces `yt-dlp -U` to ensure latest extractor fixes (crucial for Instagram).
+- **Graceful Degradation**: If Groq or Gemini daily limits are reached, jobs fall back to "Metadata-Only" mode.
+- **Error Persistence**: All job failures are logged to a persistent `errors` table in Supabase for remote debugging.
+- **Duplicate Prevention**: Database lookup before queuing prevents redundant processing of the same URL.
 
 ### System Dependencies (not npm)
 
@@ -79,7 +85,7 @@ graph TD
 | No authentication | Private deployment. Protected by Supabase RLS if shared. |
 | Gemini free tier: ~1000 req/day | Rate limiting supports ~300-500 captures/day. |
 | yt-dlp breaks periodically | Instagram breaks often. Metadata-only fallback must always work. |
-| 25MB audio file limit | Gemini inline data ceiling. |
+| 25MB audio file limit | Groq Whisper API file size ceiling. |
 
 ---
 
