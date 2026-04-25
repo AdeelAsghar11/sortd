@@ -14,6 +14,7 @@ const Settings = lazy(() => import('./pages/Settings'));
 const Favorites = lazy(() => import('./pages/Favorites'));
 const Login = lazy(() => import('./pages/Login'));
 const Signup = lazy(() => import('./pages/Signup'));
+const ShareHandler = lazy(() => import('./pages/ShareHandler'));
 
 import { AuthProvider, useAuth } from './contexts/AuthContext';
 import Walkthrough from './components/Walkthrough';
@@ -108,6 +109,7 @@ function AppContent() {
           <Route path="/notes/:id" element={<NoteDetail />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/favorites" element={<Favorites />} />
+          <Route path="/share" element={<ShareHandler />} />
         </Route>
 
         {/* Catch-all Redirect */}
