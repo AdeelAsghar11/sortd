@@ -18,8 +18,7 @@ export default function BottomNav({ onAddClick }) {
       <div className="fixed bottom-6 left-0 right-0 z-50 flex justify-center">
         <nav className="mx-4 w-full max-w-md h-[72px] bg-white rounded-[32px] neo-shadow grid grid-cols-5 items-center border border-black/5 overflow-hidden">
           <NavLink 
-            to="/" 
-            end
+            to="/inbox" 
             className={({ isActive }) => `flex justify-center transition-colors ${isActive ? 'text-[#33b1ff]' : 'text-black/20'}`}
           >
             {({ isActive }) => <Inbox size={24} strokeWidth={isActive ? 2.5 : 2} />}

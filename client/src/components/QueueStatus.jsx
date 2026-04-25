@@ -53,19 +53,21 @@ export default function QueueStatus() {
       <style>{`
         .queue-status {
           position: fixed;
-          bottom: 80px;
-          right: var(--space-16);
-          background: var(--color-dark);
-          color: white;
-          border-radius: var(--radius-card);
-          box-shadow: var(--shadow-deep);
+          bottom: 110px;
+          right: 16px;
+          background: white;
+          color: #1a1d1f;
+          border-radius: 20px;
+          box-shadow: 0 8px 32px rgba(0,0,0,0.08);
           z-index: 1500;
-          width: 240px;
+          width: 220px;
           overflow: hidden;
           transition: all 0.3s ease;
+          border: 1px solid rgba(0,0,0,0.05);
+          font-family: 'Plus Jakarta Sans', sans-serif;
         }
         .queue-header {
-          padding: var(--space-12) var(--space-16);
+          padding: 12px 16px;
           display: flex;
           justify-content: space-between;
           align-items: center;
@@ -74,12 +76,12 @@ export default function QueueStatus() {
         .header-left {
           display: flex;
           align-items: center;
-          gap: var(--space-8);
-          font-size: 13px;
-          font-weight: 600;
+          gap: 8px;
+          font-size: 12px;
+          font-weight: 800;
         }
         .pulse {
-          color: var(--color-success);
+          color: #33b1ff;
           animation: pulse 2s infinite;
         }
         @keyframes pulse {
@@ -88,20 +90,21 @@ export default function QueueStatus() {
           100% { opacity: 1; }
         }
         .queue-details {
-          padding: 0 var(--space-16) var(--space-16);
+          padding: 0 16px 12px;
           display: flex;
           flex-direction: column;
-          gap: var(--space-8);
-          border-top: 1px solid rgba(255,255,255,0.1);
-          padding-top: var(--space-12);
+          gap: 6px;
+          border-top: 1px solid rgba(0,0,0,0.05);
+          padding-top: 10px;
         }
         .stat-row {
           display: flex;
           justify-content: space-between;
-          font-size: 12px;
-          opacity: 0.8;
+          font-size: 11px;
+          font-weight: 700;
+          color: rgba(0,0,0,0.4);
         }
-        .text-error { color: var(--color-error); }
+        .text-error { color: #ff4d4d; }
       `}</style>
     </div>
   );

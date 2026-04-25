@@ -6,7 +6,7 @@ import ProcessingOverlay from '../components/ProcessingOverlay';
 import ManageListsSheet from '../components/ManageListsSheet';
 import { FolderIcon } from '../components/icons';
 import { useSSE } from '../hooks/useSSE';
-import { Search, Filter, Loader2, Inbox as InboxIcon, ChevronDown } from 'lucide-react';
+import { Search, Filter, Loader2, Inbox as InboxIcon, ChevronDown, Sparkles, Youtube, Instagram, Zap } from 'lucide-react';
 
 const PLACEHOLDER_AVATAR = 'https://api.dicebear.com/7.x/avataaars/svg?seed=Sortd';
 const PINNED_KEY = 'sortd_pinned_lists';
@@ -259,12 +259,34 @@ export default function Inbox() {
           )}
         </>
       ) : (
-        <div className="flex flex-col items-center py-20 opacity-25">
-          <InboxIcon size={56} strokeWidth={1} />
-          <p className="mt-4 font-bold">Your inbox is empty</p>
-          <p className="text-[14px] mt-1 text-center max-w-[260px] text-[#6f767e]">
-            Paste a URL or upload a screenshot in the Add tab
+        <div className="flex flex-col items-center py-12 px-8 bg-white rounded-[32px] neo-shadow border border-black/5 text-center relative overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#33b1ff] to-[#7b61ff]" />
+          <div className="w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center mb-6">
+            <Sparkles className="text-[#33b1ff]" size={32} />
+          </div>
+          <h3 className="text-xl font-extrabold tracking-tight mb-3">Ready to save your first clip?</h3>
+          <p className="text-[14px] text-black/40 font-bold leading-relaxed mb-8 max-w-[300px]">
+            Paste a link from Instagram or YouTube to create an organized, searchable note in seconds.
           </p>
+          
+          <div className="flex flex-col gap-3 w-full max-w-[240px]">
+            <div className="flex items-center gap-3 p-4 bg-[#f5f7f9] rounded-2xl">
+              <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center shadow-sm border border-black/5">
+                <Youtube size={16} className="text-red-500" />
+              </div>
+              <span className="text-[12px] font-bold text-black/60 text-left">Save a recipe <br/>or tutorial</span>
+            </div>
+            <div className="flex items-center gap-3 p-4 bg-[#f5f7f9] rounded-2xl">
+              <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center shadow-sm border border-black/5">
+                <Instagram size={16} className="text-pink-500" />
+              </div>
+              <span className="text-[12px] font-bold text-black/60 text-left">Keep a travel <br/>reel for later</span>
+            </div>
+          </div>
+
+          <div className="mt-8 flex items-center gap-2 text-[12px] font-black uppercase tracking-widest text-[#33b1ff]">
+            Tap the + button to get started
+          </div>
         </div>
       )}
 

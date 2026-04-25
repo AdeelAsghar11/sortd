@@ -4,15 +4,17 @@ import {
   Lock, 
   LogOut, 
   ChevronRight,
-  Download,
+  Download, 
   Info
 } from 'lucide-react';
+import { useAuth } from '../contexts/AuthContext';
 
 export default function Settings() {
+  const { user: authUser, signOut } = useAuth();
   const [user, setUser] = useState({
-    name: 'Alex Rivera',
-    email: 'alex@sortd.io',
-    avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Sortd'
+    name: authUser?.email?.split('@')[0] || 'User',
+    email: authUser?.email || '',
+    avatar: `https://api.dicebear.com/7.x/avataaars/svg?seed=${authUser?.id}`
   });
 
   const [editing, setEditing] = useState(false);
@@ -206,7 +208,10 @@ export default function Settings() {
           <ChevronRight size={16} className="text-black/10" />
         </button>
 
-        <button className="w-full bg-white rounded-[24px] p-5 flex items-center justify-between neo-shadow active:scale-[0.98] transition-all">
+        <button 
+          onClick={() => signOut()}
+          className="w-full bg-white rounded-[24px] p-5 flex items-center justify-between neo-shadow active:scale-[0.98] transition-all"
+        >
           <div className="flex items-center gap-4">
             <div className={`w-10 h-10 rounded-2xl flex items-center justify-center bg-red-50 text-red-500`}>
               <LogOut size={18} />

@@ -1,5 +1,6 @@
 import { createClient } from '@supabase/supabase-js';
 import dotenv from 'dotenv';
+import crypto from 'crypto';
 
 dotenv.config();
 
@@ -8,6 +9,37 @@ const supabase = createClient(
   process.env.SUPABASE_SERVICE_ROLE_KEY
 );
 
+export async function ensureUserLists(userId) {
+  const defaultLists = [
+    { name: 'Inbox', emoji: '📥', sort_order: -1, is_default: true },
+    { name: 'Watch Later', emoji: '📺', sort_order: 0 },
+    { name: 'Learn', emoji: '🧠', sort_order: 1 },
+    { name: 'Ideas', emoji: '💡', sort_order: 2 },
+    { name: 'Opportunities', emoji: '🚀', sort_order: 3 },
+    { name: 'Recipes', emoji: '🍳', sort_order: 4 },
+    { name: 'Quotes', emoji: '✍️', sort_order: 5 },
+    { name: 'Deals', emoji: '🏷️', sort_order: 6 },
+    { name: 'Events', emoji: '📅', sort_order: 7 },
+    { name: 'Saved', emoji: '🔖', sort_order: 8 }
+  ];
+
+  const { data: existing } = await supabase
+    .from('lists')
+    .select('id')
+    .eq('user_id', userId)
+    .limit(1);
+
+  if (!existing || existing.length === 0) {
+    console.log(`Initializing default lists for user ${userId}...`);
+    const listsToInsert = defaultLists.map(l => ({
+      ...l,
+      id: crypto.randomUUID(),
+      user_id: userId
+    }));
+    await supabase.from('lists').insert(listsToInsert);
+  }
+}
+
 export async function initDB() {
   const { error } = await supabase.from('lists').select('id').limit(1);
   if (error) {
@@ -15,38 +47,15 @@ export async function initDB() {
     throw new Error(`Supabase connection failed: ${error.message}`);
   }
   console.log('✅ Supabase connected');
-  
-  // Ensure default lists exist
-  const defaultLists = [
-    { id: 'inbox', name: 'Inbox', emoji: '📥', sort_order: -1 },
-    { id: 'watch-later', name: 'Watch Later', emoji: '📺', sort_order: 0 },
-    { id: 'learn', name: 'Learn', emoji: '🧠', sort_order: 1 },
-    { id: 'ideas', name: 'Ideas', emoji: '💡', sort_order: 2 },
-    { id: 'opportunities', name: 'Opportunities', emoji: '🚀', sort_order: 3 },
-    { id: 'recipes', name: 'Recipes', emoji: '🍳', sort_order: 4 },
-    { id: 'poems-quotes', name: 'Quotes', emoji: '✍️', sort_order: 5 },
-    { id: 'deals', name: 'Deals', emoji: '🏷️', sort_order: 6 },
-    { id: 'events', name: 'Events', emoji: '📅', sort_order: 7 },
-    { id: 'saved', name: 'Saved', emoji: '🔖', sort_order: 8 }
-  ];
-
-  for (const list of defaultLists) {
-    const { data: existing } = await supabase.from('lists').select('id').eq('id', list.id).single();
-    if (!existing) {
-      console.log(`Initializing list: ${list.name}...`);
-      await supabase.from('lists').insert({ ...list, is_default: list.id === 'inbox' });
-    }
-  }
-  console.log('✅ Default lists verified');
 }
 
 // Notes
-export async function createNote(params) {
+export async function createNote(params, userId) {
   const { tags, ...noteData } = params;
   
   const { data: note, error } = await supabase
     .from('notes')
-    .insert([noteData])
+    .insert([{ ...noteData, user_id: userId }])
     .select()
     .single();
 
@@ -56,14 +65,15 @@ export async function createNote(params) {
     await setNoteTags(note.id, tags);
   }
 
-  return getNoteById(note.id);
+  return getNoteById(note.id, userId);
 }
 
-export async function getNoteById(id) {
+export async function getNoteById(id, userId) {
   const { data, error } = await supabase
     .from('notes')
     .select('*, note_tags(tags(name))')
     .eq('id', id)
+    .eq('user_id', userId)
     .single();
 
   if (error) throw error;
@@ -74,8 +84,10 @@ export async function getNoteById(id) {
   return { ...data, tags };
 }
 
-export async function getAllNotes(filters = {}) {
+export async function getAllNotes(filters = {}, userId) {
   let query = supabase.from('notes').select('*, note_tags(tags(name))', { count: 'exact' });
+
+  query = query.eq('user_id', userId);
 
   if (filters.list_id) {
     query = query.eq('list_id', filters.list_id);
@@ -113,14 +125,15 @@ export async function getAllNotes(filters = {}) {
   return { notes, total: count };
 }
 
-export async function updateNote(id, updates) {
+export async function updateNote(id, updates, userId) {
   const { tags, ...noteData } = updates;
 
   if (Object.keys(noteData).length > 0) {
     const { error } = await supabase
       .from('notes')
       .update({ ...noteData, updated_at: new Date().toISOString() })
-      .eq('id', id);
+      .eq('id', id)
+      .eq('user_id', userId);
     if (error) throw error;
   }
 
@@ -128,11 +141,11 @@ export async function updateNote(id, updates) {
     await setNoteTags(id, tags);
   }
 
-  return getNoteById(id);
+  return getNoteById(id, userId);
 }
 
-export async function deleteNote(id) {
-  const { error } = await supabase.from('notes').delete().eq('id', id);
+export async function deleteNote(id, userId) {
+  const { error } = await supabase.from('notes').delete().eq('id', id).eq('user_id', userId);
   if (error) throw error;
   return { success: true };
 }
@@ -170,15 +183,18 @@ export async function setNoteTags(noteId, tagNames) {
 }
 
 // Lists
-export async function getAllLists() {
+export async function getAllLists(userId) {
+  await ensureUserLists(userId);
+
   const { data: lists, error } = await supabase
     .from('lists')
     .select('*')
+    .eq('user_id', userId)
     .order('sort_order', { ascending: true });
 
   if (error) throw error;
   
-  const { data: counts, error: countError } = await supabase.rpc('get_list_counts');
+  const { data: counts, error: countError } = await supabase.rpc('get_list_counts', { p_user_id: userId });
   
   return lists.map(list => ({
     ...list,
@@ -186,43 +202,60 @@ export async function getAllLists() {
   }));
 }
 
-export async function createList(data) {
+export async function createList(data, userId) {
   const { data: list, error } = await supabase
     .from('lists')
-    .insert([data])
+    .insert([{ ...data, user_id: userId }])
     .select()
     .single();
   if (error) throw error;
   return list;
 }
 
-export async function updateList(id, data) {
+export async function updateList(id, data, userId) {
   const { data: list, error } = await supabase
     .from('lists')
     .update(data)
     .eq('id', id)
+    .eq('user_id', userId)
     .select()
     .single();
   if (error) throw error;
   return list;
 }
 
-export async function deleteList(id) {
-  if (id === 'inbox') {
+export async function deleteList(id, userId) {
+  const { data: list } = await supabase
+    .from('lists')
+    .select('is_default')
+    .eq('id', id)
+    .eq('user_id', userId)
+    .single();
+
+  if (list?.is_default) {
     const error = new Error('Cannot delete default list');
     error.code = 'DEFAULT_LIST_PROTECTED';
     throw error;
   }
   
-  // Move notes to inbox first
-  const { error: moveError } = await supabase
-    .from('notes')
-    .update({ list_id: 'inbox' })
-    .eq('id', id);
-  
-  if (moveError) throw moveError;
+  // Find inbox for this user
+  const { data: inbox } = await supabase
+    .from('lists')
+    .select('id')
+    .eq('user_id', userId)
+    .eq('is_default', true)
+    .single();
 
-  const { error } = await supabase.from('lists').delete().eq('id', id);
+  if (inbox) {
+    // Move notes to inbox first
+    await supabase
+      .from('notes')
+      .update({ list_id: inbox.id })
+      .eq('list_id', id)
+      .eq('user_id', userId);
+  }
+
+  const { error } = await supabase.from('lists').delete().eq('id', id).eq('user_id', userId);
   if (error) throw error;
   return { success: true };
 }

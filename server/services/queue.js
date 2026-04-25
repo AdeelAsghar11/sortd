@@ -64,16 +64,18 @@ let sseClients = [];
 const durations = [];
 const DEFAULT_DURATION = 30000;
 
-export function addSSEClient(res) {
+export function addSSEClient(res, userId) {
+  res.userId = userId;
   sseClients.push(res);
   res.on('close', () => {
     sseClients = sseClients.filter(c => c !== res);
   });
 }
 
-function broadcastSSE(event, data) {
+function broadcastSSE(event, data, userId = null) {
   const message = `event: ${event}\ndata: ${JSON.stringify(data)}\n\n`;
   sseClients.forEach(client => {
+    if (userId && client.userId !== userId) return;
     try { client.write(message); }
     catch (err) { /* ignore */ }
   });
@@ -84,12 +86,13 @@ function getEstimatedDuration() {
   return durations.reduce((a, b) => a + b, 0) / durations.length;
 }
 
-export function enqueue({ type, source, payload }) {
+export function enqueue({ type, source, payload, userId }) {
   const job = {
     id: uuidv4(),
     type,
     source,
     payload,
+    userId,
     state: 'pending',
     step: null,
     result: null,
@@ -105,9 +108,9 @@ export function enqueue({ type, source, payload }) {
     jobId: job.id,
     type: job.type,
     source: job.source,
-    position: jobs.filter(j => j.state === 'pending').length,
+    position: jobs.filter(j => j.state === 'pending' && j.userId === job.userId).length,
     timestamp: job.createdAt,
-  });
+  }, job.userId);
 
   return job.id;
 }
@@ -120,7 +123,7 @@ async function processJob(job) {
     type: job.type,
     step: 'starting',
     timestamp: job.startedAt,
-  });
+  }, job.userId);
 
   const updateStep = (step) => {
     job.step = step;
@@ -129,16 +132,16 @@ async function processJob(job) {
       type: job.type,
       step,
       timestamp: new Date(),
-    });
+    }, job.userId);
   };
 
   try {
     rateLimiter.record();
     let result;
     if (job.type === 'url') {
-      result = await processUrl(job.payload.url, updateStep);
+      result = await processUrl(job.payload.url, updateStep, job.userId);
     } else if (job.type === 'image') {
-      result = await processImage(job.payload.filePath, job.payload.sourceType, updateStep);
+      result = await processImage(job.payload.filePath, job.payload.sourceType, updateStep, job.userId);
     }
 
     job.state = 'done';
@@ -154,7 +157,7 @@ async function processJob(job) {
       note: result,
       processingTimeMs: duration,
       timestamp: job.completedAt,
-    });
+    }, job.userId);
   } catch (err) {
     console.error(`Job ${job.id} failed:`, err.message);
     job.attempts++;
@@ -175,7 +178,7 @@ async function processJob(job) {
         error: err.message,
         errorCode: job.errorCode,
         timestamp: new Date(),
-      });
+      }, job.userId);
     }
   }
 }

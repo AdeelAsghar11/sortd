@@ -109,7 +109,7 @@ async function downloadAudio(url, config) {
   });
 }
 
-export async function processUrl(url, updateJobStep) {
+export async function processUrl(url, updateJobStep, userId) {
   const platform = detectPlatform(url);
   const config = PLATFORM_CONFIGS[platform] || PLATFORM_CONFIGS.default;
 
@@ -145,13 +145,13 @@ export async function processUrl(url, updateJobStep) {
       transcript = await transcribeAudio(audioFile);
       
       updateJobStep('categorizing');
-      const lists = await getAllLists();
+      const lists = await getAllLists(userId);
       aiResult = await summarizeContent(transcript, platform, lists.map(l => l.name));
       aiResult.transcript = transcript;
     } else {
       updateJobStep('categorizing');
       const text = [metadata.title, metadata.description].filter(Boolean).join('\n\n');
-      const lists = await getAllLists();
+      const lists = await getAllLists(userId);
       aiResult = text
         ? await categorizeContent(text, platform, lists.map(l => l.name))
         : { title: metadata.title || url, summary: '', category: 'inbox', tags: [platform] };
@@ -189,7 +189,7 @@ export async function processUrl(url, updateJobStep) {
     thumbnail: thumbnail,
     list_id: aiResult.category, // Assuming AI returns valid list ID or we fallback to 'inbox' in DB
     tags: aiResult.tags,
-  });
+  }, userId);
 }
 
 async function downloadAudioWithRetry(url, config) {

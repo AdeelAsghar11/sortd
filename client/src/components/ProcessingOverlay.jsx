@@ -58,34 +58,35 @@ export default function ProcessingOverlay({ jobs }) {
       <style>{`
         .processing-container {
           position: fixed;
-          top: var(--space-16);
+          top: 16px;
           left: 50%;
           transform: translateX(-50%);
           z-index: 2000;
           display: flex;
           flex-direction: column;
-          gap: var(--space-8);
+          gap: 8px;
           width: calc(100% - 32px);
           max-width: 400px;
         }
         .job-toast {
-          background: var(--color-dark);
-          color: white;
-          padding: var(--space-12) var(--space-16);
-          border-radius: var(--radius-card);
-          box-shadow: var(--shadow-deep);
+          background: white;
+          color: #1a1d1f;
+          padding: 12px 16px;
+          border-radius: 20px;
+          box-shadow: 0 8px 32px rgba(0,0,0,0.08);
           display: flex;
           flex-direction: column;
-          gap: var(--space-8);
+          gap: 8px;
           overflow: hidden;
+          border: 1px solid rgba(0,0,0,0.05);
         }
-        .job-toast.done { background: var(--color-success); }
-        .job-toast.failed { background: var(--color-error); }
+        .job-toast.done { border-left: 4px solid #98fb98; }
+        .job-toast.failed { border-left: 4px solid #ff4d4d; }
         
         .job-info {
           display: flex;
           align-items: center;
-          gap: var(--space-12);
+          gap: 12px;
         }
         .job-text {
           display: flex;
@@ -94,35 +95,40 @@ export default function ProcessingOverlay({ jobs }) {
           flex: 1;
         }
         .job-label {
-          font-weight: 700;
-          text-transform: capitalize;
+          font-weight: 800;
           font-size: 14px;
+          letter-spacing: -0.01em;
         }
         .view-link {
-          color: white;
+          color: #33b1ff;
           font-size: 13px;
-          font-weight: 700;
+          font-weight: 800;
           display: flex;
           align-items: center;
           gap: 4px;
-          text-decoration: underline;
         }
         .error-msg {
           font-size: 12px;
-          opacity: 0.9;
+          color: #ff4d4d;
+          font-weight: 600;
         }
         .progress-bar {
-          height: 3px;
-          background: rgba(255,255,255,0.2);
+          height: 4px;
+          background: #f5f7f9;
           border-radius: 2px;
           overflow: hidden;
         }
         .progress-fill {
           height: 100%;
-          background: white;
+          background: #33b1ff;
           width: 10%;
         }
-        .spinner { animation: spin 1s linear infinite; }
+        .spinner { 
+          animation: spin 1s linear infinite; 
+          color: #33b1ff;
+        }
+        .success-icon { color: #4ade80; }
+        .error-icon { color: #ff4d4d; }
         @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
       `}</style>
     </div>

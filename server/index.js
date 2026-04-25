@@ -11,6 +11,7 @@ import * as db from './services/database.js';
 import * as storage from './services/storage.js';
 import { enqueue, getQueueStats, addSSEClient, startWorker } from './services/queue.js';
 import { resetGeminiClient } from './services/gemini.js';
+import { authenticate } from './services/auth.js';
 
 dotenv.config();
 
@@ -36,49 +37,49 @@ const upload = multer({ dest: 'temp/' });
 // Routes
 
 // Notes
-app.get('/api/notes', async (req, res) => {
+app.get('/api/notes', authenticate, async (req, res) => {
   try {
-    const notes = await db.getAllNotes(req.query);
+    const notes = await db.getAllNotes(req.query, req.user.id);
     res.json(notes);
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
 });
 
-app.get('/api/notes/:id', async (req, res) => {
+app.get('/api/notes/:id', authenticate, async (req, res) => {
   try {
-    const note = await db.getNoteById(req.params.id);
+    const note = await db.getNoteById(req.params.id, req.user.id);
     res.json(note);
   } catch (err) {
     res.status(404).json({ error: 'Note not found' });
   }
 });
 
-app.post('/api/notes', async (req, res) => {
+app.post('/api/notes', authenticate, async (req, res) => {
   try {
     const note = await db.createNote({
       id: uuidv4(),
       ...req.body,
       source_type: 'manual'
-    });
+    }, req.user.id);
     res.status(201).json(note);
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
 });
 
-app.patch('/api/notes/:id', async (req, res) => {
+app.patch('/api/notes/:id', authenticate, async (req, res) => {
   try {
-    const note = await db.updateNote(req.params.id, req.body);
+    const note = await db.updateNote(req.params.id, req.body, req.user.id);
     res.json(note);
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
 });
 
-app.delete('/api/notes/:id', async (req, res) => {
+app.delete('/api/notes/:id', authenticate, async (req, res) => {
   try {
-    const result = await db.deleteNote(req.params.id);
+    const result = await db.deleteNote(req.params.id, req.user.id);
     res.json(result);
   } catch (err) {
     res.status(500).json({ error: err.message });
@@ -86,39 +87,39 @@ app.delete('/api/notes/:id', async (req, res) => {
 });
 
 // Lists
-app.get('/api/lists', async (req, res) => {
+app.get('/api/lists', authenticate, async (req, res) => {
   try {
-    const lists = await db.getAllLists();
+    const lists = await db.getAllLists(req.user.id);
     res.json(lists);
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
 });
 
-app.post('/api/lists', async (req, res) => {
+app.post('/api/lists', authenticate, async (req, res) => {
   try {
     const list = await db.createList({
       id: uuidv4(),
       ...req.body
-    });
+    }, req.user.id);
     res.status(201).json(list);
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
 });
 
-app.patch('/api/lists/:id', async (req, res) => {
+app.patch('/api/lists/:id', authenticate, async (req, res) => {
   try {
-    const list = await db.updateList(req.params.id, req.body);
+    const list = await db.updateList(req.params.id, req.body, req.user.id);
     res.json(list);
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
 });
 
-app.delete('/api/lists/:id', async (req, res) => {
+app.delete('/api/lists/:id', authenticate, async (req, res) => {
   try {
-    const result = await db.deleteList(req.params.id);
+    const result = await db.deleteList(req.params.id, req.user.id);
     res.json(result);
   } catch (err) {
     res.status(err.code === 'DEFAULT_LIST_PROTECTED' ? 400 : 500).json({ error: err.message });
@@ -126,15 +127,16 @@ app.delete('/api/lists/:id', async (req, res) => {
 });
 
 // Processing
-app.post('/api/process-url', async (req, res) => {
+app.post('/api/process-url', authenticate, async (req, res) => {
   const { url } = req.body;
   if (!url) return res.status(400).json({ error: 'URL is required' });
 
-  // Check duplicate
+  // Check duplicate for this user
   const { data: existing } = await db.supabase
     .from('notes')
     .select('id')
     .eq('source_url', url)
+    .eq('user_id', req.user.id)
     .single();
 
   if (existing) {
@@ -144,18 +146,20 @@ app.post('/api/process-url', async (req, res) => {
   const jobId = enqueue({
     type: 'url',
     source: 'api',
+    userId: req.user.id,
     payload: { url }
   });
 
   res.status(202).json({ jobId });
 });
 
-app.post('/api/process-image', upload.single('image'), async (req, res) => {
+app.post('/api/process-image', authenticate, upload.single('image'), async (req, res) => {
   if (!req.file) return res.status(400).json({ error: 'Image file is required' });
 
   const jobId = enqueue({
     type: 'image',
     source: 'api',
+    userId: req.user.id,
     payload: { 
       filePath: req.file.path,
       sourceType: 'screenshot'
@@ -166,12 +170,12 @@ app.post('/api/process-image', upload.single('image'), async (req, res) => {
 });
 
 // Queue
-app.get('/api/queue/stats', (req, res) => {
+app.get('/api/queue/stats', authenticate, (req, res) => {
   res.json(getQueueStats());
 });
 
 // Settings
-app.get('/api/settings', async (req, res) => {
+app.get('/api/settings', authenticate, async (req, res) => {
   try {
     const geminiKey = await db.getSetting('gemini_api_key');
     res.json({
@@ -183,7 +187,7 @@ app.get('/api/settings', async (req, res) => {
   }
 });
 
-app.post('/api/settings/gemini-key', async (req, res) => {
+app.post('/api/settings/gemini-key', authenticate, async (req, res) => {
   try {
     await db.setSetting('gemini_api_key', req.body.key);
     resetGeminiClient();
@@ -194,14 +198,14 @@ app.post('/api/settings/gemini-key', async (req, res) => {
 });
 
 // SSE
-app.get('/api/events', (req, res) => {
+app.get('/api/events', authenticate, (req, res) => {
   res.writeHead(200, {
     'Content-Type': 'text/event-stream',
     'Cache-Control': 'no-cache',
     'Connection': 'keep-alive',
   });
   res.write(`event: connected\ndata: ${JSON.stringify({ serverTime: new Date().toISOString() })}\n\n`);
-  addSSEClient(res);
+  addSSEClient(res, req.user.id);
 });
 
 // Start Server

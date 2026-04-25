@@ -1,11 +1,20 @@
+import { supabase } from './contexts/AuthContext';
+
 const API_BASE = (import.meta.env.VITE_API_URL || 'http://localhost:3001') + '/api';
+
+async function getAuthHeaders() {
+  const { data: { session } } = await supabase.auth.getSession();
+  return session ? { 'Authorization': `Bearer ${session.access_token}` } : {};
+}
 
 async function request(path, options = {}) {
   const url = `${API_BASE}${path}`;
+  const authHeaders = await getAuthHeaders();
   const response = await fetch(url, {
     ...options,
     headers: {
       'Content-Type': 'application/json',
+      ...authHeaders,
       ...options.headers,
     },
   });
@@ -45,8 +54,12 @@ export const api = {
   processImage: async (file) => {
     const formData = new FormData();
     formData.append('image', file);
+    const authHeaders = await getAuthHeaders();
     const response = await fetch(`${API_BASE}/process-image`, {
       method: 'POST',
+      headers: {
+        ...authHeaders
+      },
       body: formData,
     });
     if (!response.ok) throw new Error('Upload failed');

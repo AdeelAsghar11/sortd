@@ -9,7 +9,7 @@ import { uploadImage } from './storage.js';
 /**
  * Process an image file: Optimize -> Gemini Vision -> Storage -> Supabase Note
  */
-export async function processImage(filePath, sourceType = 'screenshot', updateJobStep) {
+export async function processImage(filePath, sourceType = 'screenshot', updateJobStep, userId) {
   if (!fs.existsSync(filePath)) {
     throw new Error(`Image file not found: ${filePath}`);
   }
@@ -24,7 +24,7 @@ export async function processImage(filePath, sourceType = 'screenshot', updateJo
       .toBuffer();
 
     updateJobStep('analyzing');
-    const lists = await getAllLists();
+    const lists = await getAllLists(userId);
     
     // Use optimized WebP for Gemini analysis (saves bandwidth and latency)
     const aiResult = await analyzeImage(optimizedBuffer, 'image/webp', lists.map(l => l.name));
@@ -52,7 +52,7 @@ export async function processImage(filePath, sourceType = 'screenshot', updateJo
       source_type: sourceType,
       thumbnail: thumbnail,
       list_id: aiResult.category,
-    });
+    }, userId);
   } finally {
     if (fs.existsSync(filePath)) {
       fs.unlinkSync(filePath);

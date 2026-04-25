@@ -105,7 +105,7 @@ export default function AddContentSheet({ onClose }) {
           </h4>
           <UploadZone onUpload={handleFileUpload} />
           <p className="text-[11px] font-bold text-black/25 mt-3 ml-1 leading-relaxed">
-            We'll use Gemini Vision to extract and categorize the content
+            Every upload is organized and summarized automatically.
           </p>
         </div>
       </div>

@@ -1,11 +1,8 @@
 import { useEffect, useRef } from 'react';
+import { supabase } from '../contexts/AuthContext';
 
 const SSE_URL = (import.meta.env.VITE_API_URL || 'http://localhost:3001') + '/api/events';
 
-/**
- * Enhanced SSE hook that uses a callback pattern to avoid re-render loops
- * @param {Function} onEvent - Callback called when any event arrives
- */
 export function useSSE(onEvent) {
   const onEventRef = useRef(onEvent);
   
@@ -14,7 +11,14 @@ export function useSSE(onEvent) {
   }, [onEvent]);
 
   useEffect(() => {
-    const es = new EventSource(SSE_URL);
+    let es = null;
+
+    const connect = async () => {
+      const { data: { session } } = await supabase.auth.getSession();
+      if (!session) return;
+
+      const urlWithAuth = `${SSE_URL}?token=${session.access_token}`;
+      es = new EventSource(urlWithAuth);
 
     const eventNames = ['job_queued', 'job_started', 'job_done', 'job_failed', 'watch_status'];
     
@@ -32,12 +36,16 @@ export function useSSE(onEvent) {
     es.onopen = () => console.log('✅ SSE Connected');
     es.onerror = (err) => {
       console.error('❌ SSE Error:', err);
-      // EventSource automatically retries, but we log it
+    };
     };
 
+    connect();
+
     return () => {
-      es.close();
-      console.log('🔌 SSE Disconnected');
+      if (es) {
+        es.close();
+        console.log('🔌 SSE Disconnected');
+      }
     };
   }, []);
 }
