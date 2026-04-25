@@ -143,7 +143,7 @@ export default function NoteDetail() {
         {editing ? (
           <input
             className="input-flat"
-            style={{ fontSize: '26px', fontWeight: 800, letterSpacing: '-0.5px', padding: '12px 16px' }}
+            style={{ fontSize: '26px', fontWeight: 800, letterSpacing: '-0.5px', padding: '12px 16px', width: '100%' }}
             value={editedNote.title}
             onChange={e => setEditedNote({ ...editedNote, title: e.target.value })}
           />
@@ -156,7 +156,7 @@ export default function NoteDetail() {
 
       {/* ── Organisation row ─────────────────────────── */}
       <div
-        className="flex flex-wrap"
+        className="flex items-center"
         style={{ gap: '20px', padding: '16px', background: 'white', borderRadius: '20px', marginBottom: '24px' }}
       >
         <div className="flex items-center" style={{ gap: '8px', color: '#6f767e' }}>
@@ -174,142 +174,14 @@ export default function NoteDetail() {
             {lists.map(l => <option key={l.id} value={l.id}>{l.name}</option>)}
           </select>
         </div>
-
-        <div className="flex items-center flex-wrap" style={{ gap: '8px', color: '#6f767e' }}>
-          <Tag size={16} />
-          {note.tags?.map(tag => <TagPill key={tag} name={tag} />)}
-          {(!note.tags || note.tags.length === 0) && (
-            <span style={{ fontSize: '13px', color: 'rgba(0,0,0,0.3)' }}>No tags</span>
-          )}
-        </div>
       </div>
 
-      <div className="note-body">
-        {editing ? (
-          <textarea 
-            className="content-input"
-            value={editedNote.content}
-            onChange={e => setEditedNote({...editedNote, content: e.target.value})}
-            rows={10}
-          />
-        ) : (
-          <div className="content-text">{note.content}</div>
-        )}
-        
-        {note.transcription && (
-          <div className="transcription-section">
-            <h3>Transcription</h3>
-            <p>{note.transcription}</p>
-          </div>
-        )}
-      </div>
-
-      <style>{`
-        .note-detail-page {
-          padding-bottom: var(--space-64);
-        }
-        .header-nav {
-          display: flex;
-          justify-content: space-between;
-          padding: var(--space-20) 0;
-          align-items: center;
-        }
-        .nav-actions {
-          display: flex;
-          gap: var(--space-20);
-          align-items: center;
-        }
-        .note-hero {
-          margin-bottom: var(--space-32);
-        }
-        .source-meta {
-          display: flex;
-          gap: var(--space-16);
-          margin-bottom: var(--space-12);
-          align-items: center;
-        }
-        .source-link {
-          font-size: 14px;
-          display: flex;
-          align-items: center;
-          gap: 4px;
-          font-weight: 600;
-        }
-        .note-title {
-          font-size: 32px;
-          line-height: 1.2;
-          letter-spacing: -1px;
-        }
-        .title-input {
-          font-size: 32px;
-          font-weight: 700;
-          border: none;
-          border-bottom: 2px solid var(--color-accent);
-          width: 100%;
-          outline: none;
-        }
-        .note-organization {
-          display: flex;
-          flex-wrap: wrap;
-          gap: var(--space-24);
-          padding: var(--space-16);
-          background: var(--color-bg-warm);
-          border-radius: var(--radius-card);
-          margin-bottom: var(--space-32);
-        }
-        .org-item {
-          display: flex;
-          align-items: center;
-          gap: var(--space-8);
-          color: var(--color-text-secondary);
-        }
-        .org-item select {
-          border: none;
-          background: transparent;
-          font-weight: 600;
-          font-size: 14px;
-          color: var(--color-text);
-          cursor: pointer;
-        }
-        .note-body {
-          font-size: 18px;
-          line-height: 1.6;
-          color: var(--color-text);
-        }
-        .content-input {
-          width: 100%;
-          padding: var(--space-16);
-          border: 1px solid var(--color-border);
-          border-radius: var(--radius-card);
-          font-size: 18px;
-          line-height: 1.6;
-        }
-        .transcription-section {
-          margin-top: var(--space-48);
-          padding-top: var(--space-24);
-          border-top: 1px solid var(--color-border);
-        }
-        .transcription-section h3 {
-          font-size: 14px;
-          text-transform: uppercase;
-          letter-spacing: 1px;
-          color: var(--color-text-muted);
-          margin-bottom: var(--space-12);
-        }
-        .transcription-section p {
-          font-size: 14px;
-          color: var(--color-text-secondary);
-          white-space: pre-wrap;
-        }
-        .spinner { animation: spin 1s linear infinite; color: var(--color-accent); }
-        @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-      `}</style>
       {/* ── AI Summary card (dark) ───────────────────── */}
       {note.content && (
         <div
           style={{
             background: '#1a1a1a', borderRadius: '20px',
-            padding: '20px', marginBottom: '20px',
+            padding: '24px', marginBottom: '20px',
           }}
         >
           <div className="flex items-center" style={{ gap: '8px', marginBottom: '12px' }}>

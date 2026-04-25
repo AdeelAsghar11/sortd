@@ -51,6 +51,18 @@ export default function UploadZone({ onUpload }) {
       onDragLeave={handleDragLeave}
       onDrop={handleDrop}
       onClick={() => !isUploading && fileInputRef.current.click()}
+      style={{
+        background: '#f5f7f9',
+        border: '2px dashed rgba(0,0,0,0.05)',
+        borderRadius: '32px',
+        padding: '48px 24px',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        cursor: 'pointer',
+        transition: 'all 0.2s',
+      }}
     >
       <input
         type="file"
@@ -61,78 +73,36 @@ export default function UploadZone({ onUpload }) {
       />
       
       {isUploading ? (
-        <div className="upload-status">
-          <Loader2 className="spinner" size={32} />
-          <p>Uploading screenshot...</p>
+        <div className="flex flex-col items-center gap-3">
+          <Loader2 className="spinner text-[#33b1ff]" size={32} />
+          <p className="text-[14px] font-bold text-black/40">Processing...</p>
         </div>
       ) : (
-        <div className="upload-prompt">
-          <div className="icon-stack">
-            <Upload className="upload-icon" size={24} />
-            <ImageIcon className="image-icon" size={32} />
+        <div className="flex flex-col items-center text-center">
+          <div className="relative mb-6">
+            <ImageIcon className="text-black/20" size={48} strokeWidth={1.5} />
+            <div className="absolute -top-2 -right-2 w-7 h-7 bg-white rounded-full flex items-center justify-center shadow-sm border border-black/5">
+              <Upload className="text-[#33b1ff]" size={14} strokeWidth={2.5} />
+            </div>
           </div>
-          <h3>Drop screenshot or tap to upload</h3>
-          <p>Supports PNG, JPG, WEBP</p>
+          <h3 className="text-[16px] font-extrabold tracking-tight text-[#1a1d1f] mb-1">
+            Drop screenshot or tap to upload
+          </h3>
+          <p className="text-[13px] font-bold text-black/20">
+            Supports PNG, JPG, WEBP
+          </p>
         </div>
       )}
 
       <style>{`
-        .upload-zone {
-          border: 2px dashed var(--color-border);
-          background: var(--color-bg-warm);
-          border-radius: var(--radius-card);
-          height: 200px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          cursor: pointer;
-          transition: all 0.2s ease;
-          position: relative;
-          overflow: hidden;
+        .upload-zone:hover {
+          background: #eff2f5;
+          border-color: rgba(51, 177, 255, 0.2);
         }
         .upload-zone.dragging {
-          border-color: var(--color-accent);
-          background: rgba(0, 117, 222, 0.04);
-          transform: scale(1.02);
-        }
-        .upload-zone.uploading {
-          cursor: default;
-        }
-        .upload-prompt, .upload-status {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: var(--space-8);
-          text-align: center;
-        }
-        .icon-stack {
-          position: relative;
-          margin-bottom: var(--space-8);
-        }
-        .image-icon { color: var(--color-text-muted); }
-        .upload-icon {
-          position: absolute;
-          top: -10px;
-          right: -10px;
-          color: var(--color-accent);
-          background: white;
-          border-radius: 50%;
-        }
-        .upload-zone h3 {
-          font-size: 16px;
-          font-weight: 600;
-        }
-        .upload-zone p {
-          font-size: 14px;
-          color: var(--color-text-muted);
-        }
-        .spinner {
-          animation: spin 1s linear infinite;
-          color: var(--color-accent);
-        }
-        @keyframes spin {
-          from { transform: rotate(0deg); }
-          to { transform: rotate(360deg); }
+          background: rgba(51, 177, 255, 0.05);
+          border-color: #33b1ff;
+          transform: scale(1.01);
         }
       `}</style>
     </div>

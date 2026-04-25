@@ -1,116 +1,31 @@
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
 
-/* ─── Design Tokens ─────────────────────────────────── */
 :root {
-  /* Core palette (updated for new design) */
-  --color-bg:              #ffffff;
-  --color-bg-warm:         #f5f7f9;
-  --color-text:            #1a1d1f;
-  --color-text-secondary:  #6f767e;
-  --color-text-muted:      #a39e98;
-  --color-accent:          #33b1ff;
-  --color-accent-hover:    #1a9fe8;
-  --color-accent-focus:    #33b1ff;
-  --color-badge-bg:        #e8f6ff;
-  --color-badge-text:      #33b1ff;
-  --color-border:          #efefef;
-  --color-dark:            #31302e;
-  --color-error:           #dd5b00;
-  --color-success:         #1aae39;
-
-  /* Spacing */
-  --space-2:  2px;   --space-4:  4px;   --space-8:  8px;
-  --space-12: 12px;  --space-16: 16px;  --space-20: 20px;
-  --space-24: 24px;  --space-32: 32px;  --space-48: 48px;
-  --space-64: 64px;
-
-  /* Shadows */
-  --shadow-card: rgba(0,0,0,0.04) 0px 4px 18px,
-                 rgba(0,0,0,0.027) 0px 2.025px 7.85px,
-                 rgba(0,0,0,0.02) 0px 0.8px 2.93px,
-                 rgba(0,0,0,0.01) 0px 0.175px 1.04px;
-  --shadow-deep: rgba(0,0,0,0.01) 0px 1px 3px,
-                 rgba(0,0,0,0.02) 0px 3px 7px,
-                 rgba(0,0,0,0.02) 0px 7px 15px,
-                 rgba(0,0,0,0.04) 0px 14px 28px,
-                 rgba(0,0,0,0.05) 0px 23px 52px;
-
-  /* Radii */
-  --radius-button: 999px;
-  --radius-card:   16px;
-  --radius-hero:   24px;
-  --radius-pill:   999px;
-
-  /* Typography */
-  --font-family: 'Plus Jakarta Sans', -apple-system, system-ui, sans-serif;
-}
-
-/* ─── Base Reset ─────────────────────────────────────── */
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-html, body {
-  height: 100%;
+  --color-bg:           #ffffff;
+  --color-bg-warm:      #f5f7f9;
+  --color-text:         #1a1d1f;
+  --color-text-secondary: #6f767e;
+  --color-text-muted:    #a39e98;
+  --color-accent:       #33b1ff;
+  --color-accent-hover: #1a9fe8;
+  --color-success:      #98fb98;
+  --color-border:       #efefef;
+  --color-error:        #ff4d4d;
+  
+  --radius-pill:        999px;
+  --radius-card:        24px;
+  --font-family:        'Plus Jakarta Sans', -apple-system, system-ui, sans-serif;
 }
 
 body {
-  font-family: var(--font-family);
   background-color: var(--color-bg-warm);
   color: var(--color-text);
-  line-height: 1.5;
-  font-size: 16px;
+  font-family: var(--font-family);
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 800;
-  line-height: 1.2;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-button {
-  cursor: pointer;
-  font-family: inherit;
-  border: none;
-  background: none;
-  font-size: 14px;
-  font-weight: 600;
-  transition: all 0.2s ease;
-}
-
-input, textarea, select {
-  font-family: inherit;
-  font-size: 16px;
-}
-
-/* ─── Layout Helpers ─────────────────────────────────── */
-.app-container {
-  min-height: 100vh;
-  background-color: var(--color-bg-warm);
-}
-
-.main-content {
-  flex: 1;
-  padding-bottom: 140px;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 var(--space-16);
-}
-
-/* ─── New Design System Classes ──────────────────────── */
 
 .neo-shadow {
   box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.06);
@@ -127,99 +42,50 @@ input, textarea, select {
   transform: scale(0.95);
 }
 
-.no-scrollbar::-webkit-scrollbar { display: none; }
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-/* ─── Buttons ─────────────────────────────────────────── */
 .btn-primary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   background: var(--color-accent);
   color: white;
   border-radius: var(--radius-pill);
   padding: 12px 24px;
   font-weight: 700;
-  font-family: var(--font-family);
-  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border: none;
-  transition: all 0.2s ease;
-}
-
-.btn-primary:hover {
-  background: var(--color-accent-hover);
+  cursor: pointer;
+  transition: all 0.2s;
 }
 
 .btn-primary:active {
   transform: scale(0.97);
 }
 
-.btn-secondary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(0,0,0,0.05);
-  color: var(--color-text);
-  padding: 8px 16px;
-  border-radius: var(--radius-pill);
-  font-weight: 700;
-  cursor: pointer;
-  border: none;
-  transition: all 0.2s ease;
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-.btn-secondary:hover {
-  background-color: rgba(0,0,0,0.1);
-}
-
-/* ─── Form Elements ───────────────────────────────────── */
-.input-flat {
-  display: block;
-  background: white;
-  border: 1px solid var(--color-border);
-  border-radius: 16px;
-  padding: 14px 18px;
-  width: 100%;
-  font-weight: 600;
-  font-family: var(--font-family);
-  font-size: 15px;
-  outline: none;
-  transition: all 0.2s;
-  color: var(--color-text);
-}
-
-.input-flat:focus {
-  border-color: var(--color-accent);
-  box-shadow: 0 0 0 4px rgba(51, 177, 255, 0.1);
-}
-
-.input-flat::placeholder {
-  color: var(--color-text-muted);
-  font-weight: 500;
-}
-
-/* ─── Animations ──────────────────────────────────────── */
 .modal-overlay {
   background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(8px);
   animation: fadeIn 0.2s ease-out;
 }
 
 @keyframes fadeIn {
   from { opacity: 0; }
-  to   { opacity: 1; }
+  to { opacity: 1; }
 }
 
 .bottom-sheet-anim {
-  animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 @keyframes slideUp {
   from { transform: translateY(100%); }
-  to   { transform: translateY(0); }
+  to { transform: translateY(0); }
 }
 
 .heart-pop {
@@ -227,75 +93,33 @@ input, textarea, select {
 }
 
 @keyframes heartPop {
-  0%   { transform: scale(1); }
-  50%  { transform: scale(1.4); }
+  0% { transform: scale(1); }
+  50% { transform: scale(1.4); }
   100% { transform: scale(1); }
 }
 
+.input-flat {
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 14px 18px;
+  width: 100%;
+  font-weight: 600;
+  outline: none;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.input-flat:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 4px rgba(51, 177, 255, 0.1);
+}
+
+/* Spinner */
 .spinner {
   animation: spin 1s linear infinite;
 }
-
 @keyframes spin {
   from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
-}
-
-/* Page transitions (kept for compatibility) */
-.page-enter           { opacity: 0; transform: translateY(10px); }
-.page-enter-active    { opacity: 1; transform: translateY(0); transition: all 0.3s ease; }
-.page-exit            { opacity: 1; transform: translateY(0); }
-.page-exit-active     { opacity: 0; transform: translateY(-10px); transition: all 0.3s ease; }
-
-/* ─── Legacy Utility Classes (kept for QueueStatus, ProcessingOverlay) ── */
-.flex            { display: flex; }
-.flex-col        { flex-direction: column; }
-.items-center    { align-items: center; }
-.justify-between { justify-content: space-between; }
-.gap-8           { gap: var(--space-8); }
-.gap-16          { gap: var(--space-16); }
-
-.loading-state {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 200px;
-}
-
-.pill-badge {
-  background-color: var(--color-badge-bg);
-  color: var(--color-badge-text);
-  padding: var(--space-4) var(--space-8);
-  border-radius: var(--radius-pill);
-  font-size: 12px;
-  font-weight: 700;
-}
-
-/* Card base (kept for ProcessingOverlay, QueueStatus) */
-.card {
-  background: white;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-card);
-  box-shadow: var(--shadow-card);
-  overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.card:hover {
-  box-shadow: var(--shadow-deep);
-}
-
-/* Page title helpers */
-.page-title {
-  font-size: 28px;
-  font-weight: 800;
-  letter-spacing: -0.5px;
-  color: var(--color-text);
-}
-
-.section-title {
-  font-size: 22px;
-  font-weight: 800;
-  letter-spacing: -0.25px;
-  color: var(--color-text);
+  to { transform: rotate(360deg); }
 }

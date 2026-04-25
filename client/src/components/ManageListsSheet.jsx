@@ -13,18 +13,18 @@ export default function ManageListsSheet({ lists, onToggle, onClose }) {
       >
         {/* Drag handle */}
         <div
-          className="mx-auto mb-6"
-          style={{ width: '48px', height: '6px', borderRadius: '999px', background: 'rgba(0,0,0,0.05)' }}
+          className="mx-auto mb-4"
+          style={{ width: '40px', height: '5px', borderRadius: '999px', background: 'rgba(0,0,0,0.05)' }}
         />
 
         {/* Header */}
         <div className="flex justify-between items-center mb-6 px-2">
-          <h3 className="text-2xl font-extrabold tracking-tight" style={{ color: '#1a1d1f' }}>
+          <h3 className="text-[26px] font-extrabold tracking-tight" style={{ color: '#1a1d1f' }}>
             Inbox Lists
           </h3>
           <button
             onClick={onClose}
-            className="p-2 rounded-full transition-all active:scale-90"
+            className="w-10 h-10 rounded-full flex items-center justify-center transition-all active:scale-90"
             style={{ background: '#f5f7f9' }}
           >
             <X size={20} style={{ color: '#1a1d1f' }} />
@@ -33,8 +33,8 @@ export default function ManageListsSheet({ lists, onToggle, onClose }) {
 
         {/* List rows */}
         <div
-          className="no-scrollbar px-2 mb-8"
-          style={{ display: 'grid', gap: '8px', maxHeight: '340px', overflowY: 'auto' }}
+          className="no-scrollbar px-2 mb-6"
+          style={{ display: 'grid', gap: '8px', maxHeight: '300px', overflowY: 'auto' }}
         >
           {lists.map(l => (
             <button
@@ -42,7 +42,7 @@ export default function ManageListsSheet({ lists, onToggle, onClose }) {
               onClick={() => onToggle(l.id)}
               className="flex items-center justify-between transition-all active:scale-[0.98]"
               style={{
-                padding: '20px',
+                padding: '16px',
                 borderRadius: '24px',
                 border: l.showInInbox
                   ? '1px solid rgba(51,177,255,0.3)'
@@ -102,7 +102,7 @@ export default function ManageListsSheet({ lists, onToggle, onClose }) {
           <button
             onClick={onClose}
             className="w-full btn-primary"
-            style={{ padding: '20px', fontSize: '16px' }}
+            style={{ padding: '16px', fontSize: '16px' }}
           >
             Save Changes
           </button>

@@ -32,7 +32,6 @@ export default function Favorites() {
     }
   };
 
-  // Pick up newly starred notes from SSE
   const handleEvent = useCallback((event) => {
     if (event.type === 'job_done' && event.data?.note?.starred) {
       setNotes(prev => [event.data.note, ...prev]);
@@ -42,26 +41,21 @@ export default function Favorites() {
   useSSE(handleEvent);
 
   return (
-    <div style={{ padding: '48px 24px 32px', maxWidth: '680px', margin: '0 auto' }}>
-      <h1 style={{ fontSize: '28px', fontWeight: 800, letterSpacing: '-0.5px', color: '#1a1d1f', marginBottom: '32px' }}>
-        Favorites
-      </h1>
+    <div className="px-6 pt-12 pb-32 max-w-[680px] mx-auto">
+      <h1 className="text-[28px] font-extrabold tracking-tight mb-8">Favorites</h1>
 
       {loading ? (
-        <div style={{ display: 'flex', justifyContent: 'center', padding: '80px 0' }}>
-          <Loader2 size={32} className="spinner" style={{ color: '#33b1ff' }} />
+        <div className="flex justify-center py-20">
+          <Loader2 size={32} className="spinner text-[#33b1ff]" />
         </div>
       ) : notes.length > 0 ? (
         notes.map(note => (
           <NoteCard key={note.id} note={note} onToggleFavorite={handleToggleFavorite} />
         ))
       ) : (
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '80px 0', opacity: 0.2 }}>
+        <div className="flex flex-col items-center justify-center py-20 opacity-20">
           <Star size={64} strokeWidth={1} />
-          <p style={{ marginTop: '16px', fontWeight: 700 }}>No favorites yet</p>
-          <p style={{ fontSize: '14px', marginTop: '4px', color: '#6f767e' }}>
-            Tap the heart on any clip to save it here
-          </p>
+          <p className="mt-4 font-bold">No favorites yet</p>
         </div>
       )}
     </div>

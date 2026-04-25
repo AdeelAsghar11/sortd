@@ -49,6 +49,8 @@ export async function summarizeContent(text, platform, customListNames = []) {
 You are a content categorization assistant for "Sortd".
 Analyze the following content from a ${platform} and return JSON.
 
+IMPORTANT: If this is a screenshot from social media (Instagram, TikTok, etc.), IGNORE the interface elements (usernames, buttons, metrics). Focus entirely on the main content (text, poetry, quotes, or information) displayed in the center.
+
 Available categories: watch-later, events, opportunities, poems-quotes,
 recipes, ideas, deals, learn, saved, inbox
 ${customListNames.length > 0 ? `Custom user categories: ${customListNames.join(', ')}` : ''}
@@ -70,26 +72,60 @@ ${text}
   const textResponse = response.text();
   
   try {
-    // 1. Direct parse
-    return JSON.parse(textResponse);
+    return JSON.parse(textResponse.replace(/```json\n?|```/g, '').trim());
   } catch (err) {
-    try {
-      // 2. Strip potential markdown and find first/last braces
-      const cleaned = textResponse
-        .replace(/```json\n?|```/g, '')
-        .trim();
-      
-      const start = cleaned.indexOf('{');
-      const end = cleaned.lastIndexOf('}');
-      
-      if (start !== -1 && end !== -1) {
-        return JSON.parse(cleaned.substring(start, end + 1));
-      }
-      throw err;
-    } catch (parseErr) {
-      console.error('Final JSON parse failure. Raw response:', textResponse);
-      throw new Error(`AI returned invalid JSON: ${parseErr.message}`);
+    const cleaned = textResponse.replace(/```json\n?|```/g, '').trim();
+    const start = cleaned.indexOf('{');
+    const end = cleaned.lastIndexOf('}');
+    if (start !== -1 && end !== -1) {
+      return JSON.parse(cleaned.substring(start, end + 1));
     }
+    throw new Error(`AI returned invalid JSON: ${err.message}`);
+  }
+}
+
+/**
+ * Analyze an image directly using Gemini Vision.
+ * @param {Buffer} buffer 
+ * @param {string} mimeType 
+ * @param {string[]} customListNames
+ */
+export async function analyzeImage(buffer, mimeType, customListNames = []) {
+  const { model } = await getClient();
+
+  const prompt = `
+You are a content capture assistant. Look at this image (likely a screenshot).
+
+1. Identify the CORE content. If it's a social media post, IGNORE the app UI (likes, comments, profile info). Focus on the image or text in the center.
+2. If there is text in a different language (like Urdu or Arabic), transcribe it or summarize it accurately.
+3. Categorize it into one of: watch-later, events, opportunities, poems-quotes, recipes, ideas, deals, learn, saved.
+${customListNames.length > 0 ? `Custom user categories: ${customListNames.join(', ')}` : ''}
+
+Return JSON:
+{ "title": "...", "summary": "...", "category": "..." }
+`;
+
+  const imagePart = {
+    inlineData: {
+      data: buffer.toString('base64'),
+      mimeType
+    }
+  };
+
+  const result = await model.generateContent([prompt, imagePart]);
+  const response = await result.response;
+  const textResponse = response.text();
+
+  try {
+    return JSON.parse(textResponse.replace(/```json\n?|```/g, '').trim());
+  } catch (err) {
+    const cleaned = textResponse.replace(/```json\n?|```/g, '').trim();
+    const start = cleaned.indexOf('{');
+    const end = cleaned.lastIndexOf('}');
+    if (start !== -1 && end !== -1) {
+      return JSON.parse(cleaned.substring(start, end + 1));
+    }
+    throw err;
   }
 }
 
@@ -100,8 +136,6 @@ ${text}
  * @param {string[]} customListNames
  */
 export async function categorizeContent(text, platform, customListNames = []) {
-  // Uses the same logic but with a slightly different context if needed
-  // For now, summarizeContent is robust enough
   return summarizeContent(text, platform, customListNames);
 }
 

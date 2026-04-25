@@ -1,125 +1,94 @@
 import { Link } from 'react-router-dom';
-import { Heart, Video, PlayCircle, Link as LinkIcon } from 'lucide-react';
+import { Heart, PlayCircle, Video, Link as LinkIcon } from 'lucide-react';
 import { SourceIcon } from './icons';
 
-const PLATFORM_COLORS = {
-  youtube:   '#FF0000',
-  instagram: '#E1306C',
-  tiktok:    '#69C9D0',
-};
-
 export default function NoteCard({ note, onToggleFavorite }) {
-  const platform    = (note.source_platform || '').toLowerCase();
-  const accentColor = PLATFORM_COLORS[platform] || '#33b1ff';
-  const isVideo     = note.source_type === 'url';
-  const isFavorite  = note.starred;
+  const isVideo     = note.source_type === 'url' || note.isVideo;
+  const isFavorite  = note.starred || note.isFavorite;
+  const platform    = (note.source_platform || note.source || 'manual').toLowerCase();
 
   return (
     <Link
       to={`/notes/${note.id}`}
-      className="block mb-4"
+      className="block bg-white rounded-[24px] p-4 neo-shadow mb-4 transition-all cursor-pointer border border-transparent hover:border-[#a2d2ff]/20 relative"
       style={{ textDecoration: 'none', color: 'inherit' }}
     >
-      <div
-        className="bg-white rounded-[24px] p-4 neo-shadow transition-all cursor-pointer relative"
-        style={{
-          borderLeft: `4px solid ${accentColor}`,
-          border: `1px solid transparent`,
-          borderLeftWidth: '4px',
-          borderLeftColor: accentColor,
-        }}
-      >
-        <div className="flex gap-4">
-          {/* Thumbnail */}
+      <div className="flex items-center gap-4">
+        {/* Thumbnail Section - Vertically Centered */}
+        <div className="flex-shrink-0">
           {note.thumbnail ? (
-            <div className="relative flex-shrink-0">
-              <img
-                src={note.thumbnail}
-                alt=""
-                className="w-20 h-20 rounded-2xl object-cover"
+            <div className="relative w-20 h-20">
+              <img 
+                src={note.thumbnail} 
+                alt="" 
+                className="w-20 h-20 rounded-2xl object-cover" 
               />
               {isVideo && (
-                <div
-                  className="absolute inset-0 flex items-center justify-center rounded-2xl"
-                  style={{ background: 'rgba(0,0,0,0.25)', color: 'white' }}
-                >
-                  <PlayCircle size={24} />
+                <div className="absolute inset-0 flex items-center justify-center text-white bg-black/10 rounded-2xl">
+                  <PlayCircle size={24} strokeWidth={1.5} />
                 </div>
               )}
             </div>
           ) : (
-            <div
-              className="w-20 h-20 rounded-2xl flex items-center justify-center flex-shrink-0"
-              style={{ background: '#f5f7f9' }}
-            >
-              {isVideo
-                ? <Video size={24} style={{ color: '#a39e98' }} />
-                : <LinkIcon size={24} style={{ color: '#a39e98' }} />
-              }
+            <div className="w-20 h-20 bg-[#f5f7f9] rounded-2xl flex items-center justify-center">
+              {isVideo ? (
+                <Video className="text-[#a39e98]" size={24} strokeWidth={1.5} />
+              ) : (
+                <LinkIcon className="text-[#a39e98]" size={24} strokeWidth={1.5} />
+              )}
             </div>
           )}
-
-          {/* Content */}
-          <div className="flex-1 overflow-hidden" style={{ paddingRight: '36px' }}>
-            {/* Source chip */}
-            <div className="flex items-center gap-2 mb-1.5">
-              <div
-                className="p-1.5 rounded-full flex items-center justify-center"
-                style={{ background: isVideo ? '#98fb98' : '#a2d2ff' }}
-              >
-                <SourceIcon source={note.source_platform} size={10} />
-              </div>
-              <span
-                className="text-[10px] font-bold uppercase"
-                style={{ color: 'rgba(0,0,0,0.3)', letterSpacing: '0.1em' }}
-              >
-                {note.source_platform || 'manual'}
-              </span>
-            </div>
-
-            {/* Title */}
-            <h3
-              className="text-[16px] font-extrabold mb-1 tracking-tight leading-tight truncate"
-              style={{ color: '#1a1d1f' }}
-            >
-              {note.title || 'Untitled Note'}
-            </h3>
-
-            {/* Excerpt */}
-            <p
-              className="text-[13px] leading-snug"
-              style={{
-                color: 'rgba(0,0,0,0.5)',
-                display: '-webkit-box',
-                WebkitLineClamp: 2,
-                WebkitBoxOrient: 'vertical',
-                overflow: 'hidden',
-              }}
-            >
-              {note.content}
-            </p>
-          </div>
         </div>
 
-        {/* Heart / favourite button */}
-        {onToggleFavorite && (
-          <button
-            onClick={(e) => {
-              e.preventDefault();
-              e.stopPropagation();
-              onToggleFavorite(note.id);
-            }}
-            className={`absolute top-4 right-4 p-2 rounded-full transition-all ${isFavorite ? 'heart-pop' : ''}`}
-            style={{ color: isFavorite ? '#f43f5e' : 'rgba(0,0,0,0.12)' }}
-          >
-            <Heart
-              size={20}
-              fill={isFavorite ? 'currentColor' : 'none'}
-              strokeWidth={2.5}
-            />
-          </button>
-        )}
+        {/* Content Section */}
+        <div className="flex-1 overflow-hidden pr-8">
+          {/* Source Tag Row */}
+          <div className="flex items-center gap-2 mb-1 h-5">
+            <div 
+              className={`w-5 h-5 rounded-full flex items-center justify-center ${
+                platform === 'instagram' ? 'bg-[#98fb98]' : 
+                platform === 'youtube' ? 'bg-[#a2d2ff]' : 
+                platform === 'tiktok' ? 'bg-[#98fb98]' : 'bg-[#f5f7f9]'
+              }`}
+            >
+              <SourceIcon 
+                source={platform} 
+                size={10} 
+                className={platform === 'manual' ? 'text-[#a39e98]' : 'text-white'} 
+              />
+            </div>
+            <span className="text-[9px] font-extrabold text-black/20 uppercase tracking-[0.1em]">
+              {platform}
+            </span>
+          </div>
+
+          {/* Title - 1 line */}
+          <h3 className="text-[15px] font-extrabold mb-0.5 tracking-tight leading-tight text-[#1a1d1f] line-clamp-1">
+            {note.title || 'Untitled Note'}
+          </h3>
+          
+          {/* Description - 2 lines */}
+          <p className="text-[13px] text-black/40 line-clamp-2 leading-snug">
+            {note.content}
+          </p>
+        </div>
       </div>
+      
+      {/* Heart Button - Sized to match Platform Icon */}
+      <button 
+        onClick={(e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          onToggleFavorite(note.id);
+        }}
+        className={`absolute top-4 right-5 h-5 flex items-center transition-all ${isFavorite ? 'text-rose-500 heart-pop' : 'text-black/5 hover:text-black/10'}`}
+      >
+        <Heart 
+          size={18} 
+          fill={isFavorite ? "currentColor" : "none"} 
+          strokeWidth={2.5} 
+        />
+      </button>
     </Link>
   );
 }
