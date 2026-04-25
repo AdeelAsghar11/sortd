@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Sparkles, 
+  Layers, 
   Link as LinkIcon, 
-  Cpu, 
+  FolderSearch, 
   Smartphone, 
   ChevronRight, 
   X 
@@ -17,9 +17,9 @@ const steps = [
     color: "blue"
   },
   {
-    title: "AI Analysis",
-    description: "Google Gemini automatically summarizes and categorizes your content into lists.",
-    icon: <Cpu className="w-8 h-8 text-purple-500" />,
+    title: "Smart Indexing",
+    description: "Your content is automatically summarized and organized into searchable lists.",
+    icon: <FolderSearch className="w-8 h-8 text-purple-500" />,
     color: "purple"
   },
   {

@@ -10,7 +10,7 @@ export default function Favorites() {
 
   const fetchFavorites = async () => {
     try {
-      const data = await api.getNotes({ starred: true });
+      const { notes: data } = await api.getNotes({ starred: true });
       setNotes(data);
     } catch (err) {
       console.error('Failed to fetch favorites');
@@ -24,11 +24,16 @@ export default function Favorites() {
   const handleToggleFavorite = async (noteId) => {
     const note = notes.find(n => n.id === noteId);
     if (!note) return;
+    
+    // Optimistic update
+    setNotes(prev => prev.filter(n => n.id !== noteId));
+    
     try {
       await api.updateNote(noteId, { starred: false });
-      setNotes(prev => prev.filter(n => n.id !== noteId));
     } catch (err) {
       console.error('Failed to unstar note');
+      // Revert on failure
+      setNotes(prev => [note, ...prev]);
     }
   };
 

@@ -12,10 +12,11 @@ export function useSSE(onEvent) {
 
   useEffect(() => {
     let es = null;
+    let isMounted = true;
 
     const connect = async () => {
       const { data: { session } } = await supabase.auth.getSession();
-      if (!session) return;
+      if (!isMounted || !session) return;
 
       const urlWithAuth = `${SSE_URL}?token=${session.access_token}`;
       es = new EventSource(urlWithAuth);
@@ -42,6 +43,7 @@ export function useSSE(onEvent) {
     connect();
 
     return () => {
+      isMounted = false;
       if (es) {
         es.close();
         console.log('🔌 SSE Disconnected');

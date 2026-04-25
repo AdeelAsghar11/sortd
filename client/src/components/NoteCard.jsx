@@ -69,7 +69,7 @@ export default function NoteCard({ note, onToggleFavorite }) {
           
           {/* Description - 2 lines */}
           <p className="text-[13px] text-black/40 line-clamp-2 leading-snug">
-            {note.content}
+            {note.content?.replace(/\*\*(.*?)\*\*/g, '$1').replace(/^- /gm, '')}
           </p>
         </div>
       </div>

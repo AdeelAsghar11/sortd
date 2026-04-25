@@ -194,12 +194,27 @@ export async function getAllLists(userId) {
 
   if (error) throw error;
   
-  const { data: counts, error: countError } = await supabase.rpc('get_list_counts', { p_user_id: userId });
+  const { data: notesData } = await supabase
+    .from('notes')
+    .select('list_id')
+    .eq('user_id', userId);
+    
+  const countMap = {};
+  if (notesData) {
+    notesData.forEach(n => {
+      if (n.list_id) {
+        countMap[n.list_id] = (countMap[n.list_id] || 0) + 1;
+      }
+    });
+  }
   
-  return lists.map(list => ({
+  const result = lists.map(list => ({
     ...list,
-    note_count: (counts && counts.find(c => c.list_id === list.id)?.count) || 0
+    note_count: countMap[list.id] || 0
   }));
+  
+  result.sort((a, b) => a.note_count - b.note_count);
+  return result;
 }
 
 export async function createList(data, userId) {

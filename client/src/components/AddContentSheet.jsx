@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { api } from '../api';
-import { X, Send, Sparkles } from 'lucide-react';
+import { X, Send, Loader2 } from 'lucide-react';
 import UploadZone from './UploadZone';
 
 export default function AddContentSheet({ onClose }) {
@@ -12,10 +12,14 @@ export default function AddContentSheet({ onClose }) {
     if (!url) return;
     
     setIsProcessing(true);
+    const currentUrl = url;
+    
+    // Optimistic UI close
+    setUrl('');
+    onClose();
+    
     try {
-      await api.processUrl(url);
-      setUrl('');
-      onClose();
+      await api.processUrl(currentUrl);
     } catch (err) {
       alert(err.message);
     } finally {
@@ -74,7 +78,7 @@ export default function AddContentSheet({ onClose }) {
                 placeholder="Instagram, YouTube, or web link..."
                 value={url}
                 onChange={(e) => setUrl(e.target.value)}
-                className="input-flat pl-5 pr-12 text-[15px] placeholder:text-[13px] placeholder:text-black/20"
+                className="input-flat pl-5 pr-16 text-[15px] placeholder:text-[13px] placeholder:text-black/20"
                 required
               />
               <button 
@@ -82,7 +86,7 @@ export default function AddContentSheet({ onClose }) {
                 disabled={isProcessing || !url} 
                 className="absolute right-2 w-9 h-9 rounded-2xl bg-[#33b1ff]/20 text-[#33b1ff] flex items-center justify-center transition-all active:scale-90 disabled:opacity-20"
               >
-                {isProcessing ? <Sparkles className="spinner" size={16} /> : <Send size={16} />}
+                {isProcessing ? <Loader2 className="spinner" size={16} /> : <Send size={16} />}
               </button>
             </div>
             <p className="text-[11px] font-bold text-black/25 mt-2.5 ml-1">

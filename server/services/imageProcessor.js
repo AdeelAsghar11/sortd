@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 import fs from 'fs';
 import sharp from 'sharp';
 import { analyzeImage } from './gemini.js';
-import { createNote, getAllLists } from './database.js';
+import { createNote, getAllLists, createList } from './database.js';
 import { uploadImage } from './storage.js';
 
 /**
@@ -43,6 +43,29 @@ export async function processImage(filePath, sourceType = 'screenshot', updateJo
       console.warn('OCR fallback failed, continuing with Gemini result');
     }
 
+    let targetListId;
+    let targetList = lists.find(l => l.name.toLowerCase() === (aiResult.category || '').toLowerCase());
+    
+    if (targetList) {
+      targetListId = targetList.id;
+    } else if (aiResult.category && aiResult.category.trim() !== '') {
+      try {
+        const newList = await createList({
+          id: uuidv4(),
+          name: aiResult.category.trim(),
+          sort_order: lists.length
+        }, userId);
+        targetListId = newList.id;
+      } catch (err) {
+        console.error('Failed to create new list from AI category:', err);
+        const inboxList = lists.find(l => l.name.toLowerCase() === 'inbox');
+        targetListId = inboxList ? inboxList.id : null;
+      }
+    } else {
+      const inboxList = lists.find(l => l.name.toLowerCase() === 'inbox');
+      targetListId = inboxList ? inboxList.id : null;
+    }
+
     // Save to Supabase
     return createNote({
       id: uuidv4(),
@@ -51,7 +74,7 @@ export async function processImage(filePath, sourceType = 'screenshot', updateJo
       raw_text: rawText || aiResult.summary,
       source_type: sourceType,
       thumbnail: thumbnail,
-      list_id: aiResult.category,
+      list_id: targetListId,
     }, userId);
   } finally {
     if (fs.existsSync(filePath)) {

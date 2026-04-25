@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { api } from '../api';
 import { ArrowLeft, Star, Trash2, ExternalLink, Folder, Loader2, Save, Sparkles, ChevronDown } from 'lucide-react';
+import ReactMarkdown from 'react-markdown';
 
 export default function NoteDetail() {
   const { id }         = useParams();
@@ -30,17 +31,28 @@ export default function NoteDetail() {
   }, [id]);
 
   const handleToggleStar = async () => {
+    const prevState = note.starred;
+    // Optimistic update
+    setNote({ ...note, starred: !prevState });
+    
     try {
-      const updated = await api.updateNote(id, { starred: !note.starred });
+      const updated = await api.updateNote(id, { starred: !prevState });
       setNote(updated);
-    } catch { alert('Update failed'); }
+    } catch { 
+      // Revert on failure
+      setNote({ ...note, starred: prevState });
+      alert('Update failed'); 
+    }
   };
 
   const handleDelete = async () => {
     if (!confirm('Delete this note?')) return;
+    
+    // Optimistic navigation
+    navigate('/');
+    
     try {
       await api.deleteNote(id);
-      navigate('/');
     } catch { alert('Delete failed'); }
   };
 
@@ -210,9 +222,19 @@ export default function NoteDetail() {
               }}
             />
           ) : (
-            <p style={{ fontSize: '15px', lineHeight: 1.7, color: 'rgba(255,255,255,0.82)', whiteSpace: 'pre-wrap' }}>
-              {note.content}
-            </p>
+            <div style={{ fontSize: '15px', lineHeight: 1.7, color: 'rgba(255,255,255,0.82)' }}>
+              <ReactMarkdown
+                components={{
+                  p: ({node, ...props}) => <p style={{ marginBottom: '0.8em' }} {...props} />,
+                  ul: ({node, ...props}) => <ul style={{ listStyleType: 'disc', paddingLeft: '20px', marginBottom: '0.8em' }} {...props} />,
+                  ol: ({node, ...props}) => <ol style={{ listStyleType: 'decimal', paddingLeft: '20px', marginBottom: '0.8em' }} {...props} />,
+                  li: ({node, ...props}) => <li style={{ marginBottom: '0.4em' }} {...props} />,
+                  strong: ({node, ...props}) => <strong style={{ fontWeight: 'bold', color: 'rgba(255,255,255,1)' }} {...props} />
+                }}
+              >
+                {note.content}
+              </ReactMarkdown>
+            </div>
           )}
         </div>
       )}

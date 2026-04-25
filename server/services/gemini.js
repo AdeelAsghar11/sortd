@@ -57,7 +57,7 @@ ${customListNames.length > 0 ? `Custom user categories: ${customListNames.join('
 
 Rules:
 1. "title" should be a concise, catchy title for the note.
-2. "summary" should be a high-quality summary of the main points (markdown allowed).
+2. "summary" should be a high-quality summary of the main points. If the content contains steps, recipes, tips, or lists, extract and format them clearly using bullet points or numbered lists. Markdown is allowed and encouraged.
 3. "category" MUST be one of the available categories listed above. Choose the best fit.
 
 Return ONLY valid JSON:
@@ -97,7 +97,7 @@ export async function analyzeImage(buffer, mimeType, customListNames = []) {
 You are a content capture assistant. Look at this image (likely a screenshot).
 
 1. Identify the CORE content. If it's a social media post, IGNORE the app UI (likes, comments, profile info). Focus on the image or text in the center.
-2. If there is text in a different language (like Urdu or Arabic), transcribe it or summarize it accurately.
+2. If the image contains text, poetry, or quotes in ANY language (like Urdu, Arabic, English, etc.), YOU MUST EXTRACT THE EXACT TEXT IN ITS ORIGINAL LANGUAGE. DO NOT translate it. DO NOT summarize it. Preserve the original formatting, line breaks, and language exactly as it appears in the image.
 3. Categorize it into one of: watch-later, events, opportunities, poems-quotes, recipes, ideas, deals, learn, saved.
 ${customListNames.length > 0 ? `Custom user categories: ${customListNames.join(', ')}` : ''}
 

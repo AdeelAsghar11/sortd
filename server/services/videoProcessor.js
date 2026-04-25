@@ -5,7 +5,7 @@ import ogs from 'open-graph-scraper';
 import { v4 as uuidv4 } from 'uuid';
 import { transcribeAudio } from './transcription.js';
 import { summarizeContent, categorizeContent } from './gemini.js';
-import { createNote, getAllLists } from './database.js';
+import { createNote, getAllLists, createList } from './database.js';
 import { cacheThumbnail } from './storage.js';
 
 const TEMP_DIR = path.resolve('temp');
@@ -133,8 +133,10 @@ export async function processUrl(url, updateJobStep, userId) {
   let transcript = null;
   let aiResult;
   let thumbnail = metadata.image;
+  let lists = [];
 
   try {
+    lists = await getAllLists(userId);
     if (audioFile) {
       const stats = fs.statSync(audioFile);
       if (stats.size > MAX_AUDIO_SIZE) {
@@ -145,13 +147,11 @@ export async function processUrl(url, updateJobStep, userId) {
       transcript = await transcribeAudio(audioFile);
       
       updateJobStep('categorizing');
-      const lists = await getAllLists(userId);
       aiResult = await summarizeContent(transcript, platform, lists.map(l => l.name));
       aiResult.transcript = transcript;
     } else {
       updateJobStep('categorizing');
       const text = [metadata.title, metadata.description].filter(Boolean).join('\n\n');
-      const lists = await getAllLists(userId);
       aiResult = text
         ? await categorizeContent(text, platform, lists.map(l => l.name))
         : { title: metadata.title || url, summary: '', category: 'inbox', tags: [platform] };
@@ -177,6 +177,29 @@ export async function processUrl(url, updateJobStep, userId) {
     thumbnail = await cacheThumbnail(thumbnail);
   }
 
+  let targetListId;
+  let targetList = lists.find(l => l.name.toLowerCase() === (aiResult.category || '').toLowerCase());
+  
+  if (targetList) {
+    targetListId = targetList.id;
+  } else if (aiResult.category && aiResult.category.trim() !== '') {
+    try {
+      const newList = await createList({
+        id: uuidv4(),
+        name: aiResult.category.trim(),
+        sort_order: lists.length
+      }, userId);
+      targetListId = newList.id;
+    } catch (err) {
+      console.error('Failed to create new list from AI category:', err);
+      const inboxList = lists.find(l => l.name.toLowerCase() === 'inbox');
+      targetListId = inboxList ? inboxList.id : null;
+    }
+  } else {
+    const inboxList = lists.find(l => l.name.toLowerCase() === 'inbox');
+    targetListId = inboxList ? inboxList.id : null;
+  }
+
   // Save to Supabase
   return createNote({
     id: uuidv4(),
@@ -187,7 +210,7 @@ export async function processUrl(url, updateJobStep, userId) {
     source_url: url,
     source_platform: platform,
     thumbnail: thumbnail,
-    list_id: aiResult.category, // Assuming AI returns valid list ID or we fallback to 'inbox' in DB
+    list_id: targetListId,
     tags: aiResult.tags,
   }, userId);
 }

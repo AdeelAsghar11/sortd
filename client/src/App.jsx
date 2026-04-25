@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate, Outlet } from 'react-
 import BottomNav from './components/BottomNav';
 import QueueStatus from './components/QueueStatus';
 import AddContentSheet from './components/AddContentSheet';
-import { Loader2 } from 'lucide-react';
+import { Loader2, Layers } from 'lucide-react';
 
 // Lazy load pages
 const Inbox       = lazy(() => import('./pages/Inbox'));
@@ -14,7 +14,6 @@ const Settings    = lazy(() => import('./pages/Settings'));
 const Favorites   = lazy(() => import('./pages/Favorites'));
 const Login       = lazy(() => import('./pages/Login'));
 const Signup      = lazy(() => import('./pages/Signup'));
-const Landing     = lazy(() => import('./pages/Landing'));
 
 import { AuthProvider, useAuth } from './contexts/AuthContext';
 import Walkthrough from './components/Walkthrough';
@@ -31,7 +30,7 @@ function ProtectedRoute({ children }) {
   const { user, loading } = useAuth();
   
   if (loading) return <PageLoader />;
-  if (!user) return <Navigate to="/" replace />;
+  if (!user) return <Navigate to="/login" replace />;
   
   return children;
 }
@@ -76,14 +75,15 @@ function AppContent() {
   return (
     <Router>
       <Routes>
-        {/* Public Routes */}
+        {/* Entry Point: Root goes to Inbox or Signup */}
         <Route path="/" element={
           user ? <Navigate to="/inbox" replace /> : (
             <Suspense fallback={<PageLoader />}>
-              <Landing />
+              <Signup />
             </Suspense>
           )
         } />
+        
         <Route path="/login" element={
           user ? <Navigate to="/inbox" replace /> : (
             <Suspense fallback={<PageLoader />}>
@@ -91,6 +91,7 @@ function AppContent() {
             </Suspense>
           )
         } />
+        
         <Route path="/signup" element={
           user ? <Navigate to="/inbox" replace /> : (
             <Suspense fallback={<PageLoader />}>
@@ -110,7 +111,7 @@ function AppContent() {
         </Route>
 
         {/* Catch-all Redirect */}
-        <Route path="*" element={<Navigate to={user ? "/inbox" : "/"} replace />} />
+        <Route path="*" element={<Navigate to={user ? "/inbox" : "/login"} replace />} />
       </Routes>
     </Router>
   );
