@@ -14,6 +14,26 @@
     <title>Sortd</title>
   </head>
   <body>
+    <script>
+      // Pre-React: redirect unauthenticated users to landing before React loads
+      (function () {
+        var path = window.location.pathname;
+        var search = window.location.search;
+        if (path === '/' && !search.includes('auth=')) {
+          var hasSession = false;
+          for (var key in localStorage) {
+            if (/^sb-.+-auth-token$/.test(key)) {
+              try {
+                var d = JSON.parse(localStorage.getItem(key));
+                if (d && d.access_token) hasSession = true;
+              } catch (e) {}
+              break;
+            }
+          }
+          if (!hasSession) window.location.replace('/landing.html');
+        }
+      })();
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

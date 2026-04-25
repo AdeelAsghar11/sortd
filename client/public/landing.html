@@ -52,13 +52,21 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);-webkit-font
 #nav.scrolled{box-shadow:var(--shadow)}
 .nav-row{display:flex;align-items:center;justify-content:space-between;height:64px}
 .wm{font-size:22px;font-weight:800;letter-spacing:-.5px;color:var(--text);text-decoration:none}
-.nav-btn{
-  background:var(--accent);color:#fff;border-radius:var(--r-pill);
-  padding:10px 20px;font-weight:700;font-size:14px;font-family:var(--font);
-  border:none;cursor:pointer;text-decoration:none;transition:all .2s;
-  display:inline-flex;align-items:center;
+.nav-btns{display:flex;align-items:center;gap:8px}
+.nav-btn-ghost{
+  background:transparent;color:var(--text);border-radius:var(--r-pill);
+  padding:9px 20px;font-weight:700;font-size:14px;font-family:var(--font);
+  border:1.5px solid rgba(0,0,0,.2);cursor:pointer;text-decoration:none;
+  transition:all .2s;display:inline-flex;align-items:center;
 }
-.nav-btn:hover{background:var(--accent2);transform:translateY(-1px)}
+.nav-btn-ghost:hover{border-color:var(--text)}
+.nav-btn-black{
+  background:var(--text);color:#fff;border-radius:var(--r-pill);
+  padding:9px 20px;font-weight:700;font-size:14px;font-family:var(--font);
+  border:none;cursor:pointer;text-decoration:none;
+  transition:all .2s;display:inline-flex;align-items:center;
+}
+.nav-btn-black:hover{transform:translateY(-1px);box-shadow:0 8px 20px rgba(0,0,0,.18)}
 
 /* ─── hero ───────────────────────────── */
 .hero{padding:80px 0 60px;overflow:hidden;position:relative}
@@ -104,6 +112,13 @@ h1.headline em{font-family:var(--serif);font-style:italic;font-weight:400;letter
   border:none;cursor:pointer;text-decoration:none;transition:color .2s;
 }
 .btn-ghost:hover{color:var(--text)}
+.btn-outline{
+  display:inline-flex;align-items:center;justify-content:center;
+  background:transparent;color:var(--text);border-radius:var(--r-pill);
+  padding:14px 28px;font-weight:700;font-size:16px;font-family:var(--font);
+  border:2px solid rgba(0,0,0,.2);cursor:pointer;text-decoration:none;transition:all .2s;
+}
+.btn-outline:hover{border-color:var(--text)}
 
 .trust-pills{display:flex;gap:8px;flex-wrap:wrap}
 .t-pill{
@@ -314,6 +329,7 @@ h1.headline em{font-family:var(--serif);font-style:italic;font-weight:400;letter
 .cta-h{font-size:clamp(36px,5vw,56px);font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin-bottom:18px}
 .cta-sub{font-size:17px;color:var(--text2);font-weight:500;line-height:1.65;margin-bottom:40px}
 .cta-acts{display:flex;flex-direction:column;align-items:center;gap:16px}
+.cta-btns{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap}
 .btn-cta{
   display:inline-flex;align-items:center;gap:8px;
   background:var(--text);color:#fff;border-radius:var(--r-pill);
@@ -321,6 +337,13 @@ h1.headline em{font-family:var(--serif);font-style:italic;font-weight:400;letter
   border:none;cursor:pointer;text-decoration:none;transition:all .25s;letter-spacing:-.3px;
 }
 .btn-cta:hover{transform:translateY(-3px);box-shadow:0 20px 48px rgba(0,0,0,.2)}
+.btn-cta-outline{
+  display:inline-flex;align-items:center;gap:8px;
+  background:transparent;color:var(--text);border-radius:var(--r-pill);
+  padding:16px 40px;font-weight:800;font-size:18px;font-family:var(--font);
+  border:2.5px solid rgba(0,0,0,.2);cursor:pointer;text-decoration:none;transition:all .25s;letter-spacing:-.3px;
+}
+.btn-cta-outline:hover{border-color:var(--text)}
 .pwa-hint{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--text2)}
 .pwa-icon{
   width:26px;height:26px;background:var(--text);border-radius:8px;
@@ -361,7 +384,10 @@ footer{border-top:1px solid var(--border);padding:40px 0}
 <nav id="nav">
   <div class="wrap nav-row">
     <a href="#" class="wm">Sortd</a>
-    <a href="#cta" class="nav-btn">Get the App</a>
+    <div class="nav-btns">
+      <a href="/?auth=signin" class="nav-btn-ghost">Sign In</a>
+      <a href="/?auth=signup" class="nav-btn-black">Sign Up Free</a>
+    </div>
   </div>
 </nav>
 
@@ -383,7 +409,8 @@ footer{border-top:1px solid var(--border);padding:40px 0}
       </p>
 
       <div class="hero-actions fi d3">
-        <a href="#cta" class="btn-black">Try Sortd Free</a>
+        <a href="/?auth=signup" class="btn-black">Sign Up Free</a>
+        <a href="/?auth=signin" class="btn-outline">Sign In</a>
         <a href="#how" class="btn-ghost">See how it works →</a>
       </div>
 
@@ -681,9 +708,12 @@ footer{border-top:1px solid var(--border);padding:40px 0}
   <div class="wrap">
     <div class="cta-inner">
       <h2 class="cta-h fi">Start capturing smarter.</h2>
-      <p class="cta-sub fi d1">Free to use. No account required. Works on any device.</p>
+      <p class="cta-sub fi d1">Save links from YouTube, Instagram, and TikTok. AI reads and organizes them for you.</p>
       <div class="cta-acts">
-        <a href="/" class="btn-cta fi d2">Open Sortd →</a>
+        <div class="cta-btns fi d2">
+          <a href="/?auth=signup" class="btn-cta">Sign Up Free</a>
+          <a href="/?auth=signin" class="btn-cta-outline">Sign In</a>
+        </div>
         <div class="pwa-hint fi d3">
           <div class="pwa-icon">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>

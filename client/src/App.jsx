@@ -1,9 +1,9 @@
-import { useState, lazy, Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate, Outlet } from 'react-router-dom';
+import { useState, lazy, Suspense, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate, Outlet, useSearchParams } from 'react-router-dom';
 import BottomNav from './components/BottomNav';
 import QueueStatus from './components/QueueStatus';
 import AddContentSheet from './components/AddContentSheet';
-import { Loader2, Layers } from 'lucide-react';
+import { Loader2 } from 'lucide-react';
 
 // Lazy load pages
 const Inbox = lazy(() => import('./pages/Inbox'));
@@ -27,13 +27,34 @@ function PageLoader() {
   );
 }
 
+function RedirectToLanding() {
+  useEffect(() => {
+    window.location.replace('/landing.html');
+  }, []);
+  return <PageLoader />;
+}
+
 function ProtectedRoute({ children }) {
   const { user, loading } = useAuth();
 
   if (loading) return <PageLoader />;
-  if (!user) return <Navigate to="/login" replace />;
+  if (!user) return <RedirectToLanding />;
 
   return children;
+}
+
+function AuthRoute() {
+  const { user, loading } = useAuth();
+  const [searchParams] = useSearchParams();
+
+  if (loading) return <PageLoader />;
+  if (user) return <Navigate to="/inbox" replace />;
+
+  const auth = searchParams.get('auth');
+  if (auth === 'signin') return <Suspense fallback={<PageLoader />}><Login /></Suspense>;
+  if (auth === 'signup') return <Suspense fallback={<PageLoader />}><Signup /></Suspense>;
+
+  return <RedirectToLanding />;
 }
 
 function Layout() {
@@ -76,14 +97,8 @@ function AppContent() {
   return (
     <Router>
       <Routes>
-        {/* Entry Point: Root goes to Inbox or Signup */}
-        <Route path="/" element={
-          user ? <Navigate to="/inbox" replace /> : (
-            <Suspense fallback={<PageLoader />}>
-              <Signup />
-            </Suspense>
-          )
-        } />
+        {/* Entry: checks ?auth=signin|signup, else redirects to landing */}
+        <Route path="/" element={<AuthRoute />} />
 
         <Route path="/login" element={
           user ? <Navigate to="/inbox" replace /> : (
@@ -112,8 +127,8 @@ function AppContent() {
           <Route path="/share" element={<ShareHandler />} />
         </Route>
 
-        {/* Catch-all Redirect */}
-        <Route path="*" element={<Navigate to={user ? "/inbox" : "/login"} replace />} />
+        {/* Catch-all → root (which handles landing redirect or inbox) */}
+        <Route path="*" element={<Navigate to={user ? "/inbox" : "/"} replace />} />
       </Routes>
     </Router>
   );
