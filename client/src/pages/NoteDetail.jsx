@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { api } from '../api';
-import { ArrowLeft, Star, Trash2, ExternalLink, Tag, Folder, Loader2, Save } from 'lucide-react';
-import TagPill from '../components/TagPill';
+import { ArrowLeft, Star, Trash2, ExternalLink, Folder, Loader2, Save } from 'lucide-react';
 
 export default function NoteDetail() {
   const { id } = useParams();
@@ -122,12 +121,6 @@ export default function NoteDetail() {
             {lists.map(l => <option key={l.id} value={l.id}>{l.name}</option>)}
           </select>
         </div>
-        <div className="org-item">
-          <Tag size={18} />
-          <div className="tags-list">
-            {note.tags?.map(tag => <TagPill key={tag} name={tag} />)}
-          </div>
-        </div>
       </div>
 
       <div className="note-body">
@@ -216,10 +209,6 @@ export default function NoteDetail() {
           font-size: 14px;
           color: var(--color-text);
           cursor: pointer;
-        }
-        .tags-list {
-          display: flex;
-          gap: var(--space-8);
         }
         .note-body {
           font-size: 18px;

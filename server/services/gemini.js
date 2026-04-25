@@ -39,8 +39,7 @@ async function getClient() {
  * @returns {Promise<{
  *   title: string,
  *   summary: string,
- *   category: string,
- *   tags: string[]
+ *   category: string
  * }>}
  */
 export async function summarizeContent(text, platform, customListNames = []) {
@@ -58,10 +57,9 @@ Rules:
 1. "title" should be a concise, catchy title for the note.
 2. "summary" should be a high-quality summary of the main points (markdown allowed).
 3. "category" MUST be one of the available categories listed above. Choose the best fit.
-4. "tags" should be an array of 3-5 relevant keywords.
 
 Return ONLY valid JSON:
-{ "title": "...", "summary": "...", "category": "...", "tags": [...] }
+{ "title": "...", "summary": "...", "category": "..." }
 
 Content:
 ${text}
