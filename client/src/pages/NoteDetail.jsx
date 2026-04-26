@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { mutate } from 'swr';
 import { useParams, useNavigate } from 'react-router-dom';
 import { api } from '../api';
 import { ArrowLeft, Star, Trash2, ExternalLink, Folder, Loader2, Save, Sparkles, ChevronDown } from 'lucide-react';
@@ -48,12 +49,14 @@ export default function NoteDetail() {
   const handleDelete = async () => {
     if (!confirm('Delete this note?')) return;
     
-    // Optimistic navigation
-    navigate('/');
-    
     try {
       await api.deleteNote(id);
-    } catch { alert('Delete failed'); }
+      // Invalidate all note-related cache keys
+      mutate(key => Array.isArray(key) && key[0] === '/api/notes');
+      navigate('/');
+    } catch { 
+      alert('Delete failed'); 
+    }
   };
 
   const handleSave = async () => {

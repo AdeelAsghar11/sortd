@@ -146,26 +146,26 @@ export async function processUrl(url, updateJobStep, userId) {
       updateJobStep('transcribing');
       transcript = await transcribeAudio(audioFile);
       
-      updateJobStep('categorizing');
+      updateJobStep('analyzing');
+      console.log(`🚀 Querying Groq (Primary) for video/audio analysis (${platform})...`);
       aiResult = await summarizeContent(transcript, platform, lists.map(l => l.name));
+      console.log('🤖 Llama 4 Analysis Complete for URL content.');
       aiResult.transcript = transcript;
     } else {
-      updateJobStep('categorizing');
-      const text = [metadata.title, metadata.description].filter(Boolean).join('\n\n');
+      updateJobStep('analyzing');
+      const text = [
+        metadata.title,
+        metadata.description,
+        metadata.siteName ? `Source: ${metadata.siteName}` : null,
+        `URL: ${url}`
+      ].filter(Boolean).join('\n\n');
+      console.log(`🚀 Querying Groq (Primary) for metadata analysis (${platform})...`);
       aiResult = text
         ? await categorizeContent(text, platform, lists.map(l => l.name))
         : { title: metadata.title || url, summary: '', category: 'inbox', tags: [platform] };
+      console.log('🤖 Llama 4 Analysis Complete for metadata.');
       aiResult.transcript = '';
     }
-  } catch (err) {
-    console.error('AI Processing failed:', err.message);
-    aiResult = {
-      title: metadata.title || url,
-      summary: 'AI processing failed. Original content preserved.',
-      category: 'inbox',
-      tags: [platform, 'failed-ai']
-    };
-    aiResult.transcript = transcript || '';
   } finally {
     if (audioFile && fs.existsSync(audioFile)) {
       fs.unlinkSync(audioFile);

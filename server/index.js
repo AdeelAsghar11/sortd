@@ -167,18 +167,36 @@ app.post('/api/process-url', authenticate, async (req, res) => {
 
     console.log(`🔗 Processing URL: ${url}`);
 
-    // Check duplicate for this user
-    const { data: existing } = await db.supabase
+    console.log(`🔍 Checking for duplicates: ${url}`);
+    
+    // 1. Check if note already exists
+    const { data: existingNote } = await db.supabase
       .from('notes')
       .select('id')
       .eq('source_url', url)
       .eq('user_id', req.user.id)
-      .single();
+      .maybeSingle();
 
-    if (existing) {
-      return res.status(303).json({ noteId: existing.id });
+    if (existingNote) {
+      console.log(`✨ Found existing note: ${existingNote.id}`);
+      return res.status(303).json({ noteId: existingNote.id });
     }
 
+    // 2. Check if job is already in queue
+    const { data: existingJob } = await db.supabase
+      .from('jobs')
+      .select('id')
+      .contains('payload', { url })
+      .eq('user_id', req.user.id)
+      .in('state', ['pending', 'processing'])
+      .maybeSingle();
+
+    if (existingJob) {
+      console.log(`⏳ Job already in queue: ${existingJob.id}`);
+      return res.status(202).json({ jobId: existingJob.id, message: 'Already in queue' });
+    }
+
+    console.log('🔄 Enqueueing new URL job...');
     const jobId = await enqueue({
       type: 'url',
       source: 'api',
@@ -279,13 +297,33 @@ app.get('/api/search', authenticate, async (req, res) => {
 });
 
 // SSE
-app.get('/api/events', authenticate, (req, res) => {
+app.get('/api/events', authenticate, async (req, res) => {
   res.writeHead(200, {
     'Content-Type': 'text/event-stream',
     'Cache-Control': 'no-cache',
     'Connection': 'keep-alive',
   });
+  
+  // Send connection confirmation
   res.write(`event: connected\ndata: ${JSON.stringify({ serverTime: new Date().toISOString() })}\n\n`);
+  
+  // Sync current active jobs immediately on connect
+  try {
+    const activeJobs = await db.getActiveJobsForUser(req.user.id);
+    activeJobs.forEach(job => {
+      const eventType = job.state === 'pending' ? 'job_queued' : 'job_started';
+      const eventData = {
+        jobId: job.id,
+        type: job.type,
+        step: job.step || (job.state === 'pending' ? 'queued' : 'starting'),
+        timestamp: job.updated_at
+      };
+      res.write(`event: ${eventType}\ndata: ${JSON.stringify(eventData)}\n\n`);
+    });
+  } catch (err) {
+    console.error('Failed to sync active jobs on connect:', err);
+  }
+
   addSSEClient(res, req.user.id);
 });
 

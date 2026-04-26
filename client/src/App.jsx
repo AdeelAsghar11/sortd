@@ -17,7 +17,9 @@ const Signup = lazy(() => import('./pages/Signup'));
 const ShareHandler = lazy(() => import('./pages/ShareHandler'));
 
 import { AuthProvider, useAuth } from './contexts/AuthContext';
+import { ProcessingProvider, useProcessing } from './contexts/ProcessingContext';
 import Walkthrough from './components/Walkthrough';
+import ProcessingOverlay from './components/ProcessingOverlay';
 
 function PageLoader() {
   return (
@@ -60,6 +62,7 @@ function AuthRoute() {
 function Layout() {
   const [isAddSheetOpen, setIsAddSheetOpen] = useState(false);
   const { user } = useAuth();
+  const { activeJobs } = useProcessing();
   const location = useLocation();
   const [showWalkthrough, setShowWalkthrough] = useState(() => {
     return !localStorage.getItem('sortd_onboarding_complete');
@@ -69,6 +72,8 @@ function Layout() {
 
   return (
     <div style={{ background: '#f5f7f9', minHeight: '100vh', position: 'relative' }}>
+      <ProcessingOverlay jobs={activeJobs} />
+      
       {showWalkthrough && (
         <Walkthrough onComplete={() => {
           localStorage.setItem('sortd_onboarding_complete', 'true');
@@ -140,7 +145,9 @@ function AppContent() {
 function App() {
   return (
     <AuthProvider>
-      <AppContent />
+      <ProcessingProvider>
+        <AppContent />
+      </ProcessingProvider>
     </AuthProvider>
   );
 }

@@ -1,4 +1,4 @@
-import { useState, useCallback, useRef } from 'react';
+import { useState, useCallback, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import useSWR from 'swr';
 import useSWRInfinite from 'swr/infinite';
@@ -8,7 +8,8 @@ import ProcessingOverlay from '../components/ProcessingOverlay';
 import ManageListsSheet from '../components/ManageListsSheet';
 import MemoryLane from '../components/MemoryLane';
 import { FolderIcon } from '../components/icons';
-import { useSSE } from '../hooks/useSSE';
+import { useProcessing } from '../contexts/ProcessingContext';
+import { useAuth, supabase } from '../contexts/AuthContext';
 import { Search, Filter, Loader2, Inbox as InboxIcon, ChevronDown, Layers, Youtube, Instagram, Zap } from 'lucide-react';
 
 const PLACEHOLDER_AVATAR = 'https://api.dicebear.com/7.x/avataaars/svg?seed=Sortd';
@@ -24,11 +25,13 @@ function getPinnedIds() {
 
 export default function Inbox() {
   const [search, setSearch]           = useState('');
-  const [activeJobs, setActiveJobs]   = useState([]);
+  const { activeJobs }                = useProcessing();
+  const { user }                      = useAuth();
   const [pinnedIds, setPinnedIds]     = useState(getPinnedIds);
   const [isManaging, setIsManaging]   = useState(false);
   const [showSearch, setShowSearch]   = useState(false);
   const searchRef                     = useRef(null);
+  const processedJobsRef              = useRef(new Set());
 
   // SWR for Lists
   const { data: lists = [], mutate: mutateLists } = useSWR('/api/lists', () => api.getLists());
@@ -44,7 +47,7 @@ export default function Inbox() {
     async ([url, searchStr, pageIndex]) => {
       return await api.getNotes({ search: searchStr, limit: PAGE_SIZE, offset: pageIndex * PAGE_SIZE });
     },
-    { revalidateFirstPage: false, keepPreviousData: true }
+    { revalidateFirstPage: true, keepPreviousData: true }
   );
 
   const notes = data ? data.flatMap(p => p.notes) : [];
@@ -91,65 +94,68 @@ export default function Inbox() {
     }));
   const visibleLists = listsWithVisibility.filter(l => l.showInInbox).slice(0, 3);
 
-  const handleEvent = useCallback((event) => {
-    const notifsActive = localStorage.getItem('sortd_notifications_active') === 'true';
+  // 🟢 Supabase Realtime Subscription
+  useEffect(() => {
+    if (!user?.id) return;
 
-    if (event.type === 'job_done') {
-      const note = event.data.note;
-      mutateNotes(currentData => {
-        if (!currentData) return currentData;
-        const exists = currentData.some(p => p.notes.some(n => n.id === note.id));
-        if (exists) return currentData;
+    console.log('📡 [Realtime] Initializing subscription for user:', user.id);
+    
+    const channel = supabase
+      .channel(`inbox-changes-${user.id}`) // Unique channel name
+      .on('postgres_changes', { 
+        event: '*', 
+        table: 'notes', 
+        filter: `user_id=eq.${user.id}` 
+      }, (payload) => {
+        console.group('🔄 [Realtime] Note Change Detected');
+        console.log('Event Type:', payload.eventType);
+        console.log('Payload:', payload);
+        console.groupEnd();
         
-        const newData = [...currentData];
-        newData[0] = { 
-          ...newData[0], 
-          notes: [note, ...newData[0].notes],
-          total: (newData[0].total || 0) + 1
-        };
-        return newData;
-      }, false);
-      mutateLists();
-
-      if (notifsActive && Notification.permission === 'granted') {
-        new Notification("New Clip Captured!", {
-          body: note.title || "Your content has been processed.",
-          icon: note.thumbnail || "/pwa-192.png",
-          badge: "/pwa-192.png"
-        });
-      }
-    }
-
-    if (event.type === 'job_queued' || event.type === 'job_started') {
-      setActiveJobs(prev => {
-        const exists = prev.find(j => (j.data?.jobId || j.jobId) === (event.data?.jobId || event.jobId));
-        if (exists) return prev.map(j => (j.data?.jobId || j.jobId) === (event.data?.jobId || event.jobId) ? event : j);
-        return [...prev, event];
+        // Force a fresh fetch from server
+        mutateNotes(undefined, { revalidate: true });
+      })
+      .on('postgres_changes', { 
+        event: '*', 
+        table: 'lists', 
+        filter: `user_id=eq.${user.id}` 
+      }, (payload) => {
+        console.log('🔄 [Realtime] List Change Detected:', payload.eventType);
+        mutateLists();
+      })
+      .subscribe((status) => {
+        console.log('📡 [Realtime] Subscription Status:', status);
       });
-    } else if (event.type === 'job_done' || event.type === 'job_failed') {
-      if (event.type === 'job_failed' && notifsActive && Notification.permission === 'granted') {
-        new Notification("Processing Failed", {
-          body: "We couldn't process that link. Please try another one.",
-          icon: "/pwa-192.png"
-        });
+
+    return () => {
+      console.log('🔌 [Realtime] Cleaning up subscription');
+      supabase.removeChannel(channel);
+    };
+  }, [user?.id, mutateNotes, mutateLists]);
+
+  // Handle job notifications and data refresh
+  useEffect(() => {
+    activeJobs.forEach(job => {
+      const jobId = job.data?.jobId || job.jobId;
+      if (job.type === 'job_done' && jobId && !processedJobsRef.current.has(jobId)) {
+        processedJobsRef.current.add(jobId);
+        
+        console.log('🎉 [Job Done] Refreshing Inbox data...');
+        mutateNotes();
+        mutateLists();
+        
+        // Notification logic
+        const note = job.data?.note;
+        const notifsActive = localStorage.getItem('sortd_notifications_active') === 'true';
+        if (notifsActive && Notification.permission === 'granted') {
+          new Notification("New Clip Captured!", {
+            body: note?.title || "Your content has been processed.",
+            icon: note?.thumbnail || "/pwa-192.png"
+          });
+        }
       }
-
-      setActiveJobs(prev =>
-        prev.map(j =>
-          (j.data?.jobId || j.jobId) === (event.data?.jobId || event.jobId) ? event : j
-        )
-      );
-      setTimeout(() => {
-        setActiveJobs(prev =>
-          prev.filter(j =>
-            (j.data?.jobId || j.jobId) !== (event.data?.jobId || event.jobId)
-          )
-        );
-      }, 5000);
-    }
-  }, [mutateNotes, mutateLists]);
-
-  useSSE(handleEvent);
+    });
+  }, [activeJobs, mutateNotes, mutateLists]);
 
   return (
     <div className="px-6 md:px-12 pt-12 pb-32 w-full max-w-5xl mx-auto">

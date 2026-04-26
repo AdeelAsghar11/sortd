@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import { api } from '../api';
 import { X, Send, Loader2 } from 'lucide-react';
+import { useProcessing } from '../contexts/ProcessingContext';
 import UploadZone from './UploadZone';
 
 export default function AddContentSheet({ onClose }) {
   const [url, setUrl] = useState('');
   const [isProcessing, setIsProcessing] = useState(false);
+  const { handleEvent } = useProcessing();
 
   const handleUrlSubmit = async (e) => {
     e.preventDefault();
@@ -14,12 +16,24 @@ export default function AddContentSheet({ onClose }) {
     setIsProcessing(true);
     const currentUrl = url;
     
-    // Optimistic UI close
-    setUrl('');
-    onClose();
-    
     try {
-      await api.processUrl(currentUrl);
+      const result = await api.processUrl(currentUrl);
+      
+      if (result && result.noteId && !result.jobId) {
+        // It's a duplicate
+        alert('✨ This link is already in your Sortd!');
+        setIsProcessing(false);
+        return;
+      }
+      
+      // Manually trigger event so progress bar shows up immediately
+      if (result && result.jobId) {
+        handleEvent({ type: 'job_queued', data: { jobId: result.jobId, type: 'video' } });
+      }
+      
+      // Success
+      setUrl('');
+      onClose();
     } catch (err) {
       alert(err.message);
     } finally {
@@ -29,7 +43,11 @@ export default function AddContentSheet({ onClose }) {
 
   const handleFileUpload = async (file) => {
     try {
-      await api.processImage(file);
+      const result = await api.processImage(file);
+      // Manually trigger event so progress bar shows up immediately
+      if (result && result.jobId) {
+        handleEvent({ type: 'job_queued', data: { jobId: result.jobId, type: 'image' } });
+      }
       onClose();
     } catch (err) {
       alert('Upload failed');

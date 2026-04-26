@@ -1,4 +1,3 @@
-import Tesseract from 'tesseract.js';
 import { v4 as uuidv4 } from 'uuid';
 import fs from 'fs';
 import sharp from 'sharp';
@@ -7,7 +6,7 @@ import { createNote, getAllLists, createList } from './database.js';
 import { uploadImage } from './storage.js';
 
 /**
- * Process an image file: Optimize -> Gemini Vision -> Storage -> Supabase Note
+ * Process an image file: Optimize -> Llama 4 Vision -> Storage -> Supabase Note
  */
 export async function processImage(filePath, sourceType = 'screenshot', updateJobStep, userId) {
   if (!fs.existsSync(filePath)) {
@@ -15,34 +14,41 @@ export async function processImage(filePath, sourceType = 'screenshot', updateJo
   }
 
   try {
-    updateJobStep('optimizing');
+    // 0. Initial state
+    await updateJobStep('starting');
+
+    // 1. Optimize Image
+    await updateJobStep('optimizing');
     
-    // Optimize image: Convert to WebP, resize if too large, and compress
+    // Create high-quality version for storage
     const optimizedBuffer = await sharp(filePath)
       .resize(1200, 1200, { fit: 'inside', withoutEnlargement: true })
       .webp({ quality: 80 })
       .toBuffer();
 
-    updateJobStep('analyzing');
+    // Create low-resolution version for AI (Much faster for OCR/Analysis)
+    const aiBuffer = await sharp(filePath)
+      .resize(800, 800, { fit: 'inside' })
+      .webp({ quality: 50 })
+      .toBuffer();
+
+    // 2. Parallelize Analysis and Upload
+    await updateJobStep('analyzing'); // Frontend says "Llama 4 is analyzing..."
+    
     const lists = await getAllLists(userId);
     
-    // Use optimized WebP for Gemini analysis (saves bandwidth and latency)
-    const aiResult = await analyzeImage(optimizedBuffer, 'image/webp', lists.map(l => l.name));
+    console.log('⚡ Starting parallel AI Analysis and Storage Upload...');
+    const [aiResult, thumbnail] = await Promise.all([
+      analyzeImage(aiBuffer, 'image/webp', lists.map(l => l.name)),
+      uploadImage(optimizedBuffer, 'image/webp')
+    ]);
 
-    updateJobStep('uploading');
-    // Save optimized WebP to storage
-    const thumbnail = await uploadImage(optimizedBuffer, 'image/webp');
-
-    // Run OCR in background for full-text searchability
-    // We use the original file for OCR as it might have higher resolution
-    let rawText = '';
-    try {
-      const { data: { text } } = await Tesseract.recognize(filePath, 'eng+urd');
-      rawText = text;
-    } catch (ocrErr) {
-      console.warn('OCR fallback failed, continuing with Gemini result');
-    }
-
+    // 3. Categorize and Save
+    await updateJobStep('saving'); // Frontend says "Saving to inbox..."
+    
+    // Use AI extracted text as rawText
+    let rawText = aiResult.extracted_text || aiResult.summary || '';
+    
     let targetListId;
     let targetList = lists.find(l => l.name.toLowerCase() === (aiResult.category || '').toLowerCase());
     
@@ -76,9 +82,7 @@ export async function processImage(filePath, sourceType = 'screenshot', updateJo
       thumbnail: thumbnail,
       list_id: targetListId,
     }, userId);
-  } finally {
-    if (fs.existsSync(filePath)) {
-      fs.unlinkSync(filePath);
-    }
+  } catch (err) {
+    throw err;
   }
 }

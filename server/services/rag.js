@@ -1,6 +1,5 @@
-import { generateEmbedding, summarizeContent } from './gemini.js';
+import { generateEmbedding, summarizeContent, getGeminiClient, geminiKeys } from './gemini.js';
 import { searchNotesSemantic, getAllNotes } from './database.js';
-import { getGeminiClient } from './gemini.js';
 import { queryGroq } from './groq.js';
 
 export async function queryRAG(query, userId) {
@@ -52,10 +51,21 @@ export async function queryRAG(query, userId) {
     
     User Question: ${query}`;
 
-    // 4. Generate response with rotation support (Gemini -> Groq -> Manual)
-    const { geminiKeys } = await import('./gemini.js');
-    let aiExhausted = false;
+    // 4. Generate response with rotation support (Groq Primary -> Gemini Fallback)
+    try {
+      console.log('🚀 RAG: Querying Groq (Primary)...');
+      const groqResponse = await queryGroq(prompt);
+      if (groqResponse) {
+        return {
+          response: groqResponse,
+          sources: topNotes.map(n => ({ id: n.id, title: n.title }))
+        };
+      }
+    } catch (groqErr) {
+      console.warn('⚠️ RAG Groq Primary failed, trying Gemini...', groqErr.message);
+    }
 
+    // Try Gemini if Groq failed
     for (let i = 0; i < Math.max(1, (geminiKeys?.length || 1)); i++) {
       try {
         const { model } = await getGeminiClient(i > 0, { responseMimeType: 'text/plain' });
@@ -71,30 +81,7 @@ export async function queryRAG(query, userId) {
           console.warn(`⚠️ RAG Gemini quota hit. Rotating to key #${i + 2}...`);
           continue;
         }
-        
-        if (err.message.includes('429')) {
-          console.warn('⚠️ All Gemini keys exhausted. Trying Groq fallback...');
-          aiExhausted = true;
-          break; // Exit Gemini loop to try Groq
-        }
-        
-        throw err;
-      }
-    }
-
-    // Try Groq if Gemini failed with 429
-    if (aiExhausted) {
-      try {
-        console.log('🚀 RAG: Querying Groq (Llama 3)...');
-        const groqResponse = await queryGroq(prompt);
-        if (groqResponse) {
-          return {
-            response: groqResponse,
-            sources: topNotes.map(n => ({ id: n.id, title: n.title }))
-          };
-        }
-      } catch (groqErr) {
-        console.error('Groq Fallback Failed:', groqErr.message);
+        console.error('Gemini Fallback Failed:', err.message);
       }
     }
 

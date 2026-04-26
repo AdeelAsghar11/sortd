@@ -53,6 +53,21 @@ export async function initDB() {
 export async function createNote(params, userId) {
   const { tags, ...noteData } = params;
   
+  // Prevent duplicates for URL notes
+  if (noteData.source_url) {
+    const { data: existingList } = await supabase
+      .from('notes')
+      .select('id')
+      .eq('source_url', noteData.source_url)
+      .eq('user_id', userId)
+      .limit(1);
+    
+    if (existingList && existingList.length > 0) {
+      console.log(`♻️ Note already exists for ${noteData.source_url}, returning existing.`);
+      return getNoteById(existingList[0].id, userId);
+    }
+  }
+
   const { data: note, error } = await supabase
     .from('notes')
     .insert([{ ...noteData, user_id: userId }])
@@ -398,6 +413,22 @@ export async function updateJob(id, updates) {
   return job;
 }
 
+export async function claimJob(id) {
+  const { data, error } = await supabase
+    .from('jobs')
+    .update({ 
+      state: 'processing', 
+      started_at: new Date().toISOString()
+    })
+    .eq('id', id)
+    .eq('state', 'pending') // Atomic check to prevent double-claiming
+    .select()
+    .maybeSingle();
+  
+  if (error) throw error;
+  return data; // Returns the job if claimed successfully, null otherwise
+}
+
 export async function getNextPendingJob() {
   const { data, error } = await supabase
     .from('jobs')
@@ -419,6 +450,17 @@ export async function getActiveJobsCount() {
   return count || 0;
 }
 
+export async function getActiveJobsForUser(userId) {
+  const { data, error } = await supabase
+    .from('jobs')
+    .select('*')
+    .eq('user_id', userId)
+    .in('state', ['pending', 'processing'])
+    .order('created_at', { ascending: true });
+  if (error) throw error;
+  return data || [];
+}
+
 export async function getJobStats() {
   const { data, error } = await supabase.from('jobs').select('state');
   if (error) throw error;
@@ -429,6 +471,22 @@ export async function getJobStats() {
     done: data.filter(j => j.state === 'done').length,
     failed: data.filter(j => j.state === 'failed').length,
   };
+}
+
+export async function resetStuckJobs() {
+  try {
+    const { data, error } = await supabase
+      .from('jobs')
+      .update({ state: 'pending', step: 'reset' })
+      .eq('state', 'processing')
+      .select();
+    
+    if (error) throw error;
+    return data?.length || 0;
+  } catch (err) {
+    console.error('❌ Failed to reset stuck jobs:', err.message);
+    return 0;
+  }
 }
 
 export async function searchNotesSemantic(embedding, userId, limit = 10) {
