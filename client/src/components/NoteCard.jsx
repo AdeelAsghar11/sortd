@@ -81,7 +81,7 @@ export default function NoteCard({ note, onToggleFavorite }) {
           e.stopPropagation();
           onToggleFavorite(note.id);
         }}
-        className={`absolute top-4 right-5 h-5 flex items-center transition-all ${isFavorite ? 'text-rose-500 heart-pop' : 'text-black/5 hover:text-black/10'}`}
+        className={`absolute top-4 right-5 h-5 flex items-center transition-all ${isFavorite ? 'text-rose-500' : 'text-black/5 hover:text-black/10'}`}
       >
         <Heart 
           size={18} 

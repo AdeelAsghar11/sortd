@@ -12,6 +12,8 @@ import * as storage from './services/storage.js';
 import { enqueue, getQueueStats, addSSEClient, startWorker } from './services/queue.js';
 import { resetGeminiClient } from './services/gemini.js';
 import { authenticate } from './services/auth.js';
+import { queryRAG } from './services/rag.js';
+import { generateEmbedding } from './services/gemini.js';
 
 dotenv.config();
 
@@ -33,6 +35,11 @@ app.use(cors({
   credentials: true
 }));
 app.use(express.json());
+
+app.use((req, res, next) => {
+  console.log(`${new Date().toISOString()} | ${req.method} ${req.url}`);
+  next();
+});
 
 // Rate limiting
 const limiter = rateLimit({
@@ -103,6 +110,15 @@ app.delete('/api/notes/:id', authenticate, async (req, res) => {
   }
 });
 
+app.get('/api/notes-random', authenticate, async (req, res) => {
+  try {
+    const note = await db.getRandomNote(req.user.id);
+    res.json(note);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
 // Lists
 app.get('/api/lists', authenticate, async (req, res) => {
   try {
@@ -160,7 +176,7 @@ app.post('/api/process-url', authenticate, async (req, res) => {
     return res.status(303).json({ noteId: existing.id });
   }
 
-  const jobId = enqueue({
+  const jobId = await enqueue({
     type: 'url',
     source: 'api',
     userId: req.user.id,
@@ -173,7 +189,7 @@ app.post('/api/process-url', authenticate, async (req, res) => {
 app.post('/api/process-image', authenticate, upload.single('image'), async (req, res) => {
   if (!req.file) return res.status(400).json({ error: 'Image file is required' });
 
-  const jobId = enqueue({
+  const jobId = await enqueue({
     type: 'image',
     source: 'api',
     userId: req.user.id,
@@ -187,8 +203,8 @@ app.post('/api/process-image', authenticate, upload.single('image'), async (req,
 });
 
 // Queue
-app.get('/api/queue/stats', authenticate, (req, res) => {
-  res.json(getQueueStats());
+app.get('/api/queue/stats', authenticate, async (req, res) => {
+  res.json(await getQueueStats());
 });
 
 // Settings
@@ -197,7 +213,7 @@ app.get('/api/settings', authenticate, async (req, res) => {
     const geminiKey = await db.getSetting('gemini_api_key');
     res.json({
       geminiKeySet: !!geminiKey,
-      queueStats: getQueueStats()
+      queueStats: await getQueueStats()
     });
   } catch (err) {
     res.status(500).json({ error: err.message });
@@ -209,6 +225,37 @@ app.post('/api/settings/gemini-key', authenticate, async (req, res) => {
     await db.setSetting('gemini_api_key', req.body.key);
     resetGeminiClient();
     res.json({ success: true });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+
+
+app.post('/api/ai/chat', authenticate, async (req, res) => {
+  try {
+    const { query } = req.body;
+    console.log(`🤖 Chat Request: "${query}" from user ${req.user.id}`);
+    if (!query) return res.status(400).json({ error: 'Query is required' });
+    
+    const result = await queryRAG(query, req.user.id);
+    res.json(result);
+  } catch (err) {
+    console.error('Chat Error:', err);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.get('/api/search', authenticate, async (req, res) => {
+  try {
+    const { query } = req.query;
+    if (!query) return res.status(400).json({ error: 'Query is required' });
+    
+    const embedding = await generateEmbedding(query);
+    if (!embedding) throw new Error('Failed to generate search vector');
+    
+    const results = await db.searchNotesSemantic(embedding, req.user.id);
+    res.json(results);
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
@@ -229,6 +276,7 @@ app.get('/api/events', authenticate, (req, res) => {
 async function start() {
   try {
     await db.initDB();
+    await db.initJobsTable();
     await storage.initStorage();
     startWorker();
 

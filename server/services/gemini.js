@@ -6,7 +6,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 // Manage multiple Gemini keys
-const geminiKeys = (process.env.GEMINI_API_KEY || '').split(',').map(k => k.trim()).filter(Boolean);
+export const geminiKeys = (process.env.GEMINI_API_KEY || '').split(',').map(k => k.trim()).filter(Boolean);
 let currentGeminiIndex = 0;
 
 let genAI = null;
@@ -15,7 +15,7 @@ let model = null;
 // Groq for text-only fallback
 const groq = process.env.GROQ_API_KEY ? new Groq({ apiKey: process.env.GROQ_API_KEY }) : null;
 
-async function getGeminiClient(forceRotate = false) {
+export async function getGeminiClient(forceRotate = false, config = {}) {
   if (forceRotate) {
     currentGeminiIndex = (currentGeminiIndex + 1) % geminiKeys.length;
     genAI = null;
@@ -23,7 +23,7 @@ async function getGeminiClient(forceRotate = false) {
     console.log(`🔄 Rotating to Gemini Key #${currentGeminiIndex + 1}`);
   }
 
-  if (genAI && model) return { genAI, model };
+  if (genAI && model && Object.keys(config).length === 0) return { genAI, model };
 
   let apiKey = geminiKeys[currentGeminiIndex];
   if (!apiKey) {
@@ -35,15 +35,23 @@ async function getGeminiClient(forceRotate = false) {
   }
 
   genAI = new GoogleGenerativeAI(apiKey);
-  model = genAI.getGenerativeModel({ 
-    model: 'gemini-flash-latest',
-    generationConfig: {
-      responseMimeType: 'application/json',
-      temperature: 0.3,
-    }
+  
+  const defaultConfig = {
+    responseMimeType: 'application/json',
+    temperature: 0.3,
+  };
+
+  const finalModel = genAI.getGenerativeModel({ 
+    model: 'gemini-2.0-flash-lite',
+    generationConfig: { ...defaultConfig, ...config }
   });
 
-  return { genAI, model };
+  // Only cache if it's the default config (for summarization)
+  if (Object.keys(config).length === 0) {
+    model = finalModel;
+  }
+
+  return { genAI, model: finalModel };
 }
 
 /**
@@ -150,6 +158,32 @@ function parseAIResponse(textResponse) {
 
 export async function categorizeContent(text, platform, customListNames = []) {
   return summarizeContent(text, platform, customListNames);
+}
+
+export async function generateEmbedding(text) {
+  if (!text) return null;
+  
+  // Clean text: remove newlines and extra spaces
+  const cleanText = text.replace(/\s+/g, ' ').trim();
+
+  for (let i = 0; i < Math.max(1, geminiKeys.length); i++) {
+    try {
+      const { genAI } = await getGeminiClient(i > 0);
+      const embeddingModel = genAI.getGenerativeModel({ model: 'gemini-embedding-2' });
+      const result = await embeddingModel.embedContent({ 
+        content: { parts: [{ text: cleanText.substring(0, 30000) }] }, 
+        outputDimensionality: 768 
+      });
+      return result.embedding.values;
+    } catch (err) {
+      if (err.message.includes('429') && i < geminiKeys.length - 1) {
+        console.warn('⚠️ Embedding quota exceeded. Rotating...');
+        continue;
+      }
+      console.error('Embedding generation failed:', err.message);
+      return null;
+    }
+  }
 }
 
 export function resetGeminiClient() {

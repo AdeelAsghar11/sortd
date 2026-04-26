@@ -43,6 +43,7 @@ export const api = {
   createNote: (data) => request('/notes', { method: 'POST', body: JSON.stringify(data) }),
   updateNote: (id, data) => request(`/notes/${id}`, { method: 'PATCH', body: JSON.stringify(data) }),
   deleteNote: (id) => request(`/notes/${id}`, { method: 'DELETE' }),
+  getRandomNote: () => request('/notes-random'),
 
   // Lists
   getLists: () => request('/lists'),
@@ -73,4 +74,8 @@ export const api = {
   // Settings
   getSettings: () => request('/settings'),
   setGeminiKey: (key) => request('/settings/gemini-key', { method: 'POST', body: JSON.stringify({ key }) }),
+
+  // AI
+  chat: (query) => request('/ai/chat', { method: 'POST', body: JSON.stringify({ query }) }),
+  search: (query) => request(`/search?query=${encodeURIComponent(query)}`),
 };

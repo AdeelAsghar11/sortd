@@ -1,13 +1,13 @@
-import { v4 as uuidv4 } from 'uuid';
 import { processUrl } from './videoProcessor.js';
 import { processImage } from './imageProcessor.js';
-import { logError } from './database.js';
+import { generateEmbedding } from './gemini.js';
+import { logError, createJob, updateJob, getNextPendingJob, getActiveJobsCount, getJobStats, updateNote } from './database.js';
 
 const QUEUE_CONFIG = {
   maxConcurrency: 2,
   maxGeminiPerMinute: 30,
   maxGeminiPerDay: 900,
-  pollIntervalMs: 500,
+  pollIntervalMs: 2000, // Increased poll interval for DB
 };
 
 class RateLimiter {
@@ -59,7 +59,6 @@ class RateLimiter {
 }
 
 const rateLimiter = new RateLimiter(QUEUE_CONFIG.maxGeminiPerMinute, QUEUE_CONFIG.maxGeminiPerDay);
-let jobs = [];
 let sseClients = [];
 const durations = [];
 const DEFAULT_DURATION = 30000;
@@ -81,74 +80,82 @@ function broadcastSSE(event, data, userId = null) {
   });
 }
 
-function getEstimatedDuration() {
-  if (durations.length === 0) return DEFAULT_DURATION;
-  return durations.reduce((a, b) => a + b, 0) / durations.length;
-}
-
-export function enqueue({ type, source, payload, userId }) {
-  const job = {
-    id: uuidv4(),
+export async function enqueue({ type, source, payload, userId }) {
+  const job = await createJob({
     type,
     source,
     payload,
-    userId,
+    user_id: userId,
     state: 'pending',
-    step: null,
-    result: null,
-    error: null,
-    errorCode: null,
-    attempts: 0,
-    maxAttempts: 2,
-    createdAt: new Date(),
-  };
+    max_attempts: 2,
+  });
 
-  jobs.push(job);
   broadcastSSE('job_queued', {
     jobId: job.id,
     type: job.type,
     source: job.source,
-    position: jobs.filter(j => j.state === 'pending' && j.userId === job.userId).length,
-    timestamp: job.createdAt,
-  }, job.userId);
+    timestamp: job.created_at,
+  }, userId);
 
   return job.id;
 }
 
 async function processJob(job) {
-  job.state = 'processing';
-  job.startedAt = new Date();
+  const startedAt = new Date().toISOString();
+  await updateJob(job.id, { 
+    state: 'processing', 
+    started_at: startedAt 
+  });
+
   broadcastSSE('job_started', {
     jobId: job.id,
     type: job.type,
     step: 'starting',
-    timestamp: job.startedAt,
-  }, job.userId);
+    timestamp: startedAt,
+  }, job.user_id);
 
-  const updateStep = (step) => {
-    job.step = step;
+  const updateStep = async (step) => {
+    await updateJob(job.id, { step });
     broadcastSSE('job_started', {
       jobId: job.id,
       type: job.type,
       step,
       timestamp: new Date(),
-    }, job.userId);
+    }, job.user_id);
   };
 
   try {
     rateLimiter.record();
     let result;
     if (job.type === 'url') {
-      result = await processUrl(job.payload.url, updateStep, job.userId);
+      result = await processUrl(job.payload.url, updateStep, job.user_id);
     } else if (job.type === 'image') {
-      result = await processImage(job.payload.filePath, job.payload.sourceType, updateStep, job.userId);
+      result = await processImage(job.payload.filePath, job.payload.sourceType, updateStep, job.user_id);
     }
 
-    job.state = 'done';
-    job.result = result;
-    job.completedAt = new Date();
+    // Generate embedding for semantic search & RAG
+    if (result && result.id) {
+      updateStep('embedding');
+      try {
+        const textToEmbed = `${result.title || ''}\n\n${result.content || ''}\n\n${result.raw_text || ''}`;
+        const embedding = await generateEmbedding(textToEmbed);
+        if (embedding) {
+          await updateNote(result.id, { embedding }, job.user_id);
+          result.embedding = embedding;
+        }
+      } catch (embErr) {
+        console.error(`Failed to generate embedding for note ${result.id}:`, embErr.message);
+      }
+    }
+
+    const completedAt = new Date().toISOString();
+    await updateJob(job.id, {
+      state: 'done',
+      result,
+      completed_at: completedAt
+    });
     
-    const duration = job.completedAt - job.startedAt;
+    const duration = new Date(completedAt) - new Date(startedAt);
     durations.push(duration);
     if (durations.length > 10) durations.shift();
 
@@ -156,19 +163,26 @@ async function processJob(job) {
       jobId: job.id,
       note: result,
       processingTimeMs: duration,
-      timestamp: job.completedAt,
-    }, job.userId);
+      timestamp: completedAt,
+    }, job.user_id);
   } catch (err) {
     console.error(`Job ${job.id} failed:`, err.message);
-    job.attempts++;
+    const attempts = (job.attempts || 0) + 1;
     
-    if (job.attempts < job.maxAttempts && err.message !== 'FILE_TOO_LARGE') {
-      job.state = 'pending';
-      console.log(`Retrying job ${job.id} (attempt ${job.attempts})`);
+    if (attempts < (job.max_attempts || 2) && err.message !== 'FILE_TOO_LARGE') {
+      await updateJob(job.id, { 
+        state: 'pending', 
+        attempts 
+      });
+      console.log(`Retrying job ${job.id} (attempt ${attempts})`);
     } else {
-      job.state = 'failed';
-      job.error = err.message;
-      job.errorCode = err.code || 'UNKNOWN';
+      const errorCode = err.code || 'UNKNOWN';
+      await updateJob(job.id, {
+        state: 'failed',
+        error: err.message,
+        error_code: errorCode,
+        attempts
+      });
       
       await logError(job.id, err.message, err.stack, job.payload);
       
@@ -176,25 +190,19 @@ async function processJob(job) {
         jobId: job.id,
         type: job.type,
         error: err.message,
-        errorCode: job.errorCode,
+        errorCode,
         timestamp: new Date(),
-      }, job.userId);
+      }, job.user_id);
     }
   }
 }
 
-export function getQueueStats() {
-  const pending = jobs.filter(j => j.state === 'pending').length;
-  const processing = jobs.filter(j => j.state === 'processing').length;
-  const done = jobs.filter(j => j.state === 'done').length;
-  const failed = jobs.filter(j => j.state === 'failed').length;
+export async function getQueueStats() {
+  const stats = await getJobStats();
   const remaining = rateLimiter.remaining();
 
   return {
-    pending,
-    processing,
-    done,
-    failed,
+    ...stats,
     dailyApiCalls: rateLimiter.dayCount,
     rateLimitRemaining: remaining.perDay,
     perMinuteRemaining: remaining.perMinute,
@@ -202,25 +210,20 @@ export function getQueueStats() {
 }
 
 export function startWorker() {
-  console.log('🚀 Queue worker started');
+  console.log('🚀 Persistent Queue worker started');
   setInterval(async () => {
-    const activeCount = jobs.filter(j => j.state === 'processing').length;
-    if (activeCount >= QUEUE_CONFIG.maxConcurrency) return;
+    try {
+      const activeCount = await getActiveJobsCount();
+      if (activeCount >= QUEUE_CONFIG.maxConcurrency) return;
 
-    if (!rateLimiter.canProceed()) return;
+      if (!rateLimiter.canProceed()) return;
 
-    const nextJob = jobs.find(j => j.state === 'pending');
-    if (nextJob) {
-      processJob(nextJob);
+      const nextJob = await getNextPendingJob();
+      if (nextJob) {
+        processJob(nextJob);
+      }
+    } catch (err) {
+      console.error('Queue worker error:', err.message);
     }
   }, QUEUE_CONFIG.pollIntervalMs);
-
-  // Cleanup old jobs from memory every 30 mins
-  setInterval(() => {
-    const now = Date.now();
-    jobs = jobs.filter(j => {
-      if (j.state === 'pending' || j.state === 'processing') return true;
-      return now - new Date(j.completedAt || j.createdAt).getTime() < 3600000; // Keep for 1 hour
-    });
-  }, 1800000);
 }

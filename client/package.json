@@ -21,6 +21,7 @@
     "react-dom": "^19.2.5",
     "react-markdown": "^10.1.0",
     "react-router-dom": "^7.14.2",
+    "swr": "^2.4.1",
     "tailwindcss": "^4.2.4",
     "vite-plugin-pwa": "^1.2.0"
   },

@@ -1,9 +1,12 @@
-import { useState, useEffect, useCallback, useRef } from 'react';
+import { useState, useCallback, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import useSWR from 'swr';
+import useSWRInfinite from 'swr/infinite';
 import { api } from '../api';
 import NoteCard from '../components/NoteCard';
 import ProcessingOverlay from '../components/ProcessingOverlay';
 import ManageListsSheet from '../components/ManageListsSheet';
+import MemoryLane from '../components/MemoryLane';
 import { FolderIcon } from '../components/icons';
 import { useSSE } from '../hooks/useSSE';
 import { Search, Filter, Loader2, Inbox as InboxIcon, ChevronDown, Layers, Youtube, Instagram, Zap } from 'lucide-react';
@@ -20,70 +23,54 @@ function getPinnedIds() {
 }
 
 export default function Inbox() {
-  const [notes, setNotes]           = useState([]);
-  const [loading, setLoading]       = useState(true);
-  const [loadingMore, setLoadingMore] = useState(false);
-  const [search, setSearch]         = useState('');
-  const [activeJobs, setActiveJobs] = useState([]);
-  const [lists, setLists]             = useState([]);
+  const [search, setSearch]           = useState('');
+  const [activeJobs, setActiveJobs]   = useState([]);
   const [pinnedIds, setPinnedIds]     = useState(getPinnedIds);
   const [isManaging, setIsManaging]   = useState(false);
   const [showSearch, setShowSearch]   = useState(false);
-  const [page, setPage]               = useState(0);
-  const [hasMore, setHasMore]         = useState(true);
   const searchRef                     = useRef(null);
 
-  const fetchNotes = async (isLoadMore = false) => {
-    if (isLoadMore) setLoadingMore(true);
-    else setLoading(true);
+  // SWR for Lists
+  const { data: lists = [], mutate: mutateLists } = useSWR('/api/lists', () => api.getLists());
 
-    try {
-      const currentPage = isLoadMore ? page + 1 : 0;
-      const { notes: newNotes, total } = await api.getNotes({ 
-        search, 
-        limit: PAGE_SIZE, 
-        offset: currentPage * PAGE_SIZE 
-      });
-      
-      if (isLoadMore) {
-        setNotes(prev => [...prev, ...newNotes]);
-        setPage(currentPage);
-      } else {
-        setNotes(newNotes);
-        setPage(0);
-      }
-      
-      setHasMore(notes.length + newNotes.length < total);
-    } catch (err) {
-      console.error('Failed to fetch notes');
-    } finally {
-      setLoading(false);
-      setLoadingMore(false);
-    }
+  // SWR for Notes (Infinite)
+  const getKey = (pageIndex, previousPageData) => {
+    if (previousPageData && !previousPageData.notes.length) return null;
+    return ['/api/notes', search, pageIndex];
   };
 
-  const fetchLists = async () => {
-    try { setLists(await api.getLists()); }
-    catch (err) { console.error('Failed to fetch lists'); }
-  };
+  const { data, isLoading, size: page, setSize: setPage, mutate: mutateNotes } = useSWRInfinite(
+    getKey,
+    async ([url, searchStr, pageIndex]) => {
+      return await api.getNotes({ search: searchStr, limit: PAGE_SIZE, offset: pageIndex * PAGE_SIZE });
+    },
+    { revalidateFirstPage: false, keepPreviousData: true }
+  );
 
-  useEffect(() => { fetchNotes(); }, [search]);
-  useEffect(() => { fetchLists(); }, []);
+  const notes = data ? data.flatMap(p => p.notes) : [];
+  const total = data?.[0]?.total ?? 0;
+  const hasMore = data ? notes.length < total : true;
+  const loadingMore = isLoading || (page > 0 && data && typeof data[page - 1] === "undefined");
+  const loading = isLoading && notes.length === 0;
 
   const handleToggleFavorite = async (noteId) => {
     const note = notes.find(n => n.id === noteId);
     if (!note) return;
     
     // Optimistic update
-    setNotes(prev => prev.map(n => n.id === noteId ? { ...n, starred: !n.starred } : n));
+    mutateNotes(currentData => {
+      if (!currentData) return currentData;
+      return currentData.map(p => ({
+        ...p,
+        notes: p.notes.map(n => n.id === noteId ? { ...n, starred: !n.starred } : n)
+      }));
+    }, false);
     
     try {
-      const updated = await api.updateNote(noteId, { starred: !note.starred });
-      setNotes(prev => prev.map(n => n.id === noteId ? updated : n));
+      await api.updateNote(noteId, { starred: !note.starred });
     } catch (err) {
       console.error('Failed to toggle favourite');
-      // Revert on failure
-      setNotes(prev => prev.map(n => n.id === noteId ? { ...n, starred: note.starred } : n));
+      mutateNotes();
     }
   };
 
@@ -96,22 +83,33 @@ export default function Inbox() {
     localStorage.setItem(PINNED_KEY, JSON.stringify(newPinned));
   };
 
-  const listsWithVisibility = lists.map(l => ({
-    ...l,
-    showInInbox: pinnedIds === null ? true : pinnedIds.includes(l.id),
-  }));
-  const visibleLists = listsWithVisibility.filter(l => l.showInInbox).slice(0, 6);
+  const listsWithVisibility = [...lists]
+    .sort((a, b) => (b.note_count || 0) - (a.note_count || 0))
+    .map(l => ({
+      ...l,
+      showInInbox: pinnedIds === null ? true : pinnedIds.includes(l.id),
+    }));
+  const visibleLists = listsWithVisibility.filter(l => l.showInInbox).slice(0, 3);
 
   const handleEvent = useCallback((event) => {
     const notifsActive = localStorage.getItem('sortd_notifications_active') === 'true';
 
     if (event.type === 'job_done') {
       const note = event.data.note;
-      setNotes(prev => {
-        if (prev.find(n => n.id === note.id)) return prev;
-        return [note, ...prev];
-      });
-      api.getLists().then(setLists).catch(console.error);
+      mutateNotes(currentData => {
+        if (!currentData) return currentData;
+        const exists = currentData.some(p => p.notes.some(n => n.id === note.id));
+        if (exists) return currentData;
+        
+        const newData = [...currentData];
+        newData[0] = { 
+          ...newData[0], 
+          notes: [note, ...newData[0].notes],
+          total: (newData[0].total || 0) + 1
+        };
+        return newData;
+      }, false);
+      mutateLists();
 
       if (notifsActive && Notification.permission === 'granted') {
         new Notification("New Clip Captured!", {
@@ -149,13 +147,12 @@ export default function Inbox() {
         );
       }, 5000);
     }
-  }, []);
+  }, [mutateNotes, mutateLists]);
 
   useSSE(handleEvent);
 
   return (
     <div className="px-6 md:px-12 pt-12 pb-32 w-full max-w-5xl mx-auto">
-      <ProcessingOverlay jobs={activeJobs} />
 
       <div className="hidden md:block mb-12">
         <h1 className="text-[32px] md:text-[42px] font-black tracking-tighter text-[#1a1d1f] leading-tight mb-2">
@@ -203,12 +200,15 @@ export default function Inbox() {
         </div>
       )}
 
+      {/* Memory Lane */}
+      <MemoryLane />
+
       {/* Folder grid */}
       <div className="flex items-center justify-between mb-4">
         <h2 className="text-[22px] font-extrabold tracking-tight">Your Lists</h2>
         <button
           onClick={() => setIsManaging(true)}
-          className="text-[12px] font-bold text-black/30 flex items-center gap-1 hover:text-black transition-colors"
+          className="text-[12px] font-bold text-black/30 flex items-center gap-1 hover:text-[#33b1ff] transition-colors"
         >
           Manage <Filter size={12} />
         </button>
@@ -220,15 +220,16 @@ export default function Inbox() {
             <Link 
               key={l.id} 
               to={`/lists/${l.id}`}
-              className="folder-card flex flex-col gap-3 relative overflow-hidden transition-transform active:scale-95 hover:opacity-100"
-              style={{ background: l.color || '#33b1ff' }}
+              className="relative w-full aspect-[40/32] flex items-center justify-center transition-transform active:scale-95 group"
             >
-              <div className="text-[10px] font-bold text-white absolute top-3 right-3">
-                {l.note_count ?? 0}
+              <FolderIcon color={l.color || '#33b1ff'} />
+              <div className="absolute inset-0 flex items-center justify-center pt-[12%] px-[15%] text-center">
+                <div className="text-[clamp(10px,2.5vw,12px)] font-black text-white leading-tight line-clamp-1">
+                  {l.name}
+                </div>
               </div>
-              <FolderIcon color="white" size={28} />
-              <div className="text-[11px] font-extrabold text-white tracking-tight">
-                {l.name}
+              <div className="absolute top-[0%] right-[2%] bg-white/80 backdrop-blur-lg rounded-full w-[22%] aspect-square flex items-center justify-center text-[clamp(8px,1.5vw,10px)] font-black text-[#33b1ff] border border-white/60 shadow-sm group-hover:scale-110 transition-transform">
+                {l.note_count ?? 0}
               </div>
             </Link>
           ))}
@@ -262,7 +263,7 @@ export default function Inbox() {
           {hasMore && (
             <div className="mt-8 flex justify-center">
               <button 
-                onClick={() => fetchNotes(true)} 
+                onClick={() => setPage(page + 1)} 
                 disabled={loadingMore}
                 className="btn-primary flex items-center gap-2"
                 style={{ background: 'white', color: '#1a1d1f', border: '1px solid #efefef' }}

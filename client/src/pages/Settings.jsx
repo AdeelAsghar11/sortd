@@ -5,9 +5,11 @@ import {
   LogOut, 
   ChevronRight,
   Download, 
-  Info
+  Info,
+  Star
 } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
+import { Link } from 'react-router-dom';
 
 export default function Settings() {
   const { user: authUser, signOut } = useAuth();
@@ -181,6 +183,16 @@ export default function Settings() {
         )}
 
         <div className="pt-4" />
+
+        <Link to="/favorites" className="w-full bg-white rounded-[24px] p-5 flex items-center justify-between neo-shadow active:scale-[0.98] transition-all">
+          <div className="flex items-center gap-4">
+            <div className="w-10 h-10 rounded-2xl flex items-center justify-center bg-yellow-50 text-yellow-500">
+              <Star size={18} />
+            </div>
+            <span className="font-extrabold text-[15px]">Starred Clips</span>
+          </div>
+          <ChevronRight size={16} className="text-black/10" />
+        </Link>
 
         <div className="w-full bg-white rounded-[24px] p-5 flex items-center justify-between neo-shadow">
           <div className="flex items-center gap-4">

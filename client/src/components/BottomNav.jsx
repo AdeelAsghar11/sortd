@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { Inbox, FolderOpen, Plus, Star, User } from 'lucide-react';
+import { Inbox, FolderOpen, Plus, MessageSquare, User } from 'lucide-react';
 
 export default function BottomNav({ onAddClick }) {
   return (
@@ -34,10 +34,10 @@ export default function BottomNav({ onAddClick }) {
           <div className="flex-1" /> {/* Spacer for FAB */}
 
           <NavLink
-            to="/favorites"
+            to="/chat"
             className={({ isActive }) => `flex justify-center transition-colors ${isActive ? 'text-[#33b1ff]' : 'text-black/20'}`}
           >
-            {({ isActive }) => <Star size={24} strokeWidth={isActive ? 2.5 : 2} />}
+            {({ isActive }) => <MessageSquare size={24} strokeWidth={isActive ? 2.5 : 2} />}
           </NavLink>
 
           <NavLink

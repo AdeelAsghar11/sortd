@@ -21,8 +21,15 @@ export const YoutubeIcon = ({ size = 16, className = "" }) => (
   </svg>
 );
 
-export const FolderIcon = ({ color = "rgba(255,255,255,0.4)", size = 40 }) => (
-  <svg width={size} height={(size * 32) / 40} viewBox="0 0 40 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+export const FolderIcon = ({ color = "rgba(255,255,255,0.4)", size = "100%", className = "" }) => (
+  <svg 
+    width={size} 
+    style={{ aspectRatio: '40/32' }} 
+    viewBox="0 0 40 32" 
+    fill="none" 
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+  >
     <path d="M0 6C0 2.68629 2.68629 0 6 0H14.5L18.5 4H34C37.3137 4 40 6.68629 40 10V26C40 29.3137 37.3137 32 34 32H6C2.68629 32 0 29.3137 0 26V6Z" fill={color} />
   </svg>
 );

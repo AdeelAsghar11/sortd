@@ -78,7 +78,7 @@ export default function AddContentSheet({ onClose }) {
                 placeholder="Instagram, YouTube, or web link..."
                 value={url}
                 onChange={(e) => setUrl(e.target.value)}
-                className="input-flat pl-5 pr-16 text-[15px] placeholder:text-[13px] placeholder:text-black/20"
+                className="input-flat !pl-5 !pr-[54px] text-[15px] placeholder:text-[13px] placeholder:text-black/20"
                 required
               />
               <button 

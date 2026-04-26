@@ -1,0 +1,954 @@
+◇ injected env (8) from .env // tip: ◈ secrets for agents [www.dotenvx.com]
+◇ injected env (0) from .env // tip: ⌘ suppress logs { quiet: true }
+◇ injected env (0) from .env // tip: ⌘ custom filepath { path: '/custom/path/.env' }
+◇ injected env (0) from .env // tip: ⌘ custom filepath { path: '/custom/path/.env' }
+✅ Supabase connected
+Note: jobs table may need manual creation: Could not find the function public.exec_sql(sql) in the schema cache
+🚀 Persistent Queue worker started
+🚀 Sortd Backend running at http://localhost:3001
+2026-04-26T06:57:39.310Z | POST /api/ai/chat
+Restarting 'index.js'
+◇ injected env (8) from .env // tip: ⌘ enable debugging { debug: true }
+◇ injected env (0) from .env // tip: ◈ encrypted .env [www.dotenvx.com]
+◇ injected env (0) from .env // tip: ⌘ override existing { override: true }
+◇ injected env (0) from .env // tip: ◈ encrypted .env [www.dotenvx.com]
+✅ Supabase connected
+Note: jobs table may need manual creation: Could not find the function public.exec_sql(sql) in the schema cache
+🚀 Persistent Queue worker started
+🚀 Sortd Backend running at http://localhost:3001
+Restarting 'index.js'
+◇ injected env (8) from .env // tip: ◈ secrets for agents [www.dotenvx.com]
+◇ injected env (0) from .env // tip: ⌘ custom filepath { path: '/custom/path/.env' }
+◇ injected env (0) from .env // tip: ⌘ custom filepath { path: '/custom/path/.env' }
+◇ injected env (0) from .env // tip: ⌘ custom filepath { path: '/custom/path/.env' }
+✅ Supabase connected
+Note: jobs table may need manual creation: Could not find the function public.exec_sql(sql) in the schema cache
+🚀 Persistent Queue worker started
+🚀 Sortd Backend running at http://localhost:3001
+Restarting 'index.js'
+◇ injected env (8) from .env // tip: ⌘ enable debugging { debug: true }
+◇ injected env (0) from .env // tip: ⌘ suppress logs { quiet: true }
+◇ injected env (0) from .env // tip: ⌘ override existing { override: true }
+◇ injected env (0) from .env // tip: ◈ secrets for agents [www.dotenvx.com]
+✅ Supabase connected
+Note: jobs table may need manual creation: Could not find the function public.exec_sql(sql) in the schema cache
+🚀 Persistent Queue worker started
+🚀 Sortd Backend running at http://localhost:3001
+Restarting 'index.js'
+◇ injected env (8) from .env // tip: ◈ encrypted .env [www.dotenvx.com]
+◇ injected env (0) from .env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }
+◇ injected env (0) from .env // tip: ◈ encrypted .env [www.dotenvx.com]
+◇ injected env (0) from .env // tip: ⌘ custom filepath { path: '/custom/path/.env' }
+✅ Supabase connected
+Note: jobs table may need manual creation: Could not find the function public.exec_sql(sql) in the schema cache
+🚀 Persistent Queue worker started
+🚀 Sortd Backend running at http://localhost:3001
+2026-04-26T06:59:58.236Z | GET /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MTg4ODM5LCJpYXQiOjE3NzcxODUyMzksImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.Z-iZRtHBsGPdRyDtD-RsTpi7PSQeViR_XTCxBgaeuInxPRnN8IeKJ9GA9W3I6xukLye1SeYS0g8MXNVydSM-Rg
+🔐 Auth: Verifying token for request to /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MTg4ODM5LCJpYXQiOjE3NzcxODUyMzksImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.Z-iZRtHBsGPdRyDtD-RsTpi7PSQeViR_XTCxBgaeuInxPRnN8IeKJ9GA9W3I6xukLye1SeYS0g8MXNVydSM-Rg...
+2026-04-26T06:59:58.255Z | GET /api/notes-random
+🔐 Auth: Verifying token for request to /api/notes-random...
+2026-04-26T06:59:58.261Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+2026-04-26T06:59:58.264Z | GET /api/notes?search=&limit=10&offset=0
+🔐 Auth: Verifying token for request to /api/notes?search=&limit=10&offset=0...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes-random
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MTg4ODM5LCJpYXQiOjE3NzcxODUyMzksImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.Z-iZRtHBsGPdRyDtD-RsTpi7PSQeViR_XTCxBgaeuInxPRnN8IeKJ9GA9W3I6xukLye1SeYS0g8MXNVydSM-Rg
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes?search=&limit=10&offset=0
+2026-04-26T06:59:59.166Z | GET /api/notes?search=&limit=10&offset=0
+🔐 Auth: Verifying token for request to /api/notes?search=&limit=10&offset=0...
+2026-04-26T06:59:59.373Z | GET /api/notes-random
+🔐 Auth: Verifying token for request to /api/notes-random...
+2026-04-26T06:59:59.431Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes-random
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes?search=&limit=10&offset=0
+2026-04-26T07:00:07.527Z | GET /api/notes-random
+🔐 Auth: Verifying token for request to /api/notes-random...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes-random
+2026-04-26T07:00:23.924Z | POST /api/ai/chat
+🔐 Auth: Verifying token for request to /api/ai/chat...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/ai/chat
+🤖 Chat Request: "movie list?" from user 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d
+🧠 RAG: Generating embedding for query: "movie list?"
+Embedding generation failed: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/text-embedding-004:embedContent: [404 Not Found] models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.
+RAG Error: Could not generate embedding for query
+Chat Error: Error: Could not generate embedding for query
+    at queryRAG (file:///home/groot/Documents/sortd/server/services/rag.js:11:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///home/groot/Documents/sortd/server/index.js:241:20
+2026-04-26T09:42:28.308Z | GET /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAwMTQ2LCJpYXQiOjE3NzcxOTY1NDYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.KWEDMWX7Kl8V63aVlQ275gc-tTU6TsCZ-oTjMQMeYmG-NBd26IglDAQhUN3-gQRm7oKwv_1eXNHqQd2OBsiz8g
+🔐 Auth: Verifying token for request to /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAwMTQ2LCJpYXQiOjE3NzcxOTY1NDYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.KWEDMWX7Kl8V63aVlQ275gc-tTU6TsCZ-oTjMQMeYmG-NBd26IglDAQhUN3-gQRm7oKwv_1eXNHqQd2OBsiz8g...
+2026-04-26T09:42:28.328Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+2026-04-26T09:42:28.330Z | GET /api/notes?search=&limit=10&offset=0
+🔐 Auth: Verifying token for request to /api/notes?search=&limit=10&offset=0...
+2026-04-26T09:42:28.333Z | GET /api/notes-random
+🔐 Auth: Verifying token for request to /api/notes-random...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAwMTQ2LCJpYXQiOjE3NzcxOTY1NDYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.KWEDMWX7Kl8V63aVlQ275gc-tTU6TsCZ-oTjMQMeYmG-NBd26IglDAQhUN3-gQRm7oKwv_1eXNHqQd2OBsiz8g
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes?search=&limit=10&offset=0
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes-random
+2026-04-26T09:42:29.191Z | GET /api/notes?search=&limit=10&offset=0
+🔐 Auth: Verifying token for request to /api/notes?search=&limit=10&offset=0...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes?search=&limit=10&offset=0
+2026-04-26T09:42:29.478Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+2026-04-26T09:42:29.499Z | GET /api/notes-random
+🔐 Auth: Verifying token for request to /api/notes-random...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes-random
+2026-04-26T09:42:30.561Z | GET /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAwMTQ2LCJpYXQiOjE3NzcxOTY1NDYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.KWEDMWX7Kl8V63aVlQ275gc-tTU6TsCZ-oTjMQMeYmG-NBd26IglDAQhUN3-gQRm7oKwv_1eXNHqQd2OBsiz8g
+🔐 Auth: Verifying token for request to /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAwMTQ2LCJpYXQiOjE3NzcxOTY1NDYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.KWEDMWX7Kl8V63aVlQ275gc-tTU6TsCZ-oTjMQMeYmG-NBd26IglDAQhUN3-gQRm7oKwv_1eXNHqQd2OBsiz8g...
+2026-04-26T09:42:30.575Z | GET /api/notes-random
+🔐 Auth: Verifying token for request to /api/notes-random...
+2026-04-26T09:42:30.577Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+2026-04-26T09:42:30.582Z | GET /api/notes?search=&limit=10&offset=0
+🔐 Auth: Verifying token for request to /api/notes?search=&limit=10&offset=0...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAwMTQ2LCJpYXQiOjE3NzcxOTY1NDYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.KWEDMWX7Kl8V63aVlQ275gc-tTU6TsCZ-oTjMQMeYmG-NBd26IglDAQhUN3-gQRm7oKwv_1eXNHqQd2OBsiz8g
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes-random
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes?search=&limit=10&offset=0
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T09:42:31.384Z | GET /api/notes?search=&limit=10&offset=0
+🔐 Auth: Verifying token for request to /api/notes?search=&limit=10&offset=0...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes?search=&limit=10&offset=0
+2026-04-26T09:42:31.693Z | GET /api/notes-random
+🔐 Auth: Verifying token for request to /api/notes-random...
+2026-04-26T09:42:31.742Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes-random
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T09:43:07.546Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T09:43:08.741Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T09:43:25.036Z | POST /api/ai/chat
+🔐 Auth: Verifying token for request to /api/ai/chat...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/ai/chat
+🤖 Chat Request: "what's the hackathon I saved" from user 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d
+🧠 RAG: Generating embedding for query: "what's the hackathon I saved"
+Embedding generation failed: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/text-embedding-004:embedContent: [404 Not Found] models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ListModels to see the list of available models and their supported methods.
+RAG Error: Could not generate embedding for query
+Chat Error: Error: Could not generate embedding for query
+    at queryRAG (file:///home/groot/Documents/sortd/server/services/rag.js:11:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///home/groot/Documents/sortd/server/index.js:241:20
+Restarting 'index.js'
+◇ injected env (8) from .env // tip: ◈ secrets for agents [www.dotenvx.com]
+◇ injected env (0) from .env // tip: ⌘ custom filepath { path: '/custom/path/.env' }
+◇ injected env (0) from .env // tip: ⌁ auth for agents [www.vestauth.com]
+◇ injected env (0) from .env // tip: ◈ encrypted .env [www.dotenvx.com]
+✅ Supabase connected
+Note: jobs table may need manual creation: Could not find the function public.exec_sql(sql) in the schema cache
+🚀 Persistent Queue worker started
+🚀 Sortd Backend running at http://localhost:3001
+Restarting 'index.js'
+◇ injected env (8) from .env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }
+◇ injected env (0) from .env // tip: ⌁ auth for agents [www.vestauth.com]
+◇ injected env (0) from .env // tip: ⌘ custom filepath { path: '/custom/path/.env' }
+◇ injected env (0) from .env // tip: ⌁ auth for agents [www.vestauth.com]
+✅ Supabase connected
+Note: jobs table may need manual creation: Could not find the function public.exec_sql(sql) in the schema cache
+🚀 Persistent Queue worker started
+🚀 Sortd Backend running at http://localhost:3001
+Restarting 'index.js'
+◇ injected env (8) from .env // tip: ◈ secrets for agents [www.dotenvx.com]
+◇ injected env (0) from .env // tip: ⌁ auth for agents [www.vestauth.com]
+◇ injected env (0) from .env // tip: ⌘ override existing { override: true }
+◇ injected env (0) from .env // tip: ◈ secrets for agents [www.dotenvx.com]
+✅ Supabase connected
+Note: jobs table may need manual creation: Could not find the function public.exec_sql(sql) in the schema cache
+🚀 Persistent Queue worker started
+🚀 Sortd Backend running at http://localhost:3001
+Restarting 'index.js'
+◇ injected env (8) from .env // tip: ◈ encrypted .env [www.dotenvx.com]
+◇ injected env (0) from .env // tip: ⌘ enable debugging { debug: true }
+◇ injected env (0) from .env // tip: ⌘ suppress logs { quiet: true }
+◇ injected env (0) from .env // tip: ◈ encrypted .env [www.dotenvx.com]
+✅ Supabase connected
+Note: jobs table may need manual creation: Could not find the function public.exec_sql(sql) in the schema cache
+🚀 Persistent Queue worker started
+🚀 Sortd Backend running at http://localhost:3001
+Restarting 'index.js'
+◇ injected env (8) from .env // tip: ⌘ override existing { override: true }
+◇ injected env (0) from .env // tip: ⌘ enable debugging { debug: true }
+◇ injected env (0) from .env // tip: ⌘ custom filepath { path: '/custom/path/.env' }
+◇ injected env (0) from .env // tip: ⌘ enable debugging { debug: true }
+✅ Supabase connected
+Note: jobs table may need manual creation: Could not find the function public.exec_sql(sql) in the schema cache
+🚀 Persistent Queue worker started
+🚀 Sortd Backend running at http://localhost:3001
+Restarting 'index.js'
+◇ injected env (8) from .env // tip: ⌘ custom filepath { path: '/custom/path/.env' }
+◇ injected env (0) from .env // tip: ⌁ auth for agents [www.vestauth.com]
+◇ injected env (0) from .env // tip: ◈ secrets for agents [www.dotenvx.com]
+◇ injected env (0) from .env // tip: ⌘ override existing { override: true }
+✅ Supabase connected
+Note: jobs table may need manual creation: Could not find the function public.exec_sql(sql) in the schema cache
+🚀 Persistent Queue worker started
+🚀 Sortd Backend running at http://localhost:3001
+Restarting 'index.js'
+◇ injected env (8) from .env // tip: ⌘ suppress logs { quiet: true }
+◇ injected env (0) from .env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }
+◇ injected env (0) from .env // tip: ⌘ suppress logs { quiet: true }
+◇ injected env (0) from .env // tip: ⌘ suppress logs { quiet: true }
+✅ Supabase connected
+Note: jobs table may need manual creation: Could not find the function public.exec_sql(sql) in the schema cache
+🚀 Persistent Queue worker started
+🚀 Sortd Backend running at http://localhost:3001
+Restarting 'index.js'
+file:///home/groot/Documents/sortd/server/services/rag.js:50
+    const context = topNotes.map(n => `Title: ${n.title}\nContent: ${n.content || n.raw_text}`).join('\n\n---\n\n');
+          ^
+
+SyntaxError: Identifier 'context' has already been declared
+    at compileSourceTextModule (node:internal/modules/esm/utils:346:16)
+    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:146:18)
+    at #translate (node:internal/modules/esm/loader:497:12)
+    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:544:27)
+
+Node.js v20.20.2
+Failed running 'index.js'
+Restarting 'index.js'
+◇ injected env (8) from .env // tip: ◈ secrets for agents [www.dotenvx.com]
+◇ injected env (0) from .env // tip: ⌘ enable debugging { debug: true }
+◇ injected env (0) from .env // tip: ⌘ custom filepath { path: '/custom/path/.env' }
+◇ injected env (0) from .env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }
+✅ Supabase connected
+Note: jobs table may need manual creation: Could not find the function public.exec_sql(sql) in the schema cache
+🚀 Persistent Queue worker started
+🚀 Sortd Backend running at http://localhost:3001
+2026-04-26T10:06:07.662Z | POST /api/ai/chat
+🔐 Auth: Verifying token for request to /api/ai/chat...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/ai/chat
+🤖 Chat Request: "what's that poetry by ghalib I saved?" from user 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d
+🧠 RAG: Generating embedding for query: "what's that poetry by ghalib I saved?"
+🔍 RAG: Searching for relevant notes...
+RAG Gemini Error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-lite:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash-lite
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash-lite
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash-lite
+Please retry in 50.239310342s. [{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerDayPerProjectPerModel-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.0-flash-lite"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerMinutePerProjectPerModel-FreeTier","quotaDimensions":{"model":"gemini-2.0-flash-lite","location":"global"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count","quotaId":"GenerateContentInputTokensPerModelPerMinute-FreeTier","quotaDimensions":{"model":"gemini-2.0-flash-lite","location":"global"}}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"50s"}]
+Restarting 'index.js'
+◇ injected env (8) from .env // tip: ⌘ override existing { override: true }
+◇ injected env (0) from .env // tip: ⌘ enable debugging { debug: true }
+◇ injected env (0) from .env // tip: ⌘ suppress logs { quiet: true }
+◇ injected env (0) from .env // tip: ⌘ suppress logs { quiet: true }
+◇ injected env (0) from .env // tip: ◈ secrets for agents [www.dotenvx.com]
+✅ Supabase connected
+Note: jobs table may need manual creation: Could not find the function public.exec_sql(sql) in the schema cache
+🚀 Persistent Queue worker started
+🚀 Sortd Backend running at http://localhost:3001
+Restarting 'index.js'
+◇ injected env (8) from .env // tip: ⌁ auth for agents [www.vestauth.com]
+◇ injected env (0) from .env // tip: ⌘ suppress logs { quiet: true }
+◇ injected env (0) from .env // tip: ⌘ custom filepath { path: '/custom/path/.env' }
+◇ injected env (0) from .env // tip: ⌘ suppress logs { quiet: true }
+◇ injected env (0) from .env // tip: ⌁ auth for agents [www.vestauth.com]
+✅ Supabase connected
+Note: jobs table may need manual creation: Could not find the function public.exec_sql(sql) in the schema cache
+🚀 Persistent Queue worker started
+🚀 Sortd Backend running at http://localhost:3001
+2026-04-26T10:19:21.804Z | GET /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAwMTQ2LCJpYXQiOjE3NzcxOTY1NDYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.KWEDMWX7Kl8V63aVlQ275gc-tTU6TsCZ-oTjMQMeYmG-NBd26IglDAQhUN3-gQRm7oKwv_1eXNHqQd2OBsiz8g
+🔐 Auth: Verifying token for request to /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAwMTQ2LCJpYXQiOjE3NzcxOTY1NDYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.KWEDMWX7Kl8V63aVlQ275gc-tTU6TsCZ-oTjMQMeYmG-NBd26IglDAQhUN3-gQRm7oKwv_1eXNHqQd2OBsiz8g...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAwMTQ2LCJpYXQiOjE3NzcxOTY1NDYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.KWEDMWX7Kl8V63aVlQ275gc-tTU6TsCZ-oTjMQMeYmG-NBd26IglDAQhUN3-gQRm7oKwv_1eXNHqQd2OBsiz8g
+2026-04-26T10:19:22.555Z | GET /api/notes?search=&limit=10&offset=0
+🔐 Auth: Verifying token for request to /api/notes?search=&limit=10&offset=0...
+2026-04-26T10:19:22.563Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+2026-04-26T10:19:22.564Z | GET /api/notes-random
+🔐 Auth: Verifying token for request to /api/notes-random...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes-random
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes?search=&limit=10&offset=0
+2026-04-26T10:19:23.997Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+2026-04-26T10:19:23.999Z | GET /api/notes-random
+🔐 Auth: Verifying token for request to /api/notes-random...
+2026-04-26T10:19:24.266Z | GET /api/notes?search=&limit=10&offset=0
+🔐 Auth: Verifying token for request to /api/notes?search=&limit=10&offset=0...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes-random
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes?search=&limit=10&offset=0
+2026-04-26T10:19:54.979Z | POST /api/ai/chat
+🔐 Auth: Verifying token for request to /api/ai/chat...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/ai/chat
+🤖 Chat Request: "how to get generate free videos using claude?" from user 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d
+🧠 RAG: Generating embedding for query: "how to get generate free videos using claude?"
+🔍 RAG: Searching for relevant notes...
+⚠️ RAG Gemini quota hit. Rotating to key #2...
+🔄 Rotating to Gemini Key #2
+⚠️ RAG Gemini quota hit. Rotating to key #3...
+🔄 Rotating to Gemini Key #3
+⚠️ All Gemini keys exhausted. Trying Groq fallback...
+🚀 RAG: Querying Groq (Llama 3)...
+2026-04-26T10:20:15.438Z | GET /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAwMTQ2LCJpYXQiOjE3NzcxOTY1NDYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.KWEDMWX7Kl8V63aVlQ275gc-tTU6TsCZ-oTjMQMeYmG-NBd26IglDAQhUN3-gQRm7oKwv_1eXNHqQd2OBsiz8g
+🔐 Auth: Verifying token for request to /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAwMTQ2LCJpYXQiOjE3NzcxOTY1NDYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.KWEDMWX7Kl8V63aVlQ275gc-tTU6TsCZ-oTjMQMeYmG-NBd26IglDAQhUN3-gQRm7oKwv_1eXNHqQd2OBsiz8g...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAwMTQ2LCJpYXQiOjE3NzcxOTY1NDYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.KWEDMWX7Kl8V63aVlQ275gc-tTU6TsCZ-oTjMQMeYmG-NBd26IglDAQhUN3-gQRm7oKwv_1eXNHqQd2OBsiz8g
+2026-04-26T10:20:16.197Z | GET /api/notes-random
+🔐 Auth: Verifying token for request to /api/notes-random...
+2026-04-26T10:20:16.207Z | GET /api/notes?search=&limit=10&offset=0
+🔐 Auth: Verifying token for request to /api/notes?search=&limit=10&offset=0...
+2026-04-26T10:20:16.217Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes?search=&limit=10&offset=0
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes-random
+2026-04-26T10:20:17.615Z | GET /api/notes?search=&limit=10&offset=0
+🔐 Auth: Verifying token for request to /api/notes?search=&limit=10&offset=0...
+2026-04-26T10:20:17.616Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes?search=&limit=10&offset=0
+2026-04-26T10:20:18.375Z | GET /api/notes-random
+🔐 Auth: Verifying token for request to /api/notes-random...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes-random
+2026-04-26T10:20:20.367Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:20:21.125Z | GET /api/notes/d8901ab9-a91a-495e-8209-6f9e2f7f4082
+🔐 Auth: Verifying token for request to /api/notes/d8901ab9-a91a-495e-8209-6f9e2f7f4082...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes/d8901ab9-a91a-495e-8209-6f9e2f7f4082
+2026-04-26T10:20:21.840Z | GET /api/notes/d8901ab9-a91a-495e-8209-6f9e2f7f4082
+🔐 Auth: Verifying token for request to /api/notes/d8901ab9-a91a-495e-8209-6f9e2f7f4082...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes/d8901ab9-a91a-495e-8209-6f9e2f7f4082
+2026-04-26T10:20:22.592Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:20:40.001Z | POST /api/ai/chat
+🔐 Auth: Verifying token for request to /api/ai/chat...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/ai/chat
+🤖 Chat Request: "what's that poetry by ghalib?" from user 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d
+🧠 RAG: Generating embedding for query: "what's that poetry by ghalib?"
+🔍 RAG: Searching for relevant notes...
+⚠️ RAG Gemini quota hit. Rotating to key #2...
+🔄 Rotating to Gemini Key #1
+⚠️ RAG Gemini quota hit. Rotating to key #3...
+🔄 Rotating to Gemini Key #2
+⚠️ All Gemini keys exhausted. Trying Groq fallback...
+🚀 RAG: Querying Groq (Llama 3)...
+2026-04-26T10:21:28.573Z | POST /api/ai/chat
+🔐 Auth: Verifying token for request to /api/ai/chat...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/ai/chat
+🤖 Chat Request: "what's that hackathon?" from user 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d
+🧠 RAG: Generating embedding for query: "what's that hackathon?"
+🔍 RAG: Searching for relevant notes...
+⚠️ RAG Gemini quota hit. Rotating to key #2...
+🔄 Rotating to Gemini Key #3
+⚠️ RAG Gemini quota hit. Rotating to key #3...
+🔄 Rotating to Gemini Key #1
+⚠️ All Gemini keys exhausted. Trying Groq fallback...
+🚀 RAG: Querying Groq (Llama 3)...
+2026-04-26T10:23:09.180Z | GET /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAwMTQ2LCJpYXQiOjE3NzcxOTY1NDYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.KWEDMWX7Kl8V63aVlQ275gc-tTU6TsCZ-oTjMQMeYmG-NBd26IglDAQhUN3-gQRm7oKwv_1eXNHqQd2OBsiz8g
+🔐 Auth: Verifying token for request to /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAwMTQ2LCJpYXQiOjE3NzcxOTY1NDYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.KWEDMWX7Kl8V63aVlQ275gc-tTU6TsCZ-oTjMQMeYmG-NBd26IglDAQhUN3-gQRm7oKwv_1eXNHqQd2OBsiz8g...
+2026-04-26T10:23:09.196Z | GET /api/notes-random
+🔐 Auth: Verifying token for request to /api/notes-random...
+2026-04-26T10:23:09.197Z | GET /api/notes?search=&limit=10&offset=0
+🔐 Auth: Verifying token for request to /api/notes?search=&limit=10&offset=0...
+2026-04-26T10:23:09.199Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes?search=&limit=10&offset=0
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes-random
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAwMTQ2LCJpYXQiOjE3NzcxOTY1NDYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.KWEDMWX7Kl8V63aVlQ275gc-tTU6TsCZ-oTjMQMeYmG-NBd26IglDAQhUN3-gQRm7oKwv_1eXNHqQd2OBsiz8g
+2026-04-26T10:23:10.828Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+2026-04-26T10:23:10.872Z | GET /api/notes-random
+🔐 Auth: Verifying token for request to /api/notes-random...
+2026-04-26T10:23:11.148Z | GET /api/notes?search=&limit=10&offset=0
+🔐 Auth: Verifying token for request to /api/notes?search=&limit=10&offset=0...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes-random
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes?search=&limit=10&offset=0
+2026-04-26T10:23:14.286Z | GET /api/notes?search=c&limit=10&offset=0
+🔐 Auth: Verifying token for request to /api/notes?search=c&limit=10&offset=0...
+2026-04-26T10:23:14.553Z | GET /api/notes?search=cr&limit=10&offset=0
+🔐 Auth: Verifying token for request to /api/notes?search=cr&limit=10&offset=0...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes?search=c&limit=10&offset=0
+2026-04-26T10:23:14.779Z | GET /api/notes?search=cre&limit=10&offset=0
+🔐 Auth: Verifying token for request to /api/notes?search=cre&limit=10&offset=0...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes?search=cr&limit=10&offset=0
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes?search=cre&limit=10&offset=0
+2026-04-26T10:23:15.628Z | GET /api/notes?search=cred&limit=10&offset=0
+🔐 Auth: Verifying token for request to /api/notes?search=cred&limit=10&offset=0...
+2026-04-26T10:23:15.798Z | GET /api/notes?search=credi&limit=10&offset=0
+🔐 Auth: Verifying token for request to /api/notes?search=credi&limit=10&offset=0...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes?search=cred&limit=10&offset=0
+2026-04-26T10:23:15.954Z | GET /api/notes?search=credit&limit=10&offset=0
+🔐 Auth: Verifying token for request to /api/notes?search=credit&limit=10&offset=0...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes?search=credi&limit=10&offset=0
+2026-04-26T10:23:16.105Z | GET /api/notes?search=credite&limit=10&offset=0
+🔐 Auth: Verifying token for request to /api/notes?search=credite&limit=10&offset=0...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes?search=credit&limit=10&offset=0
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes?search=credite&limit=10&offset=0
+2026-04-26T10:23:16.681Z | GET /api/notes?search=credit&limit=10&offset=0
+🔐 Auth: Verifying token for request to /api/notes?search=credit&limit=10&offset=0...
+2026-04-26T10:23:16.716Z | GET /api/notes?search=credits&limit=10&offset=0
+🔐 Auth: Verifying token for request to /api/notes?search=credits&limit=10&offset=0...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes?search=credit&limit=10&offset=0
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes?search=credits&limit=10&offset=0
+2026-04-26T10:23:19.645Z | GET /api/notes?search=&limit=10&offset=0
+🔐 Auth: Verifying token for request to /api/notes?search=&limit=10&offset=0...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes?search=&limit=10&offset=0
+2026-04-26T10:23:38.716Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:23:40.123Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:25:12.480Z | GET /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAwMTQ2LCJpYXQiOjE3NzcxOTY1NDYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.KWEDMWX7Kl8V63aVlQ275gc-tTU6TsCZ-oTjMQMeYmG-NBd26IglDAQhUN3-gQRm7oKwv_1eXNHqQd2OBsiz8g
+🔐 Auth: Verifying token for request to /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAwMTQ2LCJpYXQiOjE3NzcxOTY1NDYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.KWEDMWX7Kl8V63aVlQ275gc-tTU6TsCZ-oTjMQMeYmG-NBd26IglDAQhUN3-gQRm7oKwv_1eXNHqQd2OBsiz8g...
+2026-04-26T10:25:12.490Z | GET /api/notes-random
+🔐 Auth: Verifying token for request to /api/notes-random...
+2026-04-26T10:25:12.493Z | GET /api/notes?search=&limit=10&offset=0
+🔐 Auth: Verifying token for request to /api/notes?search=&limit=10&offset=0...
+2026-04-26T10:25:12.495Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAwMTQ2LCJpYXQiOjE3NzcxOTY1NDYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.KWEDMWX7Kl8V63aVlQ275gc-tTU6TsCZ-oTjMQMeYmG-NBd26IglDAQhUN3-gQRm7oKwv_1eXNHqQd2OBsiz8g
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes?search=&limit=10&offset=0
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes-random
+2026-04-26T10:25:13.631Z | GET /api/notes?search=&limit=10&offset=0
+🔐 Auth: Verifying token for request to /api/notes?search=&limit=10&offset=0...
+2026-04-26T10:25:13.811Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+2026-04-26T10:25:13.906Z | GET /api/notes-random
+🔐 Auth: Verifying token for request to /api/notes-random...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes?search=&limit=10&offset=0
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes-random
+2026-04-26T10:28:50.559Z | POST /api/ai/chat
+🔐 Auth: Verifying token for request to /api/ai/chat...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/ai/chat
+🤖 Chat Request: "hi" from user 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d
+🧠 RAG: Generating embedding for query: "hi"
+🔍 RAG: Searching for relevant notes...
+⚠️ RAG Gemini quota hit. Rotating to key #2...
+🔄 Rotating to Gemini Key #2
+⚠️ RAG Gemini quota hit. Rotating to key #3...
+🔄 Rotating to Gemini Key #3
+⚠️ All Gemini keys exhausted. Trying Groq fallback...
+🚀 RAG: Querying Groq (Llama 3)...
+2026-04-26T10:31:11.475Z | POST /api/ai/chat
+🔐 Auth: Verifying token for request to /api/ai/chat...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/ai/chat
+🤖 Chat Request: "hackathon?" from user 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d
+🧠 RAG: Generating embedding for query: "hackathon?"
+🔍 RAG: Searching for relevant notes...
+⚠️ RAG Gemini quota hit. Rotating to key #2...
+🔄 Rotating to Gemini Key #1
+⚠️ RAG Gemini quota hit. Rotating to key #3...
+🔄 Rotating to Gemini Key #2
+⚠️ All Gemini keys exhausted. Trying Groq fallback...
+🚀 RAG: Querying Groq (Llama 3)...
+2026-04-26T10:32:58.985Z | GET /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAwMTQ2LCJpYXQiOjE3NzcxOTY1NDYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.KWEDMWX7Kl8V63aVlQ275gc-tTU6TsCZ-oTjMQMeYmG-NBd26IglDAQhUN3-gQRm7oKwv_1eXNHqQd2OBsiz8g
+🔐 Auth: Verifying token for request to /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAwMTQ2LCJpYXQiOjE3NzcxOTY1NDYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.KWEDMWX7Kl8V63aVlQ275gc-tTU6TsCZ-oTjMQMeYmG-NBd26IglDAQhUN3-gQRm7oKwv_1eXNHqQd2OBsiz8g...
+2026-04-26T10:32:59.002Z | GET /api/notes?search=&limit=10&offset=0
+🔐 Auth: Verifying token for request to /api/notes?search=&limit=10&offset=0...
+2026-04-26T10:32:59.003Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+2026-04-26T10:32:59.006Z | GET /api/notes-random
+🔐 Auth: Verifying token for request to /api/notes-random...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes?search=&limit=10&offset=0
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAwMTQ2LCJpYXQiOjE3NzcxOTY1NDYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.KWEDMWX7Kl8V63aVlQ275gc-tTU6TsCZ-oTjMQMeYmG-NBd26IglDAQhUN3-gQRm7oKwv_1eXNHqQd2OBsiz8g
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes-random
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:33:00.239Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:33:01.127Z | GET /api/notes?search=&limit=10&offset=0
+🔐 Auth: Verifying token for request to /api/notes?search=&limit=10&offset=0...
+2026-04-26T10:33:01.254Z | GET /api/notes-random
+🔐 Auth: Verifying token for request to /api/notes-random...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes?search=&limit=10&offset=0
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes-random
+2026-04-26T10:38:28.277Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:38:29.519Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+2026-04-26T10:38:29.561Z | GET /api/notes?list_id=3e807ca0-4547-4f8b-af52-40ea9e0278f7
+🔐 Auth: Verifying token for request to /api/notes?list_id=3e807ca0-4547-4f8b-af52-40ea9e0278f7...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes?list_id=3e807ca0-4547-4f8b-af52-40ea9e0278f7
+2026-04-26T10:38:30.904Z | GET /api/notes?list_id=3e807ca0-4547-4f8b-af52-40ea9e0278f7
+🔐 Auth: Verifying token for request to /api/notes?list_id=3e807ca0-4547-4f8b-af52-40ea9e0278f7...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes?list_id=3e807ca0-4547-4f8b-af52-40ea9e0278f7
+2026-04-26T10:38:33.636Z | GET /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAwMTQ2LCJpYXQiOjE3NzcxOTY1NDYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.KWEDMWX7Kl8V63aVlQ275gc-tTU6TsCZ-oTjMQMeYmG-NBd26IglDAQhUN3-gQRm7oKwv_1eXNHqQd2OBsiz8g
+🔐 Auth: Verifying token for request to /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAwMTQ2LCJpYXQiOjE3NzcxOTY1NDYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.KWEDMWX7Kl8V63aVlQ275gc-tTU6TsCZ-oTjMQMeYmG-NBd26IglDAQhUN3-gQRm7oKwv_1eXNHqQd2OBsiz8g...
+2026-04-26T10:38:33.846Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+2026-04-26T10:38:33.847Z | GET /api/notes?search=&limit=10&offset=0
+🔐 Auth: Verifying token for request to /api/notes?search=&limit=10&offset=0...
+2026-04-26T10:38:33.848Z | GET /api/notes-random
+🔐 Auth: Verifying token for request to /api/notes-random...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAwMTQ2LCJpYXQiOjE3NzcxOTY1NDYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.KWEDMWX7Kl8V63aVlQ275gc-tTU6TsCZ-oTjMQMeYmG-NBd26IglDAQhUN3-gQRm7oKwv_1eXNHqQd2OBsiz8g
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes?search=&limit=10&offset=0
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes-random
+2026-04-26T10:38:35.059Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+2026-04-26T10:38:35.111Z | GET /api/notes?search=&limit=10&offset=0
+🔐 Auth: Verifying token for request to /api/notes?search=&limit=10&offset=0...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes?search=&limit=10&offset=0
+2026-04-26T10:38:35.642Z | GET /api/notes-random
+🔐 Auth: Verifying token for request to /api/notes-random...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes-random
+2026-04-26T10:39:11.708Z | GET /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAwMTQ2LCJpYXQiOjE3NzcxOTY1NDYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.KWEDMWX7Kl8V63aVlQ275gc-tTU6TsCZ-oTjMQMeYmG-NBd26IglDAQhUN3-gQRm7oKwv_1eXNHqQd2OBsiz8g
+🔐 Auth: Verifying token for request to /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAwMTQ2LCJpYXQiOjE3NzcxOTY1NDYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.KWEDMWX7Kl8V63aVlQ275gc-tTU6TsCZ-oTjMQMeYmG-NBd26IglDAQhUN3-gQRm7oKwv_1eXNHqQd2OBsiz8g...
+2026-04-26T10:39:11.718Z | GET /api/notes?search=&limit=10&offset=0
+🔐 Auth: Verifying token for request to /api/notes?search=&limit=10&offset=0...
+2026-04-26T10:39:11.719Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+2026-04-26T10:39:11.722Z | GET /api/notes-random
+🔐 Auth: Verifying token for request to /api/notes-random...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes?search=&limit=10&offset=0
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAwMTQ2LCJpYXQiOjE3NzcxOTY1NDYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.KWEDMWX7Kl8V63aVlQ275gc-tTU6TsCZ-oTjMQMeYmG-NBd26IglDAQhUN3-gQRm7oKwv_1eXNHqQd2OBsiz8g
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes-random
+2026-04-26T10:39:14.930Z | GET /api/notes-random
+🔐 Auth: Verifying token for request to /api/notes-random...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes-random
+2026-04-26T10:39:57.697Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:40:47.338Z | GET /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAwMTQ2LCJpYXQiOjE3NzcxOTY1NDYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.KWEDMWX7Kl8V63aVlQ275gc-tTU6TsCZ-oTjMQMeYmG-NBd26IglDAQhUN3-gQRm7oKwv_1eXNHqQd2OBsiz8g
+🔐 Auth: Verifying token for request to /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAwMTQ2LCJpYXQiOjE3NzcxOTY1NDYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.KWEDMWX7Kl8V63aVlQ275gc-tTU6TsCZ-oTjMQMeYmG-NBd26IglDAQhUN3-gQRm7oKwv_1eXNHqQd2OBsiz8g...
+2026-04-26T10:40:47.373Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+2026-04-26T10:40:47.376Z | GET /api/notes?search=&limit=10&offset=0
+🔐 Auth: Verifying token for request to /api/notes?search=&limit=10&offset=0...
+2026-04-26T10:40:47.383Z | GET /api/notes-random
+🔐 Auth: Verifying token for request to /api/notes-random...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAwMTQ2LCJpYXQiOjE3NzcxOTY1NDYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.KWEDMWX7Kl8V63aVlQ275gc-tTU6TsCZ-oTjMQMeYmG-NBd26IglDAQhUN3-gQRm7oKwv_1eXNHqQd2OBsiz8g
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes?search=&limit=10&offset=0
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes-random
+2026-04-26T10:40:48.973Z | GET /api/notes-random
+🔐 Auth: Verifying token for request to /api/notes-random...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes-random
+2026-04-26T10:40:50.549Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:40:51.738Z | GET /api/notes-random
+🔐 Auth: Verifying token for request to /api/notes-random...
+2026-04-26T10:40:51.739Z | GET /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAwMTQ2LCJpYXQiOjE3NzcxOTY1NDYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.KWEDMWX7Kl8V63aVlQ275gc-tTU6TsCZ-oTjMQMeYmG-NBd26IglDAQhUN3-gQRm7oKwv_1eXNHqQd2OBsiz8g
+🔐 Auth: Verifying token for request to /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAwMTQ2LCJpYXQiOjE3NzcxOTY1NDYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.KWEDMWX7Kl8V63aVlQ275gc-tTU6TsCZ-oTjMQMeYmG-NBd26IglDAQhUN3-gQRm7oKwv_1eXNHqQd2OBsiz8g...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes-random
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAwMTQ2LCJpYXQiOjE3NzcxOTY1NDYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.KWEDMWX7Kl8V63aVlQ275gc-tTU6TsCZ-oTjMQMeYmG-NBd26IglDAQhUN3-gQRm7oKwv_1eXNHqQd2OBsiz8g
+2026-04-26T10:40:53.039Z | GET /api/notes-random
+🔐 Auth: Verifying token for request to /api/notes-random...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes-random
+2026-04-26T10:40:54.239Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:40:55.456Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+2026-04-26T10:40:55.480Z | GET /api/notes?list_id=3e807ca0-4547-4f8b-af52-40ea9e0278f7
+🔐 Auth: Verifying token for request to /api/notes?list_id=3e807ca0-4547-4f8b-af52-40ea9e0278f7...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes?list_id=3e807ca0-4547-4f8b-af52-40ea9e0278f7
+2026-04-26T10:40:57.162Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+2026-04-26T10:40:57.163Z | GET /api/notes-random
+🔐 Auth: Verifying token for request to /api/notes-random...
+2026-04-26T10:40:57.166Z | GET /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+🔐 Auth: Verifying token for request to /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ...
+2026-04-26T10:40:57.167Z | GET /api/notes?list_id=3e807ca0-4547-4f8b-af52-40ea9e0278f7
+🔐 Auth: Verifying token for request to /api/notes?list_id=3e807ca0-4547-4f8b-af52-40ea9e0278f7...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes?list_id=3e807ca0-4547-4f8b-af52-40ea9e0278f7
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes-random
+2026-04-26T10:40:58.233Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:40:58.761Z | GET /api/notes-random
+🔐 Auth: Verifying token for request to /api/notes-random...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes-random
+2026-04-26T10:40:59.371Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+2026-04-26T10:40:59.387Z | GET /api/notes?list_id=3e807ca0-4547-4f8b-af52-40ea9e0278f7
+🔐 Auth: Verifying token for request to /api/notes?list_id=3e807ca0-4547-4f8b-af52-40ea9e0278f7...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes?list_id=3e807ca0-4547-4f8b-af52-40ea9e0278f7
+2026-04-26T10:41:00.558Z | GET /api/notes?list_id=3e807ca0-4547-4f8b-af52-40ea9e0278f7
+🔐 Auth: Verifying token for request to /api/notes?list_id=3e807ca0-4547-4f8b-af52-40ea9e0278f7...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes?list_id=3e807ca0-4547-4f8b-af52-40ea9e0278f7
+2026-04-26T10:41:01.158Z | GET /api/notes-random
+🔐 Auth: Verifying token for request to /api/notes-random...
+2026-04-26T10:41:01.160Z | GET /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+🔐 Auth: Verifying token for request to /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ...
+2026-04-26T10:41:01.162Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes-random
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+2026-04-26T10:41:02.719Z | GET /api/notes-random
+🔐 Auth: Verifying token for request to /api/notes-random...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes-random
+2026-04-26T10:41:06.970Z | GET /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+🔐 Auth: Verifying token for request to /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ...
+2026-04-26T10:41:06.982Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+2026-04-26T10:41:06.984Z | GET /api/notes-random
+🔐 Auth: Verifying token for request to /api/notes-random...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes-random
+2026-04-26T10:41:08.612Z | GET /api/notes-random
+🔐 Auth: Verifying token for request to /api/notes-random...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes-random
+2026-04-26T10:41:38.754Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:41:43.177Z | GET /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+🔐 Auth: Verifying token for request to /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ...
+2026-04-26T10:41:43.180Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+2026-04-26T10:41:43.185Z | GET /api/notes-random
+🔐 Auth: Verifying token for request to /api/notes-random...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes-random
+2026-04-26T10:41:44.884Z | GET /api/notes-random
+🔐 Auth: Verifying token for request to /api/notes-random...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes-random
+2026-04-26T10:41:47.758Z | GET /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+🔐 Auth: Verifying token for request to /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ...
+2026-04-26T10:41:47.764Z | GET /api/notes?starred=true
+🔐 Auth: Verifying token for request to /api/notes?starred=true...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes?starred=true
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+2026-04-26T10:41:51.150Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:41:54.005Z | GET /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+🔐 Auth: Verifying token for request to /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ...
+2026-04-26T10:41:54.012Z | GET /api/notes?starred=true
+🔐 Auth: Verifying token for request to /api/notes?starred=true...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes?starred=true
+2026-04-26T10:41:55.665Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+2026-04-26T10:41:55.669Z | GET /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+🔐 Auth: Verifying token for request to /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ...
+2026-04-26T10:41:55.673Z | GET /api/notes-random
+🔐 Auth: Verifying token for request to /api/notes-random...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes-random
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:41:57.298Z | GET /api/notes-random
+🔐 Auth: Verifying token for request to /api/notes-random...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes-random
+2026-04-26T10:42:01.737Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:42:03.758Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:42:04.960Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+2026-04-26T10:42:04.996Z | GET /api/notes?list_id=57023307-3b25-41f2-9cc2-c46f21991170
+🔐 Auth: Verifying token for request to /api/notes?list_id=57023307-3b25-41f2-9cc2-c46f21991170...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes?list_id=57023307-3b25-41f2-9cc2-c46f21991170
+2026-04-26T10:42:06.065Z | GET /api/notes?list_id=57023307-3b25-41f2-9cc2-c46f21991170
+🔐 Auth: Verifying token for request to /api/notes?list_id=57023307-3b25-41f2-9cc2-c46f21991170...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes?list_id=57023307-3b25-41f2-9cc2-c46f21991170
+2026-04-26T10:42:28.772Z | GET /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+🔐 Auth: Verifying token for request to /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ...
+2026-04-26T10:42:28.781Z | GET /api/notes-random
+🔐 Auth: Verifying token for request to /api/notes-random...
+2026-04-26T10:42:28.785Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes-random
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+2026-04-26T10:42:33.369Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:42:34.448Z | GET /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+🔐 Auth: Verifying token for request to /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+2026-04-26T10:42:37.271Z | GET /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+🔐 Auth: Verifying token for request to /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ...
+2026-04-26T10:42:37.445Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:42:57.442Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:43:01.247Z | GET /api/notes-random
+🔐 Auth: Verifying token for request to /api/notes-random...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/notes-random
+2026-04-26T10:43:05.820Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:43:15.590Z | GET /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+🔐 Auth: Verifying token for request to /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ...
+2026-04-26T10:43:15.594Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+2026-04-26T10:43:36.202Z | GET /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+🔐 Auth: Verifying token for request to /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ...
+2026-04-26T10:43:36.206Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+2026-04-26T10:43:39.689Z | GET /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+🔐 Auth: Verifying token for request to /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+2026-04-26T10:43:41.751Z | GET /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+🔐 Auth: Verifying token for request to /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+2026-04-26T10:43:43.752Z | GET /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+🔐 Auth: Verifying token for request to /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ...
+2026-04-26T10:43:43.831Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+2026-04-26T10:44:06.855Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:44:28.728Z | GET /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+🔐 Auth: Verifying token for request to /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ...
+2026-04-26T10:44:28.734Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+2026-04-26T10:44:39.903Z | GET /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+🔐 Auth: Verifying token for request to /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ...
+2026-04-26T10:44:39.908Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+2026-04-26T10:44:55.421Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:45:02.428Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:45:41.501Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:45:50.309Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:46:01.743Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:46:13.314Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:46:32.414Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:46:39.578Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:47:23.226Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:47:43.603Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:48:10.813Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:48:13.188Z | GET /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+🔐 Auth: Verifying token for request to /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+2026-04-26T10:48:43.542Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:49:03.504Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:49:58.182Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:50:26.860Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:51:01.561Z | GET /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+🔐 Auth: Verifying token for request to /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ...
+2026-04-26T10:51:01.577Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+2026-04-26T10:51:12.872Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:51:39.561Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:52:11.725Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:52:20.384Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:53:36.504Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:53:59.624Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:54:22.067Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:54:33.254Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:54:51.938Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:55:01.466Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:55:15.528Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:55:33.907Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:55:39.496Z | GET /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+🔐 Auth: Verifying token for request to /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ...
+2026-04-26T10:55:39.502Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+2026-04-26T10:56:01.851Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:56:39.621Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:56:56.506Z | GET /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+🔐 Auth: Verifying token for request to /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ...
+2026-04-26T10:56:56.557Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+2026-04-26T10:57:14.352Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:57:31.075Z | GET /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+🔐 Auth: Verifying token for request to /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ...
+2026-04-26T10:57:31.080Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+2026-04-26T10:57:36.484Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:57:45.791Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:58:02.277Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:58:09.695Z | GET /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+🔐 Auth: Verifying token for request to /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ...
+2026-04-26T10:58:09.707Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+2026-04-26T10:58:35.162Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:58:39.814Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+2026-04-26T10:58:39.818Z | GET /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+🔐 Auth: Verifying token for request to /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:59:17.310Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T10:59:49.642Z | GET /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+🔐 Auth: Verifying token for request to /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ...
+2026-04-26T10:59:49.649Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+2026-04-26T10:59:53.120Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T11:00:20.187Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T11:01:05.384Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T11:01:12.749Z | GET /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+🔐 Auth: Verifying token for request to /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ...
+2026-04-26T11:01:12.764Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+2026-04-26T11:01:29.388Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T11:01:46.553Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T11:02:21.976Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+2026-04-26T11:02:22.567Z | GET /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+🔐 Auth: Verifying token for request to /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+2026-04-26T11:02:24.234Z | GET /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+🔐 Auth: Verifying token for request to /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+2026-04-26T11:02:34.718Z | GET /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+🔐 Auth: Verifying token for request to /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ...
+2026-04-26T11:02:34.731Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+2026-04-26T11:02:46.802Z | POST /api/ai/chat
+🔐 Auth: Verifying token for request to /api/ai/chat...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/ai/chat
+🤖 Chat Request: "what are the movies on list?" from user 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d
+🧠 RAG: Generating embedding for query: "what are the movies on list?"
+🔍 RAG: Searching for relevant notes...
+⚠️ RAG Gemini quota hit. Rotating to key #2...
+🔄 Rotating to Gemini Key #3
+⚠️ RAG Gemini quota hit. Rotating to key #3...
+🔄 Rotating to Gemini Key #1
+⚠️ All Gemini keys exhausted. Trying Groq fallback...
+🚀 RAG: Querying Groq (Llama 3)...
+2026-04-26T11:02:57.376Z | POST /api/ai/chat
+🔐 Auth: Verifying token for request to /api/ai/chat...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/ai/chat
+🤖 Chat Request: "whats that new model by china?" from user 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d
+🧠 RAG: Generating embedding for query: "whats that new model by china?"
+🔍 RAG: Searching for relevant notes...
+⚠️ RAG Gemini quota hit. Rotating to key #2...
+🔄 Rotating to Gemini Key #2
+⚠️ RAG Gemini quota hit. Rotating to key #3...
+🔄 Rotating to Gemini Key #3
+⚠️ All Gemini keys exhausted. Trying Groq fallback...
+🚀 RAG: Querying Groq (Llama 3)...
+2026-04-26T11:03:10.783Z | GET /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+🔐 Auth: Verifying token for request to /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ...
+2026-04-26T11:03:10.791Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+2026-04-26T11:03:18.457Z | GET /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ
+🔐 Auth: Verifying token for request to /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ...
+2026-04-26T11:03:18.463Z | GET /api/lists
+🔐 Auth: Verifying token for request to /api/lists...
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/lists
+✅ Auth: User 0eab8f61-13af-47e9-b904-bdf5f7d6ba2d authenticated for /api/events?token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjY0YzgxYTFiLTNiMjEtNDg2Yi1hODQxLTA2ZmRmNmI4MTk0MyIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2dneGpmcWV4ampxc3p3dHZ1cGpjLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIwZWFiOGY2MS0xM2FmLTQ3ZTktYjkwNC1iZGY1ZjdkNmJhMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjAzNjU2LCJpYXQiOjE3NzcyMDAwNTYsImVtYWlsIjoiaGFqdWdnODhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6ImhhanVnZzg4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjBlYWI4ZjYxLTEzYWYtNDdlOS1iOTA0LWJkZjVmN2Q2YmEyZCJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc3MTgxNzU5fV0sInNlc3Npb25faWQiOiI2NjQ2MTM4OS03M2ZiLTQ0ZmYtYmQ5NC0xY2U4MzE1NjgwODUiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.FJI0g1j9luio-VstRXYURrya3_7hUviNsUdTK8p8X0tv_n2TBZll0lXW18pN2tmxLx_hspJuskZvzY3rauBmbQ

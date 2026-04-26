@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import useSWR from 'swr';
 import { api } from '../api';
 import NoteCard from '../components/NoteCard';
 import { ArrowLeft, Loader2, Trash2, Folder } from 'lucide-react';
@@ -7,31 +7,20 @@ import { ArrowLeft, Loader2, Trash2, Folder } from 'lucide-react';
 export default function ListView() {
   const { id } = useParams();
   const navigate = useNavigate();
-  const [list, setList] = useState(null);
-  const [notes, setNotes] = useState([]);
-  const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const lists = await api.getLists();
-        const currentList = lists.find(l => l.id === id);
-        setList(currentList);
-        
-        const { notes: noteData } = await api.getNotes({ list_id: id });
-        setNotes(noteData);
-      } catch (err) {
-        console.error('Failed to fetch list data');
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchData();
-  }, [id]);
+  const { data: lists, isLoading: listsLoading } = useSWR('/api/lists', () => api.getLists());
+  const list = lists?.find(l => l.id === id);
+
+  const { data: notesData, isLoading: notesLoading, mutate: mutateNotes } = useSWR(`/api/notes?list_id=${id}`, async () => {
+    const res = await api.getNotes({ list_id: id });
+    return res.notes;
+  });
+
+  const notes = notesData || [];
+  const loading = listsLoading || notesLoading;
 
   const handleDelete = async () => {
     if (confirm('Are you sure you want to delete this list? Notes will be moved to Inbox.')) {
-      // Optimistic navigation
       navigate('/');
       try {
         await api.deleteList(id);
@@ -46,15 +35,13 @@ export default function ListView() {
     if (!note) return;
     
     // Optimistic update
-    setNotes(prev => prev.map(n => n.id === noteId ? { ...n, starred: !n.starred } : n));
+    mutateNotes(notes.map(n => n.id === noteId ? { ...n, starred: !n.starred } : n), false);
     
     try {
-      const updated = await api.updateNote(noteId, { starred: !note.starred });
-      setNotes(prev => prev.map(n => n.id === noteId ? updated : n));
+      await api.updateNote(noteId, { starred: !note.starred });
     } catch (err) {
       console.error('Failed to toggle favourite');
-      // Revert on failure
-      setNotes(prev => prev.map(n => n.id === noteId ? { ...n, starred: note.starred } : n));
+      mutateNotes();
     }
   };
 

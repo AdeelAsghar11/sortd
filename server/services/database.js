@@ -301,4 +301,161 @@ export async function logError(jobId, message, stack, payload) {
   if (error) console.error('Failed to log error to DB:', error.message);
 }
 
+// Random / Memory Lane
+export async function getRandomNote(userId) {
+  const thirtyDaysAgo = new Date();
+  thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
+
+  // Try to find a note older than 30 days
+  let { data: notes, error } = await supabase
+    .from('notes')
+    .select('*, note_tags(tags(name))')
+    .eq('user_id', userId)
+    .lt('created_at', thirtyDaysAgo.toISOString())
+    .limit(50); // Get a pool to pick from
+
+  if (error) throw error;
+
+  // Fallback: If no old notes, get any notes
+  if (!notes || notes.length === 0) {
+    const { data: allNotes, error: allErr } = await supabase
+      .from('notes')
+      .select('*, note_tags(tags(name))')
+      .eq('user_id', userId)
+      .limit(50);
+    if (allErr) throw allErr;
+    notes = allNotes;
+  }
+
+  if (!notes || notes.length === 0) return null;
+
+  // Pick one at random
+  const randomIndex = Math.floor(Math.random() * notes.length);
+  const data = notes[randomIndex];
+
+  // Flatten tags
+  const tags = data.note_tags.map(nt => nt.tags?.name).filter(Boolean);
+  delete data.note_tags;
+  return { ...data, tags };
+}
+
+// Jobs / Queue
+export async function initJobsTable() {
+  try {
+    const { error } = await supabase.rpc('exec_sql', {
+      sql: `
+        CREATE TABLE IF NOT EXISTS jobs (
+          id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+          user_id UUID REFERENCES auth.users(id) ON DELETE CASCADE,
+          type TEXT NOT NULL,
+          source TEXT,
+          payload JSONB NOT NULL,
+          state TEXT NOT NULL DEFAULT 'pending',
+          step TEXT,
+          result JSONB,
+          error TEXT,
+          error_code TEXT,
+          attempts INTEGER NOT NULL DEFAULT 0,
+          max_attempts INTEGER NOT NULL DEFAULT 2,
+          created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+          started_at TIMESTAMPTZ,
+          completed_at TIMESTAMPTZ
+        );
+        CREATE INDEX IF NOT EXISTS idx_jobs_state_pending ON jobs(state, created_at) WHERE state = 'pending';
+      `
+    });
+    
+    if (error) console.warn('Note: jobs table may need manual creation:', error.message);
+    
+    // Check if table exists even if RPC failed or didn't run
+    const { error: checkError } = await supabase.from('jobs').select('id').limit(1);
+    if (checkError && checkError.code === '42P01') {
+       console.warn('⚠️ "jobs" table missing. Please run migrations.');
+    }
+  } catch (err) {
+    console.warn('Failed to initialize jobs table:', err.message);
+  }
+}
+
+export async function createJob(data) {
+  const { data: job, error } = await supabase
+    .from('jobs')
+    .insert([data])
+    .select()
+    .single();
+  if (error) throw error;
+  return job;
+}
+
+export async function updateJob(id, updates) {
+  const { data: job, error } = await supabase
+    .from('jobs')
+    .update(updates)
+    .eq('id', id)
+    .select()
+    .single();
+  if (error) throw error;
+  return job;
+}
+
+export async function getNextPendingJob() {
+  const { data, error } = await supabase
+    .from('jobs')
+    .select('*')
+    .eq('state', 'pending')
+    .order('created_at', { ascending: true })
+    .limit(1)
+    .maybeSingle();
+  if (error) throw error;
+  return data;
+}
+
+export async function getActiveJobsCount() {
+  const { count, error } = await supabase
+    .from('jobs')
+    .select('*', { count: 'exact', head: true })
+    .eq('state', 'processing');
+  if (error) throw error;
+  return count || 0;
+}
+
+export async function getJobStats() {
+  const { data, error } = await supabase.from('jobs').select('state');
+  if (error) throw error;
+  
+  return {
+    pending: data.filter(j => j.state === 'pending').length,
+    processing: data.filter(j => j.state === 'processing').length,
+    done: data.filter(j => j.state === 'done').length,
+    failed: data.filter(j => j.state === 'failed').length,
+  };
+}
+
+export async function searchNotesSemantic(embedding, userId, limit = 10) {
+  try {
+    const { data, error } = await supabase.rpc('match_notes', {
+      query_embedding: embedding,
+      match_threshold: 0.3,
+      match_count: limit,
+      p_user_id: userId
+    });
+    
+    if (error) {
+      if (error.code === 'PGRST202' || error.message.includes('match_notes')) {
+        console.warn('⚠️ match_notes RPC missing. Falling back to keyword search.');
+        return getAllNotes({ limit }, userId);
+      }
+      throw error;
+    }
+    
+    return { 
+      notes: (data || []).map(n => ({ ...n, tags: [] })), 
+      total: data?.length || 0 
+    };
+  } catch (err) {
+    console.warn('Semantic search failed, falling back to keyword:', err.message);
+    return getAllNotes({ limit }, userId);
+  }
+}
+
 export { supabase };

@@ -1,7 +1,6 @@
 import { useState, lazy, Suspense, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate, Outlet, useSearchParams } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, Outlet, useSearchParams, useLocation } from 'react-router-dom';
 import BottomNav from './components/BottomNav';
-import QueueStatus from './components/QueueStatus';
 import AddContentSheet from './components/AddContentSheet';
 import { Loader2 } from 'lucide-react';
 
@@ -12,6 +11,7 @@ const ListView = lazy(() => import('./pages/ListView'));
 const NoteDetail = lazy(() => import('./pages/NoteDetail'));
 const Settings = lazy(() => import('./pages/Settings'));
 const Favorites = lazy(() => import('./pages/Favorites'));
+const AIChat = lazy(() => import('./pages/AIChat'));
 const Login = lazy(() => import('./pages/Login'));
 const Signup = lazy(() => import('./pages/Signup'));
 const ShareHandler = lazy(() => import('./pages/ShareHandler'));
@@ -60,9 +60,12 @@ function AuthRoute() {
 function Layout() {
   const [isAddSheetOpen, setIsAddSheetOpen] = useState(false);
   const { user } = useAuth();
+  const location = useLocation();
   const [showWalkthrough, setShowWalkthrough] = useState(() => {
     return !localStorage.getItem('sortd_onboarding_complete');
   });
+
+  const hideNav = location.pathname === '/chat';
 
   return (
     <div style={{ background: '#f5f7f9', minHeight: '100vh', position: 'relative' }}>
@@ -73,14 +76,13 @@ function Layout() {
         }} />
       )}
 
-      <main style={{ paddingBottom: '140px' }}>
+      <main style={{ paddingBottom: hideNav ? '0' : '140px' }}>
         <Suspense fallback={<PageLoader />}>
           <Outlet />
         </Suspense>
       </main>
 
-      <QueueStatus />
-      <BottomNav onAddClick={() => setIsAddSheetOpen(true)} />
+      {!hideNav && <BottomNav onAddClick={() => setIsAddSheetOpen(true)} />}
 
       {isAddSheetOpen && (
         <AddContentSheet onClose={() => setIsAddSheetOpen(false)} />
@@ -124,6 +126,7 @@ function AppContent() {
           <Route path="/notes/:id" element={<NoteDetail />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/favorites" element={<Favorites />} />
+          <Route path="/chat" element={<AIChat />} />
           <Route path="/share" element={<ShareHandler />} />
         </Route>
 
