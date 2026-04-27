@@ -3,6 +3,7 @@
 
 **Team Name:** MadGroot  
 **Team Lead:** Muhammad Ismail
+**Team Member:** Adeel Asghar
 
 ---
 
